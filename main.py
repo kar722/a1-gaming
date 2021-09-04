@@ -4,6 +4,7 @@ from flask import Flask, render_template, request
 # create a Flask instance
 app = Flask(__name__)
 
+
 @app.route('/greet/', methods=['GET', 'POST'])
 def greet():
     # submit button has been pushed
@@ -13,6 +14,7 @@ def greet():
             return render_template("greet.html", name1=name)
     # starting and empty input default
     return render_template("greet.html", name1="World")
+
 
 # connects default URL to render index.html
 @app.route('/')
@@ -34,6 +36,15 @@ def walruses():
 @app.route('/hawkers/')
 def hawkers():
     return render_template("hawkers.html")
+
+
+@app.route('/About Us/')
+def aboutus():
+    return render_template("aboutus.html")
+
+@app.route('/About Me: Daniel Levy/')
+def aboutmedaniel():
+    return render_template("aboutmedaniel.html")
 
 
 # runs the application on the development server
