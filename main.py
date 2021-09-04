@@ -4,67 +4,23 @@ from flask import Flask, render_template, request
 # create a Flask instance
 app = Flask(__name__)
 
-@app.route('/aboutmekarthik/')
-def kargreet():
-    return render_template("aboutmekarthik.html")
-
-@app.route('/aboutmekarthik/', methods=['GET', 'POST'])
+@app.route('/karthikgreet/')
 def greet():
+    return render_template("karthikgreet")
+
+@app.route('/karthikgreet/', methods=['GET', 'POST'])
+def greet1():
     # submit button has been pushed
     if request.form:
         name = request.form.get("name")
         if len(name) != 0:  # input field has content
-            return render_template("aboutmekarthik.html", name1=name)
+            return render_template("karthikgreet.html", name1=name)
     # starting and empty input default
-    return render_template("aboutmekarthik.html", name1="World")
-
-@app.route('/aboutmedaniel/')
-def dangreet():
-    return render_template("aboutmedaniel.html")
-
-@app.route('/aboutmedaniel/', methods=['GET', 'POST'])
-def greet2():
-    # submit button has been pushed
-    if request.form:
-        name = request.form.get("name")
-        if len(name) != 0:  # input field has content
-            return render_template("aboutmedaniel.html", name1=name)
-    # starting and empty input default
-    return render_template("aboutmedaniel.html", name1="World")
-
-@app.route('/aboutmedylan/')
-def dylangreet():
-    return render_template("aboutmedylan.html")
-
-@app.route('/aboutmedylan/', methods=['GET', 'POST'])
-def greet3():
-    # submit button has been pushed
-    if request.form:
-        name = request.form.get("name")
-        if len(name) != 0:  # input field has content
-            return render_template("aboutmedylan.html", name1=name)
-    # starting and empty input default
-    return render_template("aboutmedylan.html", name1="World")
-
-@app.route('/aboutmewilliam/')
-def wilgreet():
-    return render_template("aboutmewilliam.html")
-
-@app.route('/aboutmewilliam/', methods=['GET', 'POST'])
-def greet4():
-    # submit button has been pushed
-    if request.form:
-        name = request.form.get("name")
-        if len(name) != 0:  # input field has content
-            return render_template("aboutmewilliam.html", name1=name)
-    # starting and empty input default
-    return render_template("aboutmewilliam.html", name1="World")
+    return render_template("karthikgreet.html", name1="World")
 
 @app.route('/danielgreet/')
 def greet2():
     return render_template("danielgreet.html")
-
-#shush
 
 @app.route('/danielgreet/', methods=['GET', 'POST'])
 def greet3():
@@ -80,8 +36,6 @@ def greet3():
 def greet4():
     return render_template("dylangreet.html")
 
-#shush
-
 @app.route('/dylangreet/', methods=['GET', 'POST'])
 def greet5():
     # submit button has been pushed
@@ -95,8 +49,6 @@ def greet5():
 @app.route('/williamgreet/')
 def greet6():
     return render_template("williamgreet.html")
-
-#shush
 
 @app.route('/williamgreet/', methods=['GET', 'POST'])
 def greet7():
