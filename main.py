@@ -37,6 +37,9 @@ def walruses():
 def hawkers():
     return render_template("hawkers.html")
 
+@app.route('/mini-labs/')
+def mini():
+    return render_template("mini-labs.html")
 
 @app.route('/About Us/')
 def aboutus():
