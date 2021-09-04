@@ -20,6 +20,54 @@ def greet():
     # starting and empty input default
     return render_template("karthikgreet.html", name1="World")
 
+@app.route('/danielgreet/')
+def greet2():
+    return render_template("danielgreet.html")
+
+#shush
+
+@app.route('/danielgreet/', methods=['GET', 'POST'])
+def greet3():
+    # submit button has been pushed
+    if request.form:
+        name = request.form.get("name")
+        if len(name) != 0:  # input field has content
+            return render_template("danielgreet.html", name1=name)
+    # starting and empty input default
+    return render_template("danielgreet.html", name1="World")
+
+@app.route('/dylangreet/')
+def greet4():
+    return render_template("dylangreet.html")
+
+#shush
+
+@app.route('/dylangreet/', methods=['GET', 'POST'])
+def greet5():
+    # submit button has been pushed
+    if request.form:
+        name = request.form.get("name")
+        if len(name) != 0:  # input field has content
+            return render_template("dylangreet.html", name1=name)
+    # starting and empty input default
+    return render_template("dylangreet.html", name1="World")
+
+@app.route('/williamgreet/')
+def greet6():
+    return render_template("williamgreet.html")
+
+#shush
+
+@app.route('/williamgreet/', methods=['GET', 'POST'])
+def greet7():
+    # submit button has been pushed
+    if request.form:
+        name = request.form.get("name")
+        if len(name) != 0:  # input field has content
+            return render_template("williamgreet.html", name1=name)
+    # starting and empty input default
+    return render_template("williamgreet.html", name1="World")
+
 # connects default URL to render index.html
 @app.route('/')
 def index():

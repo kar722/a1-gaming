@@ -1,6 +1,17 @@
 <!-- Navigation Bar from bootstrap
 This HTML is setup as a fragment allowing it to be "included" by other HTML files via Jinja2
 -->
+<html>
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" ></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+
+
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="https://csp.nighthawkcodingsociety.com/">{{basename}}</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -9,15 +20,34 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
             <!-- url_for is a Jinja2 pre-processor that finds route from function name (def) -->
-            <a class="nav-link" href={{ url_for('index') }}>Portfolio</a>
-            <a class="nav-link" href={{ url_for('kangaroos') }}>PCs</a>
+            <a class="nav-link" href={{ url_for('index') }}>Home</a>
+            <a class="nav-link" href={{ url_for('kangaroos') }}>PC</a>
             <a class="nav-link" href={{ url_for('walruses') }}>Console</a>
             <a class="nav-link" href={{ url_for('hawkers') }}>Mobile</a>
             <!-- stub is shown using the name of the route -->
-            <a class="nav-link" href="/karthikgreet/">Karthik-- Greet/About Me</a>
+            <a class="nav-link" href="/greet/">Greet</a>
             <a class="nav-link" href="/mini-labs/">Mini Labs</a>
+            <a class="nav-link" href="/aboutmedaniel/">About Daniel</a>
+            <a class="nav-link" href="/aboutmedylan/">About Dylan</a>
+            <a class="nav-link" href="/aboutmekarthik/">About Karthik</a>
+            <a class="nav-link" href="/aboutmewilliam/">About William</a>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false" id="dropdownMenuButton1" type="button">
+                    About Us
+                </a>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <a class="dropdown-item" href="/danielgreet/">About Daniel</a>
+                    <a class="dropdown-item" href="/dylangreet/">About Dylan</a>
+                    <a class="dropdown-item" href="/karthikgreet/">About Karthik</a>
+                    <a class="dropdown-item" href="/williamgreet/">About William</a>
+                </div>
+            </li>
+
+            </ul>
+        </div>
 
 
         </div>
     </div>
 </nav>
+</body>
