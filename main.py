@@ -35,6 +35,9 @@ def walruses():
 def hawkers():
     return render_template("hawkers.html")
 
+@app.route('/mini-labs/')
+def mini():
+    return render_template("mini-labs.html")
 
 # runs the application on the development server
 if __name__ == "__main__":
