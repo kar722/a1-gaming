@@ -4,15 +4,19 @@ from flask import Flask, render_template, request
 # create a Flask instance
 app = Flask(__name__)
 
-@app.route('/greet/', methods=['GET', 'POST'])
+@app.route('/karthikgreet/')
+def greet1():
+    return render_template("karthikgreet.html")
+
+@app.route('/karthikgreet/', methods=['GET', 'POST'])
 def greet():
     # submit button has been pushed
     if request.form:
         name = request.form.get("name")
         if len(name) != 0:  # input field has content
-            return render_template("greet.html", name1=name)
+            return render_template("karthikgreet.html", name1=name)
     # starting and empty input default
-    return render_template("greet.html", name1="World")
+    return render_template("karthikgreet.html", name1="World")
 
 # connects default URL to render index.html
 @app.route('/')
