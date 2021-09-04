@@ -8,6 +8,8 @@ app = Flask(__name__)
 def greet1():
     return render_template("karthikgreet.html")
 
+#shush
+
 @app.route('/karthikgreet/', methods=['GET', 'POST'])
 def greet():
     # submit button has been pushed
