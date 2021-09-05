@@ -1,7 +1,7 @@
 Team Repository: A1 Gaming (Daniel, William, Karthik, Dylan)
 
-[Repository]:
-
+**[Repository]:
+**
 https://github.com/kar722/a1-gaming/edit/main/README.md
 
 [Scrum Board]:
