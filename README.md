@@ -8,7 +8,7 @@ https://github.com/kar722/a1-gaming/edit/main/README.md
 https://github.com/kar722/a1-gaming/projects/1
 
 ### Roles:
-- Scrum Master: Daniel Levy (previously Technical Lead from August 19-September 3, 2021)
+- Scrum Master: Daniel Levy
 - Designer: Karthikk Valluri
 - Technical Lead: William Du
 - Developer: Dylan Luo
