@@ -41,6 +41,8 @@ We want our website to model an e-commerce website with the purpose of reselling
 14. Bootstrap Grid:
 15. Updated Journal:
 
+**Issues:**
+
 ### Table of Contents (Sprint 1 and 2 From Aug. 23 - Sept. 3):
 1. Base: https://github.com/kar722/a1-gaming/blob/main/templates/layouts/base.htmlhttps://github.com/kar722/a1-gaming/blob/main/templates/layouts/base.html
 2. Navbar w/ Dropdown: https://github.com/kar722/a1-gaming/blob/main/templates/layouts/navbar.html
@@ -56,3 +58,5 @@ We want our website to model an e-commerce website with the purpose of reselling
 12. Consoles: https://github.com/kar722/a1-gaming/blob/main/templates/walruses.html
 13. Mini Labs: https://github.com/kar722/a1-gaming/blob/main/templates/mini-labs.html
 14. Brain Write (August 24): https://docs.google.com/document/d/1jZKU3pm5WeYAIzSTbDu2zB90bgjFU4M6QuYsutwqypE/edit#
+
+**Issues:**
