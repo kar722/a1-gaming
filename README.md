@@ -41,7 +41,7 @@ We want our website to model an e-commerce website with the purpose of reselling
 14. Bootstrap Grid:
 15. Updated Journal:
 
-**Issues:**
+**Issues:** View in Scrum Board, assigned by Daniel Levy
 
 ### Table of Contents (Sprint 1 and 2 From Aug. 23 - Sept. 3):
 1. Base: https://github.com/kar722/a1-gaming/blob/main/templates/layouts/base.htmlhttps://github.com/kar722/a1-gaming/blob/main/templates/layouts/base.html
@@ -60,4 +60,4 @@ We want our website to model an e-commerce website with the purpose of reselling
 14. Brain Write (August 24): https://docs.google.com/document/d/1jZKU3pm5WeYAIzSTbDu2zB90bgjFU4M6QuYsutwqypE/edit#
 15. Wireframe:
 
-**Issues:**
+**Issues:** View in Scrum Board, assigned by Daniel Levy
