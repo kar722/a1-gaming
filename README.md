@@ -40,4 +40,4 @@ We want our website to model an e-commerce website with the purpose of reselling
 11. PCs: https://github.com/kar722/a1-gaming/blob/main/templates/kangaroos.html
 12. Consoles: https://github.com/kar722/a1-gaming/blob/main/templates/walruses.html
 13. Mini Labs: https://github.com/kar722/a1-gaming/blob/main/templates/mini-labs.html
-14. Brain Wrote (August 4): https://docs.google.com/document/d/1jZKU3pm5WeYAIzSTbDu2zB90bgjFU4M6QuYsutwqypE/edit#
+14. Brain Write (August 24): https://docs.google.com/document/d/1jZKU3pm5WeYAIzSTbDu2zB90bgjFU4M6QuYsutwqypE/edit#
