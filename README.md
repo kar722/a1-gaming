@@ -25,6 +25,21 @@ We want our website to model an e-commerce website with the purpose of reselling
 
 
 ### Table of Contents (Sprint 3 and 4 From September 7 - Sept. 17):
+1. Cleaned up code/HTML files:
+2. Cleaned up README: https://github.com/kar722/a1-gaming/edit/main/README.md
+3. Cleaned up Scrum Board: 
+4. Theme 1:
+5. Theme 2:
+6. Revamped website, with own STYLE, COLORS, and FONTS:
+7. Theme 1:
+8. Theme 2:
+9. Location for Mini-Lab: 
+10. Embedded Brain Write:
+11. Embedded Wireframes:
+12. Embedded Greet:
+13. Embedded Test Prep Tuesday:
+14. Bootstrap Grid:
+15. Updated Journal:
 
 ### Table of Contents (Sprint 1 and 2 From Aug. 23 - Sept. 3):
 1. Base: https://github.com/kar722/a1-gaming/blob/main/templates/layouts/base.htmlhttps://github.com/kar722/a1-gaming/blob/main/templates/layouts/base.html
