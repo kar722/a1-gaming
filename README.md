@@ -44,7 +44,7 @@ We want our website to model an e-commerce website with the purpose of reselling
 **Issues:** View in Scrum Board, assigned by Daniel Levy
 
 ### Table of Contents (Sprint 1 and 2 From Aug. 23 - Sept. 3):
-1. Base: https://github.com/kar722/a1-gaming/blob/main/templates/layouts/base.htmlhttps://github.com/kar722/a1-gaming/blob/main/templates/layouts/base.html
+1. Base: https://github.com/kar722/a1-gaming/blob/main/templates/layouts/base.html
 2. Navbar w/ Dropdown: https://github.com/kar722/a1-gaming/blob/main/templates/layouts/navbar.html
 3. Project: https://github.com/kar722/a1-gaming/blob/main/templates/layouts/project.html
 4. Greet function: https://github.com/kar722/a1-gaming/blob/main/templates/greet.html
