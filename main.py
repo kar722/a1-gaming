@@ -5,7 +5,7 @@ from flask import Flask, render_template, request
 app = Flask(__name__)
 
 @app.route('/karthikgreet/')
-def greet():
+def greet0():
     return render_template("karthikgreet.html")
 
 @app.route('/karthikgreet/', methods=['GET', 'POST'])
@@ -60,6 +60,21 @@ def greet7():
     # starting and empty input default
     return render_template("williamgreet.html", name1="World")
 
+@app.route('/greet/')
+def greet8():
+    return render_template("greet.html")
+
+@app.route('/greet/', methods=['GET', 'POST'])
+def greet9():
+    # submit button has been pushed
+    if request.form:
+        name = request.form.get("name")
+        if len(name) != 0:  # input field has content
+            return render_template("greet.html", name1=name)
+    # starting and empty input default
+    return render_template("greet.html", name1="World")
+
+
 # connects default URL to render index.html
 @app.route('/')
 def index():
@@ -81,9 +96,9 @@ def walruses():
 def hawkers():
     return render_template("hawkers.html")
 
-@app.route('/mini-labs/')
+@app.route('/Video Journal 0/')
 def mini():
-    return render_template("mini-labs.html")
+    return render_template("Video Journal 0.html")
 
 # runs the application on the development server
 if __name__ == "__main__":

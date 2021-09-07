@@ -24,11 +24,10 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
             <a class="nav-link" href={{ url_for('walruses') }}>Console</a>
             <a class="nav-link" href={{ url_for('hawkers') }}>Mobile</a>
             <!-- stub is shown using the name of the route -->
-            <a class="nav-link" href="/mini-labs/">Mini Labs</a>
 
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false" id="dropdownMenuButton1" type="button">
-                    Dropdown
+                    About Us
                 </a>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                     <a class="dropdown-item" href="/danielgreet/">About Daniel</a>
@@ -38,10 +37,16 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
                 </div>
             </li>
 
-            </ul>
-        </div>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false" id="dropdownMenuButton1" type="button">
+                    Mini-Labs
+                </a>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <a class="nav-link" href="/Video Journal 0/">Video Journal 0</a>
+                    <a class="nav-link" href="/greet/">Greet Function</a>
+                </div>
 
-
+            </div>
         </div>
     </div>
 </nav>
