@@ -58,6 +58,6 @@ We want our website to model an e-commerce website with the purpose of reselling
 12. Consoles: https://github.com/kar722/a1-gaming/blob/main/templates/walruses.html
 13. Mini Labs: https://github.com/kar722/a1-gaming/blob/main/templates/mini-labs.html
 14. Brain Write (August 24): https://docs.google.com/document/d/1jZKU3pm5WeYAIzSTbDu2zB90bgjFU4M6QuYsutwqypE/edit#
-15. Wireframe:
+15. Wireframe: https://docs.google.com/drawings/d/1VvyeTyWTGXQJn7mUw2x6wO_ZDId_wGWzCNg3LYlWItc/edit
 
 **Issues:** View in Scrum Board, assigned by Daniel Levy
