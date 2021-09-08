@@ -14,9 +14,9 @@ def greet1():
     if request.form:
         name = request.form.get("name")
         if len(name) != 0:  # input field has content
-            return render_template("karthikgreet.html", name1=name)
+            return render_template("karthikgreet.html", name=name)
     # starting and empty input default
-    return render_template("karthikgreet.html", name1="World")
+    return render_template("karthikgreet.html", name="World")
 
 @app.route('/danielgreet/')
 def greet2():
