@@ -1,27 +1,18 @@
 <!-- Extending the project layout, as this file will do minor customizations -->
-{% extends "layouts/project.html" %}
+{% extends "layouts/project2.html" %}
 
 <!-- Setting up variables to customize "project" details to be specific to walruses -->
 {% set project = "Consoles" %}
-{% set overview = "https://nighthawkcodingsociety.com/projectsearch/dash" %}
-{% set scrumboard = "https://github.com/ridhimainukurti/group-2/projects/1" %}
-{% set repo = "https://github.com/ridhimainukurti/group-2" %}
-{% set authors = "https://wasc.nighthawkcodingsociety.com/about"  %}
+{% set PlayStation = "https://www.youtube.com/watch?v=qXU-4Dwkv2E" %}
+{% set Xbox = "https://www.youtube.com/channel/UClIKOsDS5dsfzFA3zveDT3Q?view_as=subscriber" %}
+{% set Nintendo = "https://github.com/avabrooks/Python-Web-Portfolio-Series-Demo" %}
+
 
 <!-- Setting up a block replacement to customize background to RINGS -->
 {% block background %}
-    <script src="{{ url_for('static', filename='three.r119.min.js') }}"></script>
-    <script src="{{ url_for('static', filename='vanta.rings.min.js') }}"></script>
-    <script>
-        VANTA.RINGS({
-            el: "body",
-            mouseControls: true,
-            touchControls: true,
-            gyroControls: false,
-            minHeight: 200.00,
-            minWidth: 200.00,
-            scale: 1.00,
-            scaleMobile: 1.00
-        })
-    </script>
+    <style>
+        body {
+            background-image: url('https://lh3.googleusercontent.com/cIJbLe1TvnaNJrW_LXO6OVCD6N6R9ny3IN7TzlCcfKbxO1B-rthZV1fCHWCNGcq-pMy0xq2L2GkSqZ8ZPfN6M3AHYPpCmgFSSYz2kA=s2500');
+        }
+    </style>
 {% endblock %}
