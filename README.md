@@ -1,17 +1,32 @@
 ### Pop Quiz
 ## Team Name: A1 From Day 0
 ## Scrum Board: https://github.com/kar722/a1-gaming/projects/1
+
+## Pairs
+# Daniel and William
+
+#
+
+
+
+
+## Tasks:
+
+
+## Scrum Board:
+
+
 ## Commits: 
-Daniel Levy:
+Daniel Levy (29 Commits):
 https://github.com/kar722/a1-gaming/commits?author=danaylevy2004
 
-Karthik Valluri:
+Karthik Valluri (17 Commits):
 https://github.com/kar722/a1-gaming/commits?author=kar722
 
-Dylan Luo:
+Dylan Luo (5 Commits):
 https://github.com/kar722/a1-gaming/commits?author=Dylanluo05
 
-William Du: 
+William Du (2 Commits): 
 https://github.com/kar722/a1-gaming/commits?author=WilliamDu22
 
 
@@ -27,8 +42,6 @@ https://github.com/722
 
 William Du:
 https://github.com/WilliamDu22
-
-### Individual Data
 
 ___________________________________________________________________________________________________________________________________________________________________________________
 Team Repository: A1 Gaming (Daniel, William, Karthik, Dylan)
