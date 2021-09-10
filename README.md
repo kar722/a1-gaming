@@ -1,38 +1,74 @@
-### Pop Quiz
+# Pop Quiz
+
 ## Team Name: A1 From Day 0
 ## Scrum Board: https://github.com/kar722/a1-gaming/projects/1
 
+(Note: The team members listed are organized by commits, Daniel having the most and William having the least.)
+
+## Daniel Levy:
+(Paired with William Du)
+
+Daniel and William's Tasks:
+
+Commits: https://github.com/kar722/a1-gaming/commits?author=danaylevy2004
+
+Profile: https://github.com/danaylevy2004
+
+## Karthik Valluri:
+(Paired with Dylan Luo)
+
+Karthik and Dylan's Tasks: 
+
+Commits: https://github.com/kar722/a1-gaming/commits?author=kar722
+
+Profile: https://github.com/722
+
+## Dylan Luo:
+(Paired with Karthik Valluri)
+
+Karthik and Dylan's Tasks: 
+
+Commits: https://github.com/kar722/a1-gaming/commits?author=Dylanluo05
+
+Profile: https://github.com/Dylanluo05
+
+## William Du: 
+(Paired with Daniel Levy)
+
+William and Daniel's Tasks
+
+Commits: https://github.com/kar722/a1-gaming/commits?author=WilliamDu22
+
+Profile: https://github.com/WilliamDu22
+
 ## Pairs
-# Daniel and William
+Daniel and William
+
+Karthik and Dylan
 
 #
 
-
-
-
 ## Tasks:
 
+## Pair share journals:
+Daniel Levy and William Du:
 
-## Scrum Board:
+Karthik Valluri and Dylan Luo:
+
 
 
 ## Commits: 
-Daniel Levy (29 Commits):
-https://github.com/kar722/a1-gaming/commits?author=danaylevy2004
 
-Karthik Valluri (17 Commits):
-https://github.com/kar722/a1-gaming/commits?author=kar722
+
+
 
 Dylan Luo (5 Commits):
-https://github.com/kar722/a1-gaming/commits?author=Dylanluo05
 
 William Du (2 Commits): 
-https://github.com/kar722/a1-gaming/commits?author=WilliamDu22
 
 
 ## Profile: 
 Daniel Levy:
-https://github.com/danaylevy2004
 
 Dylan Luo:
 https://github.com/Dylanluo05
