@@ -5,10 +5,13 @@
 ## Profile: 
 Daniel Levy   
 https://github.com/danaylevy2004
+
 Dylan Levy
 https://github.com/Dylanluo05
+
 Karthik Valluri
 https://github.com/722
+
 WilliamDu22
 https://github.com/WilliamDu22
 
