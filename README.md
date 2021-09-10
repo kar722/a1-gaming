@@ -25,7 +25,7 @@ https://github.com/Dylanluo05
 Karthik Valluri:
 https://github.com/722
 
-WilliamDu22:
+William Du:
 https://github.com/WilliamDu22
 
 ### Individual Data
