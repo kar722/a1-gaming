@@ -1,20 +1,61 @@
-### Pop Quiz
-## Team Name: 
-## Scrum Board: 
-## Commits: 
-## Profile: 
-Daniel Levy   
-https://github.com/danaylevy2004
-Dylan Levy
-https://github.com/Dylanluo05
-Karthik Valluri
-https://github.com/722
-WilliamDu22
-https://github.com/WilliamDu22
+# Pop Quiz
 
-### Individual Data
+## Team Name: A1 From Day 0
+## Scrum Board: https://github.com/kar722/a1-gaming/projects/1
 
+(Note: The team members listed are organized by commits, Daniel having the most and William having the least.)
 
+## Daniel Levy:
+(Paired with William Du)
+
+Daniel's Individual Tasks: Clean up code, README, Scrumboard, refacter and rename code to make sure it is properly ordered, review Sprint Process.
+1. Review Canvas requirements, add any requirements you want to complement based off of your Theme.
+2. Make Issues and assign to individuals, place Issues in appropriate Column as you progress.  Groom columns and issues to be relevant for week.  Have team members create check boxes and comment on issues that they have accepted work.
+3. As you move Issues into review, have individuals link Tangible assets to the Issue.  Individual should add comments that highlight anything Scrum master should report through Video.
+4. At close of each Week update README with links to issues, and any highlight words that would be nice to see without clicking into the issue.  Time box this README section declaring Week and Sprint dates in a section Header using Markdown (Links to an external site.).  Add a Video embed to section to highlight work. 
+
+Daniel and William's Tasks: Create location for Mini Labs and rename it; embed Brain Write, Wireframes, Greet, and Test Prep Tuesday 3; implement evidence of research or early designs; implement a 4x4 design on Mini Lab Page
+
+Daniel and William's Pair Share: https://docs.google.com/document/d/1vPc-NNkHoVmcHb3S6NU5yBj06MIF5NSxVOZiq8TVLoY/edit
+
+Commits: https://github.com/kar722/a1-gaming/commits?author=danaylevy2004
+
+Profile: https://github.com/danaylevy2004
+
+## Karthik Valluri:
+(Paired with Dylan Luo)
+
+Karthik and Dylan's Tasks: Style with colors and fonts on CSS and experiment with two themes while looking at CSS
+
+Karthik and Dylan's Pair Share: https://docs.google.com/document/d/1R-onvhHRnXWmFq3cE78amJ_WD8tyBJaAEcQoICjz09k/edit
+
+Commits: https://github.com/kar722/a1-gaming/commits?author=kar722
+
+Profile: https://github.com/722
+
+## Dylan Luo:
+(Paired with Karthik Valluri)
+
+Dylan and Karthik's Tasks: Style with colors and fonts on CSS and experiment with two themes while looking at CSS
+
+Dylan and Karthik's Pair Share: https://docs.google.com/document/d/1R-onvhHRnXWmFq3cE78amJ_WD8tyBJaAEcQoICjz09k/edit
+
+Commits: https://github.com/kar722/a1-gaming/commits?author=Dylanluo05
+
+Profile: https://github.com/Dylanluo05
+
+## William Du: 
+(Paired with Daniel Levy)
+
+William and Daniel's Tasks: Create location for Mini Labs and rename it; embed Brain Write, Wireframes, Greet, and Test Prep Tuesday 3; implement evidence of research or early designs; implement a 4x4 design on Mini Lab Page
+
+William and Daniel's Pair Share: https://docs.google.com/document/d/1vPc-NNkHoVmcHb3S6NU5yBj06MIF5NSxVOZiq8TVLoY/edit
+
+Commits: https://github.com/kar722/a1-gaming/commits?author=WilliamDu22
+
+Profile: https://github.com/WilliamDu22
+
+___________________________________________________________________________________________________________________________________________________________________________________
 Team Repository: A1 Gaming (Daniel, William, Karthik, Dylan)
 ### Repository:
 
