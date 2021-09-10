@@ -5,7 +5,7 @@
 Daniel Levy:
 https://github.com/kar722/a1-gaming/commits?author=danaylevy2004
 
-William Du:
+Karthik Valluri:
 https://github.com/kar722/a1-gaming/commits?author=kar722
 
 Dylan Luo:
