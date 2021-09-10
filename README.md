@@ -10,6 +10,8 @@
 
 Daniel and William's Tasks:
 
+Daniel and William's Pair Share:
+
 Commits: https://github.com/kar722/a1-gaming/commits?author=danaylevy2004
 
 Profile: https://github.com/danaylevy2004
@@ -19,6 +21,8 @@ Profile: https://github.com/danaylevy2004
 
 Karthik and Dylan's Tasks: 
 
+Karthik and Dylan's Pair Share:
+
 Commits: https://github.com/kar722/a1-gaming/commits?author=kar722
 
 Profile: https://github.com/722
@@ -26,7 +30,9 @@ Profile: https://github.com/722
 ## Dylan Luo:
 (Paired with Karthik Valluri)
 
-Karthik and Dylan's Tasks: 
+Dylan and Karthik's Tasks: 
+
+Dylan and Karthik's Pair Share:
 
 Commits: https://github.com/kar722/a1-gaming/commits?author=Dylanluo05
 
@@ -35,7 +41,9 @@ Profile: https://github.com/Dylanluo05
 ## William Du: 
 (Paired with Daniel Levy)
 
-William and Daniel's Tasks
+William and Daniel's Tasks:
+
+William and Daniel's Pair Share:
 
 Commits: https://github.com/kar722/a1-gaming/commits?author=WilliamDu22
 
