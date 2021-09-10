@@ -1,0 +1,155 @@
+<!-- Custom file for standardizing Project Data
+This HTML is setup as as a Jinja2 layout, coders use layouts for:
+ ... standardization of style
+ ... setting expectations for data
+ ... code reuse
+-->
+<!DOCTYPE HTML>
+<html lang="en">
+
+{% set name = "" %}
+{% set github = "https://github.com/kar722/a1-gaming" %}
+{% set twitter = "https://twitter.com/NighthawkCoding" %}
+{% set youtube = "https://www.youtube.com/everythingfutbol" %}
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        :root{
+            --white: whitesmoke;
+            --black: black;
+            --grey: grey;
+        }
+
+        html, body{
+            margin: 0;
+            height: 100%;
+            animation: fadein 2s;
+            -moz-animation: fadein 2s; /* Firefox */
+            -webkit-animation: fadein 2s; /* Safari and Chrome */
+            -o-animation: fadein 2s; /* Opera */
+            background-color: var(--grey);
+            color: var(--white);
+        }
+
+        .dark-mode {
+            background-color: var(--white);
+            color: var(--black);
+        }
+
+        h1{
+            font-size: 5em;
+        }
+
+        a {
+            color: midnightblue;
+        }
+
+        .fa{
+            font-size: 3em;
+            letter-spacing: 1em;
+            transition: all .2s;
+            color: white;
+        }
+
+        .fa:hover{
+            transform: translateY(10px);
+        }
+
+        .fa-youtube-play:hover{
+            color: #cc0000;
+        }
+
+        .fa-twitter:hover{
+            color: #1da1f2;
+        }
+
+        .fa-github:hover{
+            color: #000000;
+        }
+
+        .btn:link,
+        .btn:visited {
+            text-transform: uppercase;
+            text-decoration: none;
+            padding: 15px 40px;
+            display: inline-block;
+            border-radius: 100px;
+            transition: all .2s;
+            position: absolute;
+            color: white;
+            font-size: 2.5em;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 20px 40px rgba(255, 255, 255, 0.2);
+        }
+
+        .btn:active {
+            transform: translateY(-1px);
+            box-shadow: 0 5px 10px rgba(255, 255, 255, 0.2);
+        }
+
+        .row{
+            margin: auto;
+        }
+
+    </style>
+
+    <title>{{ project }} | A1 from Day 0 </title>
+
+</head>
+
+<body>
+{% include "layouts/navbar.html" %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Who is Dylan?</title>
+</head>
+<body>
+<div class="center-block" style="margin: 2% 5% 5%; text-align:center; font-family: 'MADE Soulmaze';">
+    <div class="col-12">
+        <p style="color: white">Hello, {{name1}}!</p>
+    </div>
+    <div class="col-12">
+        <form action="/dylangreet/" id="dylangreet" method="POST" >
+            <label for="name" style="color: white">Type a greeting name?</label>
+            <input name="name" id="name">
+            <input type="submit" value="Greetings!">
+        </form>
+        <p>
+
+        </p>
+    </div>
+    <div class="col-12">
+    </div>
+</div>
+
+
+
+<h1 style="text-align: center; color: aqua; font-family: Mytupi";> About Me</h1>
+
+<p style="text-align: center; color: blanchedalmond; font-family: Mytupi">
+
+<p style="text-align: center; color: blanchedalmond; font-family: Mytupi"> My name is Dylan Luo. I am 16 and I am a junior at Del Norte High School. My favorite subjects are math and history. I enjoy watching and playing soccer with my friends.
+
+    <!-- karthik is goated honestly -->
+
+</body>
+
+</html>
+
+{% block background %}
+
+    <style>
+        body {
+            background-image: url('https://wallpaperaccess.com/full/2029165.jpg');
+        }
+    </style>
+
+{% endblock %}
