@@ -96,9 +96,17 @@ def walruses():
 def hawkers():
     return render_template("hawkers.html")
 
-@app.route('/Video Journal 0/')
+@app.route('/Video Journals/')
 def mini():
-    return render_template("Video Journal 0.html")
+    return render_template("Video Journals.html")
+
+@app.route('/binary/')
+def binary():
+    return render_template("binary.html")
+
+@app.route('/howitsmade/')
+def howitsmade():
+    return render_template("howitsmade.html")
 
 # runs the application on the development server
 if __name__ == "__main__":
