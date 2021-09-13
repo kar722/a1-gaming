@@ -1,1 +1,161 @@
-{% extends "layouts/base9.html" %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        :root{
+            --white: whitesmoke;
+            --black: black;
+            --grey: grey;
+        }
+
+        html, body{
+            margin: 0;
+            height: 100%;
+            animation: fadein 2s;
+            -moz-animation: fadein 2s; /* Firefox */
+            -webkit-animation: fadein 2s; /* Safari and Chrome */
+            -o-animation: fadein 2s; /* Opera */
+            background-color: var(--grey);
+            color: var(--white);
+        }
+
+        .dark-mode {
+            background-color: var(--white);
+            color: var(--black);
+        }
+
+        h1{
+            font-size: 5em;
+        }
+
+        a {
+            color: midnightblue;
+        }
+
+        .fa{
+            font-size: 3em;
+            letter-spacing: 1em;
+            transition: all .2s;
+            color: white;
+        }
+
+        .fa:hover{
+            transform: translateY(10px);
+        }
+
+        .fa-youtube-play:hover{
+            color: #cc0000;
+        }
+
+        .fa-twitter:hover{
+            color: #1da1f2;
+        }
+
+        .fa-github:hover{
+            color: #000000;
+        }
+
+        .btn:link,
+        .btn:visited {
+            text-transform: uppercase;
+            text-decoration: none;
+            padding: 15px 40px;
+            display: inline-block;
+            border-radius: 100px;
+            transition: all .2s;
+            position: absolute;
+            color: white;
+            font-size: 2.5em;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 20px 40px rgba(255, 255, 255, 0.2);
+        }
+
+        .btn:active {
+            transform: translateY(-1px);
+            box-shadow: 0 5px 10px rgba(255, 255, 255, 0.2);
+        }
+
+        .row{
+            margin: auto;
+        }
+
+    </style>
+
+
+</head>
+
+<body>
+{% include "layouts/navbar.html" %}
+</body>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<style>
+    .column {
+        float: left;
+        width: 25%;
+    }
+
+    /* Clear floats after the columns */
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+</style>
+
+<body>
+
+<div class="container">
+    <div class="row">
+        <div class="column">
+            <h2>
+                Greet Function
+            </h2>
+            <div class="center-block" style="margin: 2% 5% 5%; text-align:left; font-family: gilroy,serif;">
+                <div class="col-12">
+                    <p>Hello, {{name1}}!</p>
+                </div>
+                <div class="col-12">
+                    <form action="/greet" id="greet" method="POST" >
+                        <label for="name">Type a greeting name?</label>
+                        <input name = "name" id = "name">
+                        <input type="submit" value="Greetings!">
+                    </form>
+                    <img src="/static/assets/Capture.PNG" width=200 height=200 alt="Greeting">
+                </div>
+                <div class="col-12">
+                </div>
+            </div>
+        </div>
+        <div class="column">
+            <h2>
+                Brain Write
+            </h2>
+            <iframe width=250 height=300 src="https://docs.google.com/document/d/e/2PACX-1vQeZeORW97-6JQHMGD7y89dJbbJ_7iWR3rnxLI2qnhTvnzsTEY1MBJpbmC0f8Rje0E1sSNyecRtTl_f/pub?embedded=true"></iframe>
+        </div>
+        <div class="column">
+            <h2>
+                Wireframe
+            </h2>
+            <img src="https://docs.google.com/drawings/d/e/2PACX-1vRShAZTJ41COdJBqnRYKc93VixamsrVGCVLnCOM-gu0XYuEhqtCGF2GK7f-_UBp46CeXj3lHjof4ZEc/pub?w=960&amp;h=720" width=250 height=300></iframe>
+        </div>
+        <div class="column">
+            <h2>
+                Test Prep Tuesday
+            </h2>
+            <iframe width=250 height=300 src="https://docs.google.com/document/d/e/2PACX-1vTK42vARxbG0wi8lez4Rec6iRqdD6knC-hin26Eio5ei7VWfHlAHNpbp7MrNdAsDRjfvnUmw969aieR/pub?embedded=true"></iframe>
+        </div>
+    </div>
+</div>
+</body>
+</html>
