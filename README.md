@@ -4,7 +4,6 @@
 | Name | Github Profile | Issues | Scrum Board | Commit History |
 |------|----------------|--------|-------------|----------------|
 | Daniel Levy | @danaylevy2004 | https://github.com/kar722/a1-gaming/projects/1?card_filter_query=assignee%3Adanaylevy2004 | https://github.com/kar722/a1-gaming/projects/1?card_filter_query=assignee%3Adanaylevy2004 |https://github.com/kar722/a1-gaming/commits?author=danaylevy2004
-|------|----------------|--------|-------------|----------------|
 | Karthik Valluri | @kar722 | https://github.com/kar722/a1-gaming/projects/1?card_filter_query=assignee%3Akar722 | https://
 | William Du |
 | Dylan Luo |
