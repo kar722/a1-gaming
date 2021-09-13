@@ -8,8 +8,8 @@
 | Dylan Luo | @DylanLuo05 | https://github.com/kar722/a1-gaming/issues?q=is%3Aissue+assignee%3Adylanluo05 | https://github.com/kar722/a1-gaming/projects/1?card_filter_query=assignee%3Adylanluo05 | https://github.com/kar722/a1-gaming/commits?author=dylanluo05 | https://docs.google.com/document/d/1R-onvhHRnXWmFq3cE78amJ_WD8tyBJaAEcQoICjz09k/edit
 ## Overall Scrum Board: https://github.com/kar722/a1-gaming/projects/1
 
-Team Repository: A1 Gaming (Daniel, William, Karthik, Dylan)
-### Repository:
+# Team Repository: A1 Gaming (Daniel, William, Karthik, Dylan)
+
 
 ### Repository:
 https://github.com/kar722/a1-gaming/edit/main/README.md
