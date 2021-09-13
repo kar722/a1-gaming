@@ -1,6 +1,8 @@
 # Pop Quiz
 
 ## Team Name: A1 From Day 0
+|Name|Github Profile|Issues|Scrum Board|Commit History
+
 ## Scrum Board: https://github.com/kar722/a1-gaming/projects/1
 
 (Note: The team members listed are organized by commits, Daniel having the most and William having the least.)
