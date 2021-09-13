@@ -3,10 +3,10 @@
 ## Team Name: A1 From Day 0
 | Name | Github Profile | Issues | Scrum Board | Commit History |
 |------|----------------|--------|-------------|----------------|
-| Daniel Levy | @danaylevy2004 | https://github.com/kar722/a1-gaming/projects/1?card_filter_query=assignee%3Adanaylevy2004 | https://github.com/kar722/a1-gaming/projects/1?card_filter_query=assignee%3Adanaylevy2004 |https://github.com/kar722/a1-gaming/commits?author=danaylevy2004
-| Karthik Valluri | @kar722 | https://github.com/kar722/a1-gaming/projects/1?card_filter_query=assignee%3Akar722 | https://
-| William Du |
-| Dylan Luo |
+| Daniel Levy | @danaylevy2004 | https://github.com/kar722/a1-gaming/issues?q=is%3Aissue+assignee%3Adanaylevy2004| https://github.com/kar722/a1-gaming/projects/1?card_filter_query=assignee%3Adanaylevy2004 |https://github.com/kar722/a1-gaming/commits?author=danaylevy2004
+| Karthik Valluri | @kar722 | https://github.com/kar722/a1-gaming/issues?q=is%3Aissue+assignee%3Akar722 |
+| William Du | @WilliamDu22 | https://github.com/kar722/a1-gaming/issues?q=is%3Aissue+assignee%3Awilliamdu22
+| Dylan Luo | @DylanLuo05 | https://github.com/kar722/a1-gaming/issues?q=is%3Aissue+assignee%3Adylanluo05
 ## Scrum Board: https://github.com/kar722/a1-gaming/projects/1
 
 (Note: The team members listed are organized by commits, Daniel having the most and William having the least.)
