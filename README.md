@@ -1,12 +1,12 @@
 # Pop Quiz
 
 ## Team Name: A1 From Day 0
-| Name | Github Profile | Issues | Scrum Board | Commit History |
-|------|----------------|--------|-------------|----------------|
-| Daniel Levy | @danaylevy2004 | https://github.com/kar722/a1-gaming/issues?q=is%3Aissue+assignee%3Adanaylevy2004| https://github.com/kar722/a1-gaming/projects/1?card_filter_query=assignee%3Adanaylevy2004 |https://github.com/kar722/a1-gaming/commits?author=danaylevy2004
-| Karthik Valluri | @kar722 | https://github.com/kar722/a1-gaming/issues?q=is%3Aissue+assignee%3Akar722 |
-| William Du | @WilliamDu22 | https://github.com/kar722/a1-gaming/issues?q=is%3Aissue+assignee%3Awilliamdu22
-| Dylan Luo | @DylanLuo05 | https://github.com/kar722/a1-gaming/issues?q=is%3Aissue+assignee%3Adylanluo05
+| Name | Github Profile | Issues | Scrum Board | Commit History | Pair Share |
+|------|----------------|--------|-------------|----------------|------------|
+| Daniel Levy | @danaylevy2004 | https://github.com/kar722/a1-gaming/issues?q=is%3Aissue+assignee%3Adanaylevy2004| https://github.com/kar722/a1-gaming/projects/1?card_filter_query=assignee%3Adanaylevy2004 |https://github.com/kar722/a1-gaming/commits?author=danaylevy2004 | https://docs.google.com/document/d/1vPc-NNkHoVmcHb3S6NU5yBj06MIF5NSxVOZiq8TVLoY/edit |
+| Karthik Valluri | @kar722 | https://github.com/kar722/a1-gaming/issues?q=is%3Aissue+assignee%3Akar722 | a | a | https://docs.google.com/document/d/1R-onvhHRnXWmFq3cE78amJ_WD8tyBJaAEcQoICjz09k/edit
+| William Du | @WilliamDu22 | https://github.com/kar722/a1-gaming/issues?q=is%3Aissue+assignee%3Awilliamdu22 | a | a | https://docs.google.com/document/d/1vPc-NNkHoVmcHb3S6NU5yBj06MIF5NSxVOZiq8TVLoY/edit
+| Dylan Luo | @DylanLuo05 | https://github.com/kar722/a1-gaming/issues?q=is%3Aissue+assignee%3Adylanluo05 | a | a | https://docs.google.com/document/d/1R-onvhHRnXWmFq3cE78amJ_WD8tyBJaAEcQoICjz09k/edit
 ## Scrum Board: https://github.com/kar722/a1-gaming/projects/1
 
 (Note: The team members listed are organized by commits, Daniel having the most and William having the least.)
@@ -17,7 +17,7 @@
 
 https://github.com/kar722/a1-gaming/projects/1?card_filter_query=assignee%3Adanaylevy2004
 
-Daniel and William's Pair Share: https://docs.google.com/document/d/1vPc-NNkHoVmcHb3S6NU5yBj06MIF5NSxVOZiq8TVLoY/edit
+Daniel and William's Pair Share: 
 
 Commits: https://github.com/kar722/a1-gaming/commits?author=danaylevy2004
 
@@ -30,7 +30,7 @@ https://github.com/kar722/a1-gaming/projects/1?card_filter_query=assignee%3Akar7
 
 Karthik and Dylan's Tasks: Style with colors and fonts on CSS and experiment with two themes while looking at CSS
 
-Karthik and Dylan's Pair Share: https://docs.google.com/document/d/1R-onvhHRnXWmFq3cE78amJ_WD8tyBJaAEcQoICjz09k/edit
+Karthik and Dylan's Pair Share: 
 
 Commits: https://github.com/kar722/a1-gaming/commits?author=kar722
 
