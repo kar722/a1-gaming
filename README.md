@@ -1,4 +1,3 @@
-# Pop Quiz
 
 ## Team Name: A1 From Day 0
 | Name | Github Profile | Issues | Scrum Board | Commit History | Pair Share |
