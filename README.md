@@ -1,7 +1,8 @@
 # Pop Quiz
 
 ## Team Name: A1 From Day 0
-|Name|Github Profile|Issues|Scrum Board|Commit History
+| Name | Github Profile | Issues | Scrum Board | Commit History |
+|------|----------------|--------|-------------|----------------|
 
 ## Scrum Board: https://github.com/kar722/a1-gaming/projects/1
 
