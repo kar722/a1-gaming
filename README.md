@@ -37,8 +37,8 @@ https://docs.google.com/document/d/1R-onvhHRnXWmFq3cE78amJ_WD8tyBJaAEcQoICjz09k/
 | - | - | - | - |
 | Daniel | 4/4 |  | 
 | William | 4/4 |  | 
-| Karthik | 4/4 | [Individual page](https://github.com/tonyhieu/p4-oompaloompas/blob/master/templates/individual/alice.html), plans to use laptop at home and school | 
-| Dylan | 4/4 | [Individual page](https://github.com/tonyhieu/p4-oompaloompas/blob/master/templates/individual/anthony.html), plans to use laptop at home and school | 
+| Karthik | 4/4 | | 
+| Dylan | 4/4 |  | 
 
 
 ### Table of Contents (Sprint 3 and 4 From September 7 - Sept. 17):
