@@ -37,8 +37,8 @@ https://docs.google.com/document/d/1R-onvhHRnXWmFq3cE78amJ_WD8tyBJaAEcQoICjz09k/
 
 | Name | Score | Role | Work Done |
 | - | - | - | - |
-| Daniel | 4/4 | [Individual page](https://github.com/tonyhieu/p4-oompaloompas/blob/master/templates/individual/linda.html), plans to use laptop at home and school | 
-| William | 4/4 | [Individual page](https://github.com/tonyhieu/p4-oompaloompas/blob/master/templates/individual/sanvi.html), plans to use laptop at home and school | 
+| Daniel | 4/4 |  | 
+| William | 4/4 |  | 
 | Karthik | 4/4 | [Individual page](https://github.com/tonyhieu/p4-oompaloompas/blob/master/templates/individual/alice.html), plans to use laptop at home and school | 
 | Dylan | 4/4 | [Individual page](https://github.com/tonyhieu/p4-oompaloompas/blob/master/templates/individual/anthony.html), plans to use laptop at home and school | 
 
@@ -58,11 +58,11 @@ https://docs.google.com/document/d/1R-onvhHRnXWmFq3cE78amJ_WD8tyBJaAEcQoICjz09k/
 
 | Name | Score | Role | Work Done |
 | - | - | - | - |
-| Linda | 4/4 | [Individual page](https://github.com/tonyhieu/p4-oompaloompas/blob/master/templates/individual/linda.html), plans to use laptop at home and school | 
-| Sanvi | 4/4 | [Individual page](https://github.com/tonyhieu/p4-oompaloompas/blob/master/templates/individual/sanvi.html), plans to use laptop at home and school | 
-| Alice | 4/4 | [Individual page](https://github.com/tonyhieu/p4-oompaloompas/blob/master/templates/individual/alice.html), plans to use laptop at home and school | 
-| Anthony | 4/4 | [Individual page](https://github.com/tonyhieu/p4-oompaloompas/blob/master/templates/individual/anthony.html), plans to use laptop at home and school | 
-| Ellen | 4/4 | [Individual page](https://github.com/tonyhieu/p4-oompaloompas/blob/master/templates/individual/ellen.html), plans to use laptop at home and school | 
+| Linda | 4/4 |  | 
+| Sanvi | 4/4 |  | 
+| Alice | 4/4 |  | 
+| Anthony | 4/4 |  | 
+| Ellen | 4/4 |  | 
 
 ### Table of Contents (Sprint 1 and 2 From Aug. 23 - Sept. 3):
 1. Base: https://github.com/kar722/a1-gaming/blob/main/templates/layouts/base.html
