@@ -30,7 +30,7 @@ https://github.com/kar722/a1-gaming/projects/1
 Daniel and William's Journal:
 https://docs.google.com/document/d/1vPc-NNkHoVmcHb3S6NU5yBj06MIF5NSxVOZiq8TVLoY/edit
 
-Karthik and Dylan's Journal:
+### Karthik and Dylan's Journal:
 https://docs.google.com/document/d/1R-onvhHRnXWmFq3cE78amJ_WD8tyBJaAEcQoICjz09k/edit?usp=sharing
 
 ### Objective: 
@@ -41,18 +41,14 @@ We want our website to model an e-commerce website with the purpose of reselling
 1. Cleaned up code/HTML files:
 2. Cleaned up README: https://github.com/kar722/a1-gaming/edit/main/README.md
 3. Cleaned up Scrum Board: 
-4. Theme 1:
-5. Theme 2:
-6. Revamped website, with own STYLE, COLORS, and FONTS:
-7. Theme 1:
-8. Theme 2:
-9. Location for Mini-Lab: 
-10. Embedded Brain Write:
-11. Embedded Wireframes:
-12. Embedded Greet:
-13. Embedded Test Prep Tuesday:
-14. Bootstrap Grid:
-15. Updated Journal:
+4. Revamped website, with own STYLE, COLORS, and FONTS:
+5. Location for Mini-Lab: 
+6. Embedded Brain Write:
+7. Embedded Wireframes:
+8. Embedded Greet:
+9. Embedded Test Prep Tuesday:
+10. Bootstrap Grid:
+11. Updated Journal:
 
 **Issues:** View in Scrum Board, assigned by Daniel Levy
 
