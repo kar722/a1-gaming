@@ -30,11 +30,17 @@ https://github.com/kar722/a1-gaming/projects/1
 Daniel and William's Journal:
 https://docs.google.com/document/d/1vPc-NNkHoVmcHb3S6NU5yBj06MIF5NSxVOZiq8TVLoY/edit
 
-### Karthik and Dylan's Journal:
+Karthik and Dylan's Journal:
 https://docs.google.com/document/d/1R-onvhHRnXWmFq3cE78amJ_WD8tyBJaAEcQoICjz09k/edit?usp=sharing
 
-### Objective: 
-We want our website to model an e-commerce website with the purpose of reselling gaming equipment, like computers, PC parts, and peripherals. We are planning on changing the code within the pages that we changed from Hawkers, Kangaroos, and Walruses into PCs, Console, and Mice respectively. We are also including about me pages that will be done in a dropdown as well as a greet function. Our final goal is to create something where someone can view different items and possibly buy something.
+
+
+| Name | Score | Role | Work Done |
+| - | - | - | - |
+| Daniel | 4/4 | [Individual page](https://github.com/tonyhieu/p4-oompaloompas/blob/master/templates/individual/linda.html), plans to use laptop at home and school | 
+| William | 4/4 | [Individual page](https://github.com/tonyhieu/p4-oompaloompas/blob/master/templates/individual/sanvi.html), plans to use laptop at home and school | 
+| Karthik | 4/4 | [Individual page](https://github.com/tonyhieu/p4-oompaloompas/blob/master/templates/individual/alice.html), plans to use laptop at home and school | 
+| Dylan | 4/4 | [Individual page](https://github.com/tonyhieu/p4-oompaloompas/blob/master/templates/individual/anthony.html), plans to use laptop at home and school | 
 
 
 ### Table of Contents (Sprint 3 and 4 From September 7 - Sept. 17):
@@ -50,7 +56,13 @@ We want our website to model an e-commerce website with the purpose of reselling
 10. Bootstrap Grid:
 11. Updated Journal:
 
-**Issues:** View in Scrum Board, assigned by Daniel Levy
+| Name | Score | Role | Work Done |
+| - | - | - | - |
+| Linda | 4/4 | [Individual page](https://github.com/tonyhieu/p4-oompaloompas/blob/master/templates/individual/linda.html), plans to use laptop at home and school | 
+| Sanvi | 4/4 | [Individual page](https://github.com/tonyhieu/p4-oompaloompas/blob/master/templates/individual/sanvi.html), plans to use laptop at home and school | 
+| Alice | 4/4 | [Individual page](https://github.com/tonyhieu/p4-oompaloompas/blob/master/templates/individual/alice.html), plans to use laptop at home and school | 
+| Anthony | 4/4 | [Individual page](https://github.com/tonyhieu/p4-oompaloompas/blob/master/templates/individual/anthony.html), plans to use laptop at home and school | 
+| Ellen | 4/4 | [Individual page](https://github.com/tonyhieu/p4-oompaloompas/blob/master/templates/individual/ellen.html), plans to use laptop at home and school | 
 
 ### Table of Contents (Sprint 1 and 2 From Aug. 23 - Sept. 3):
 1. Base: https://github.com/kar722/a1-gaming/blob/main/templates/layouts/base.html
@@ -69,4 +81,5 @@ We want our website to model an e-commerce website with the purpose of reselling
 14. Brain Write (August 24): https://docs.google.com/document/d/1jZKU3pm5WeYAIzSTbDu2zB90bgjFU4M6QuYsutwqypE/edit#
 15. Wireframe: https://docs.google.com/drawings/d/1VvyeTyWTGXQJn7mUw2x6wO_ZDId_wGWzCNg3LYlWItc/edit
 
-**Issues:** View in Scrum Board, assigned by Daniel Levy
+### Objective: 
+We want our website to model an e-commerce website with the purpose of reselling gaming equipment, like computers, PC parts, and peripherals. We are planning on changing the code within the pages that we changed from Hawkers, Kangaroos, and Walruses into PCs, Console, and Mice respectively. We are also including about me pages that will be done in a dropdown as well as a greet function. Our final goal is to create something where someone can view different items and possibly buy something.
