@@ -47,11 +47,11 @@ https://docs.google.com/document/d/1R-onvhHRnXWmFq3cE78amJ_WD8tyBJaAEcQoICjz09k/
 
 | Name | Score | Role | Work Done |
 | - | - | - | - |
-| Linda | 4/4 |  | 
-| Sanvi | 4/4 |  | 
-| Alice | 4/4 |  | 
-| Anthony | 4/4 |  | 
-| Ellen | 4/4 |  | 
+| Daniel | 4/4 | Scrum Master | |
+| Karthik | 4/4 | Designer | |
+| William | 4/4 | Technical Lead | | 
+| Dylan | 4/4 | Developer | |
+
 
 ### Table of Contents (Sprint 1 and 2 From Aug. 23 - Sept. 3):
 1. Base: https://github.com/kar722/a1-gaming/blob/main/templates/layouts/base.html
@@ -72,11 +72,10 @@ https://docs.google.com/document/d/1R-onvhHRnXWmFq3cE78amJ_WD8tyBJaAEcQoICjz09k/
 
 | Name | Score | Role | Work Done |
 | - | - | - | - |
-| Linda | 4/4 |  | 
-| Sanvi | 4/4 |  | 
-| Alice | 4/4 |  | 
-| Anthony | 4/4 |  | 
-| Ellen | 4/4 |  | s
+| Daniel | 4/4 | Technical Lead | |
+| Karthik | 4/4 | Designer | |
+| William | 4/4 | Scrum Master | | 
+| Dylan | 4/4 | Developer | |
 
 ### Objective: 
 We want our website to model an e-commerce website with the purpose of reselling gaming equipment, like computers, PC parts, and peripherals. We are planning on changing the code within the pages that we changed from Hawkers, Kangaroos, and Walruses into PCs, Console, and Mice respectively. We are also including about me pages that will be done in a dropdown as well as a greet function. Our final goal is to create something where someone can view different items and possibly buy something.
