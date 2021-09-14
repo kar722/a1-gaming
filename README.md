@@ -19,12 +19,6 @@ https://github.com/kar722/a1-gaming/edit/main/README.md
 
 https://github.com/kar722/a1-gaming/projects/1
 
-### Roles:
-- Scrum Master: Daniel Levy
-- Designer: Karthik Valluri
-- Technical Lead: William Du
-- Developer: Dylan Luo
-
 ### Pair Share Journals:
 Daniel and William's Journal:
 https://docs.google.com/document/d/1vPc-NNkHoVmcHb3S6NU5yBj06MIF5NSxVOZiq8TVLoY/edit
