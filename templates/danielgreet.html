@@ -7,11 +7,6 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
 <!DOCTYPE HTML>
 <html lang="en">
 
-{% set name = "" %}
-{% set github = "https://github.com/kar722/a1-gaming" %}
-{% set twitter = "https://twitter.com/NighthawkCoding" %}
-{% set youtube = "https://www.youtube.com/everythingfutbol" %}
-
 <head>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -114,7 +109,7 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
 <body>
 <div class="center-block" style="margin: 2% 5% 5%; text-align:center; font-family: 'MADE Soulmaze';">
     <div class="col-12">
-        <p style="color: white">Hello, {{name1}}!</p>
+        <p style="color: white">Hello {{name1}}!</p>
     </div>
     <div class="col-12">
         <form action="/danielgreet/" id="danielgreet" method="POST" >
@@ -132,7 +127,7 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
 
 
 
-<h1 style="text-align: center; color: aqua; font-family: Mytupi";> About Me</h1>
+<h1 style="text-align: center; color: white; font-family: Mytupi";> About Me</h1>
 
 <p style="text-align: center; color: blanchedalmond; font-family: Mytupi"> Hi, my name is Daniel Levy. I am 17 years old and I am a junior at Del Norte High School. My favorite subjects are math and computer science. I enjoy hiking, biking, swimming, and spending time with friends.
 <p style="text-align: center; color: blanchedalmond; font-family: Mytupi">
@@ -148,7 +143,7 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
 
     <style>
         body {
-            background-image: url('https://cutewallpaper.org/21/bubbles-wallpapers-hd/Colorful-Neon-Bubbles-Wallpaper,-HD-Abstract-4K-Wallpapers-.jpg');
+            background-image: url('https://images.hdqwalls.com/download/minimalist-landscape-to-1920x1080.jpg');
         }
     </style>
 

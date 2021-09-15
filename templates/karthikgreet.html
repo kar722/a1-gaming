@@ -7,11 +7,6 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
 <!DOCTYPE HTML>
 <html lang="en">
 
-{% set name = "" %}
-{% set github = "https://github.com/kar722/a1-gaming" %}
-{% set twitter = "https://twitter.com/NighthawkCoding" %}
-{% set youtube = "https://www.youtube.com/everythingfutbol" %}
-
 <head>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -115,7 +110,7 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
 <body>
 <div class="center-block" style="margin: 2% 5% 5%; text-align:center; font-family: 'MADE Soulmaze';">
     <div class="col-12">
-        <p style="color: white">Hello I am Karthik, {{name}}!</p>
+        <p style="color: white">Hello {{name}}!</p>
     </div>
     <div class="col-12">
         <form action="/karthikgreet/" id="karthikgreet" method="POST" >
@@ -130,7 +125,7 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
 
 
 
-<h1 style="text-align: center; color: aqua; font-family: Mytupi";> About Me</h1>
+<h1 style="text-align: center; color: white; font-family: Mytupi";> About Me</h1>
 
 <p style="text-align: center; color: blanchedalmond; font-family: Mytupi"> Hi, I am Karthik Valluri. I am 15 y/o and I enjoy watching basketball & soccer. I also enjoy playing tennis, video games, and playing sports with my friends. </p>
 
@@ -146,7 +141,7 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
 
     <style>
         body {
-            background-image: url('https://img2.wallspic.com/originals/3/8/0/5/6/165083-vaporwave-cars-audi_rs_2_avant-synthwave-water-1920x1080.jpg');
+            background-image: url('https://desktopwallpapershd.com/wp-content/uploads/2021/07/Minimalist-Background.jpg');
         }
     </style>
 
