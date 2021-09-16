@@ -1,16 +1,5 @@
-<!-- Custom file for standardizing Project Data
-This HTML is setup as as a Jinja2 layout, coders use layouts for:
- ... standardization of style
- ... setting expectations for data
- ... code reuse
--->
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="en">
-
-{% set name = "" %}
-{% set github = "https://github.com/kar722/a1-gaming" %}
-{% set twitter = "https://twitter.com/NighthawkCoding" %}
-{% set youtube = "https://www.youtube.com/everythingfutbol" %}
 
 <head>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -98,18 +87,16 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
 
     </style>
 
-    <title>{{ project }} | A1 from Day 0 </title>
 
 </head>
 
 <body>
 {% include "layouts/navbar.html" %}
+</body>
 
-<!DOCTYPE html>
-<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>How its Made | A1 From Day 0</title>
 </head>
 
 <style>
@@ -127,18 +114,19 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
 </style>
 
 <body>
+
 <div class="container">
     <div class="row">
         <div class="column">
-            <h3>
+            <h2>
                 Greet Function
-            </h3>
+            </h2>
             <div class="center-block" style="margin: 2% 5% 5%; text-align:left; font-family: gilroy,serif;">
                 <div class="col-12">
                     <p>Hello, {{name1}}!</p>
                 </div>
                 <div class="col-12">
-                    <form action="/grid" id="greet" method="POST" >
+                    <form action="/greet" id="greet" method="POST" >
                         <label for="name">Type a greeting name?</label>
                         <input name = "name" id = "name">
                         <input type="submit" value="Greetings!">
@@ -153,20 +141,24 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
             <h3>
                 Brain Write
             </h3>
-            <iframe width=300 height=300 src="https://docs.google.com/document/d/e/2PACX-1vQeZeORW97-6JQHMGD7y89dJbbJ_7iWR3rnxLI2qnhTvnzsTEY1MBJpbmC0f8Rje0E1sSNyecRtTl_f/pub?embedded=true"></iframe>
+            <iframe width=250 height=300 src="https://docs.google.com/document/d/e/2PACX-1vQeZeORW97-6JQHMGD7y89dJbbJ_7iWR3rnxLI2qnhTvnzsTEY1MBJpbmC0f8Rje0E1sSNyecRtTl_f/pub?embedded=true"></iframe>
         </div>
-        <div class="column">
-            <h3>
-                Wireframe
-            </h3>
-            <img src="https://docs.google.com/drawings/d/e/2PACX-1vRShAZTJ41COdJBqnRYKc93VixamsrVGCVLnCOM-gu0XYuEhqtCGF2GK7f-_UBp46CeXj3lHjof4ZEc/pub?w=960&amp;h=720" width=300 height=300></iframe>
-        </div>
+
         <div class="column">
             <h3>
                 Test Prep Tuesday
             </h3>
-            <iframe width=300 height=300 src="https://docs.google.com/document/d/e/2PACX-1vTK42vARxbG0wi8lez4Rec6iRqdD6knC-hin26Eio5ei7VWfHlAHNpbp7MrNdAsDRjfvnUmw969aieR/pub?embedded=true"></iframe>
+            <iframe width=250 height=300 src="https://docs.google.com/document/d/e/2PACX-1vTK42vARxbG0wi8lez4Rec6iRqdD6knC-hin26Eio5ei7VWfHlAHNpbp7MrNdAsDRjfvnUmw969aieR/pub?embedded=true"></iframe>
         </div>
+
+        <div class="row">
+            <h3>
+                Wireframe
+            </h3>
+            <img src="https://docs.google.com/drawings/d/e/2PACX-1vRShAZTJ41COdJBqnRYKc93VixamsrVGCVLnCOM-gu0XYuEhqtCGF2GK7f-_UBp46CeXj3lHjof4ZEc/pub?w=960&amp;h=720" width=1000 height=975 ></iframe>
+        </div>
+
     </div>
 </div>
 </body>
+</html>

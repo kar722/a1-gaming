@@ -7,6 +7,8 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
 <!DOCTYPE HTML>
 <html lang="en">
 
+
+
 <head>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -93,7 +95,7 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
 
     </style>
 
-    <title>{{ project }} | A1 from Day 0 </title>
+    <title> About Dylan | A1 from Day 0 </title>
 
 </head>
 
@@ -109,7 +111,7 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
 <body>
 <div class="center-block" style="margin: 2% 5% 5%; text-align:center; font-family: 'MADE Soulmaze';">
     <div class="col-12">
-        <p style="color: white">Hello {{name1}}!</p>
+        <p style="color: white">Hello, {{name1}}!</p>
     </div>
     <div class="col-12">
         <form action="/dylangreet/" id="dylangreet" method="POST" >
@@ -127,11 +129,15 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
 
 
 
-<h1 style="text-align: center; color: white; font-family: Mytupi";> About Me</h1>
+<h1 style="text-align: center; color: aqua; font-family: Mytupi";> About Me</h1>
 
 <p style="text-align: center; color: blanchedalmond; font-family: Mytupi">
 
-<p style="text-align: center; color: blanchedalmond; font-family: Mytupi"> Hey, my name is Dylan Luo. I am 16 and I am a junior at Del Norte High School. My favorite subjects are math and computer science. I enjoy watching and playing soccer with my friends, and I also enjoy editing videos.
+<p style="text-align: center; color: blanchedalmond; font-family: Mytupi"> My name is Dylan Luo. I am 16 and I am a junior at Del Norte High School. My favorite subjects are math and computer science. I enjoy watching and playing soccer with my friends.
+
+
+    <img src="/static/assets/dylan.jpg" alt="Greeting" width="270" height="330">
+
 
     <!-- dylan is goated honestly -->
 
