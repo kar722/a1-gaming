@@ -120,6 +120,10 @@ def greet1288():
     # starting and empty input default
     return render_template("howitsmade.html.html", name1="World")
 
+@app.route('/rgb', methods=["GET", "POST"])
+def rgb():
+    return render_template("rgb.html", images=image_data())
+
 # runs the application on the development server
 if __name__ == "__main__":
     app.run(debug=True)
