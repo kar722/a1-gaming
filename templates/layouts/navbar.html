@@ -20,9 +20,9 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
         <div class="navbar-nav">
             <!-- url_for is a Jinja2 pre-processor that finds route from function name (def) -->
             <a class="nav-link" href={{ url_for('index') }}>A1 Gaming</a>
-            <a class="nav-link" href={{ url_for('kangaroos') }}>PCs</a>
-            <a class="nav-link" href={{ url_for('walruses') }}>Console</a>
-            <a class="nav-link" href={{ url_for('hawkers') }}>Mobile</a>
+            <a class="nav-link" href={{ url_for('PCs') }}>PCs</a>
+            <a class="nav-link" href={{ url_for('Console') }}>Console</a>
+            <a class="nav-link" href={{ url_for('Mobile') }}>Mobile</a>
             <a class="nav-link" href={{ url_for('rgb') }}>rgb</a>
             <!-- stub is shown using the name of the route -->
 
@@ -46,6 +46,7 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
                     <a class="nav-link" href="/Video Journals/">Video Journals</a>
                     <a class="nav-link" href="/binary/">Binary</a>
                     <a class="nav-link" href="/howitsmade/">How It's Made</a>
+                    <a class="nav-link" href="/rgb/">RGB</a>
                 </div>
 
             </div>
