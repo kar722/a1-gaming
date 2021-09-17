@@ -108,6 +108,7 @@ def binary():
 def howitsmade():
     return render_template("howitsmade.html")
 
+<<<<<<< HEAD
 @app.route('/rgb/')
 def rgb():
     return render_template("rgb.html")
@@ -116,6 +117,12 @@ def rgb():
 def rgb():
     return render_template("color.html")
 
+@app.route('/rgb/')
+def rgb():
+    return render_template("color.html")
+
+=======
+>>>>>>> parent of 3a80068 (rgb)
 # runs the application on the development server
 if __name__ == "__main__":
     app.run(debug=True)
