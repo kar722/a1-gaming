@@ -26,18 +26,7 @@ https://docs.google.com/document/d/1vPc-NNkHoVmcHb3S6NU5yBj06MIF5NSxVOZiq8TVLoY/
 Karthik and Dylan's Journal:
 https://docs.google.com/document/d/1R-onvhHRnXWmFq3cE78amJ_WD8tyBJaAEcQoICjz09k/edit?usp=sharing
 
-### Table of Contents (Sprint 3 and 4 From September 7 - Sept. 17):
-1. Cleaned up code/HTML files:
-2. Cleaned up README: https://github.com/kar722/a1-gaming/edit/main/README.md
-3. Cleaned up Scrum Board: 
-4. Revamped website, with own STYLE, COLORS, and FONTS:
-5. Location for Mini-Lab: 
-6. Embedded Brain Write:
-7. Embedded Wireframes:
-8. Embedded Greet:
-9. Embedded Test Prep Tuesday:
-10. Bootstrap Grid:
-11. Updated Journal:
+
 
 | Name | Score | Role | Work Done |
 | - | - | - | - |
