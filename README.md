@@ -41,10 +41,10 @@ https://docs.google.com/document/d/1R-onvhHRnXWmFq3cE78amJ_WD8tyBJaAEcQoICjz09k/
 
 | Name | Score | Role | Work Done |
 | - | - | - | - |
-| Daniel | 4/4 | Scrum Master | |
-| Karthik | 4/4 | Designer | |
-| William | 4/4 | Technical Lead | | 
-| Dylan | 4/4 | Developer | |
+| Daniel | 4/4 | Scrum Master | Displayed in video/scrum board |
+| Karthik | 4/4 | Designer | Displayed in video/scrum board |
+| William | 4/4 | Technical Lead | Displayed in video/scrum board | 
+| Dylan | 4/4 | Developer | Displayed in video/scrum board |
 
 
 ### Table of Contents (Sprint 1 and 2 From Aug. 23 - Sept. 3):
