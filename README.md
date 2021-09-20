@@ -27,6 +27,11 @@ Karthik and Dylan's Journal:
 https://docs.google.com/document/d/1R-onvhHRnXWmFq3cE78amJ_WD8tyBJaAEcQoICjz09k/edit?usp=sharing
 
 
+### Table of Contents (Sprint 1 and 2 From Aug. 23 - Sept. 3):
+
+
+### Table of Contents (Sprint 1 and 2 From Aug. 23 - Sept. 3):
+
 
 | Name | Score | Role | Work Done |
 | - | - | - | - |
@@ -55,10 +60,10 @@ https://docs.google.com/document/d/1R-onvhHRnXWmFq3cE78amJ_WD8tyBJaAEcQoICjz09k/
 
 | Name | Score | Role | Work Done |
 | - | - | - | - |
-| Daniel | 4/4 | Technical Lead | |
-| Karthik | 4/4 | Designer | |
-| William | 4/4 | Scrum Master | | 
-| Dylan | 4/4 | Developer | |
+| Daniel | 4/4 | Technical Lead | Displayed in video/scrum board |
+| Karthik | 4/4 | Designer | Displayed in video/scrum board |
+| William | 4/4 | Scrum Master | Displayed in video/scrum board | 
+| Dylan | 4/4 | Developer | Displayed in video/scrum board |
 
 ### Objective: 
 We want our website to model an e-commerce website with the purpose of reselling gaming equipment, like computers, PC parts, and peripherals. We are planning on changing the code within the pages that we changed from Hawkers, Kangaroos, and Walruses into PCs, Console, and Mice respectively. We are also including about me pages that will be done in a dropdown as well as a greet function. Our final goal is to create something where someone can view different items and possibly buy something.
