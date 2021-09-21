@@ -35,7 +35,7 @@ https://github.com/kar722/a1-gaming/edit/main/README.md
 4. [Bootstrap Grid with Wireframe, Greet, and TPT3](https://github.com/kar722/a1-gaming/blob/main/templates/howitsmade.html)
 5. [Changed DOM](https://github.com/kar722/a1-gaming/blob/main/templates/layouts/navbar.html)
 6. [Binary Math](https://github.com/kar722/a1-gaming/blob/main/templates/binary.html)
-7. [Binary Display (will be updated)](https://github.com/kar722/a1-gaming/blob/main/templates/rgb.html)
+7. [RGB Values Within an Image (will be updated)](https://github.com/kar722/a1-gaming/blob/main/templates/rgb.html)
 
 | Name | Score | Role | Work Done |
 | - | - | - | - |
