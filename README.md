@@ -32,12 +32,13 @@ https://github.com/kar722/a1-gaming/edit/main/README.md
 | Dylan | 4/4 | Developer | Displayed in video/scrum board |
 
 ### Table of Contents (Sprint 3 and 4 From Sept. 10 - Sept. 17):
-1. [New Style, Colors, Fonts](https://github.com/kar722/a1-gaming/blob/main/templates/layouts/base.html)
-2. [New Mini Labs Location](https://github.com/kar722/a1-gaming/blob/main/templates/layouts/navbar.html)
-3. [Bootstrap Grid with Wireframe, Greet, and TPT3](https://github.com/kar722/a1-gaming/blob/main/templates/layouts/project.html)
-4. [Changed DOM](https://github.com/kar722/a1-gaming/blob/main/templates/greet.html)
-5. [Binary Math](https://github.com/kar722/a1-gaming/blob/main/templates/danielgreet.html)
-6. [Binary Display (will be updated)](https://github.com/kar722/a1-gaming/blob/main/templates/karthikgreet.html)
+1. [New Style, Colors, Fonts 1](https://github.com/kar722/a1-gaming/blob/main/templates/Apple.html)
+2. [New Style, Colors, Fonts 2](https://github.com/kar722/a1-gaming/blob/main/templates/Samsung.html)
+3. [New Mini Labs Location](https://github.com/kar722/a1-gaming/blob/main/templates/layouts/navbar.html)
+4. [Bootstrap Grid with Wireframe, Greet, and TPT3](https://github.com/kar722/a1-gaming/blob/main/templates/howitsmade.html)
+5. [Changed DOM](https://github.com/kar722/a1-gaming/blob/main/templates/layouts/navbar.html)
+6. [Binary Math](https://github.com/kar722/a1-gaming/blob/main/templates/binary.html)
+7. [Binary Display (will be updated)](https://github.com/kar722/a1-gaming/blob/main/templates/rgb.html)
 
 | Name | Score | Role | Work Done |
 | - | - | - | - |
