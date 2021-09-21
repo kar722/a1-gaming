@@ -108,6 +108,14 @@ def binary():
 def howitsmade():
     return render_template("howitsmade.html")
 
+@app.route('/Apple/')
+def Apple():
+    return render_template("Apple.html")
+
+@app.route('/Samsung/')
+def Samsung():
+    return render_template("Samsung.html")
+
 
 
 @app.route('/howitsmade/', methods=['GET', 'POST'])
