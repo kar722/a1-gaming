@@ -15,17 +15,6 @@
 ### Repository:
 https://github.com/kar722/a1-gaming/edit/main/README.md
 
-### Scrum Board:
-
-https://github.com/kar722/a1-gaming/projects/1
-
-### Pair Share Journals:
-Daniel and William's Journal:
-https://docs.google.com/document/d/1vPc-NNkHoVmcHb3S6NU5yBj06MIF5NSxVOZiq8TVLoY/edit
-
-Karthik and Dylan's Journal:
-https://docs.google.com/document/d/1R-onvhHRnXWmFq3cE78amJ_WD8tyBJaAEcQoICjz09k/edit?usp=sharing
-
 
 ### Table of Contents (Sprint 5 and 6 From Sept. 20 - Oct. 1):
 1. [Base](https://github.com/kar722/a1-gaming/blob/main/templates/layouts/base.html)
@@ -44,7 +33,14 @@ https://docs.google.com/document/d/1R-onvhHRnXWmFq3cE78amJ_WD8tyBJaAEcQoICjz09k/
 14. [Brain Write (August 24)](https://docs.google.com/document/d/1jZKU3pm5WeYAIzSTbDu2zB90bgjFU4M6QuYsutwqypE/edit#)
 15. [Wireframe](https://docs.google.com/drawings/d/1VvyeTyWTGXQJn7mUw2x6wO_ZDId_wGWzCNg3LYlWItc/edit)
 
-### Table of Contents (Sprint 3 and 4 From September  Sept. 3):
+| Name | Score | Role | Work Done |
+| - | - | - | - |
+| Daniel | 4/4 | Scrum Master | Displayed in video/scrum board |
+| Karthik | 4/4 | Designer | Displayed in video/scrum board |
+| William | 4/4 | Technical Lead | Displayed in video/scrum board | 
+| Dylan | 4/4 | Developer | Displayed in video/scrum board |
+
+### Table of Contents (Sprint 3 and 4 From Sept. 10 - Sept. 17):
 1. [Base](https://github.com/kar722/a1-gaming/blob/main/templates/layouts/base.html)
 2. [Navbar w/ Dropdown](https://github.com/kar722/a1-gaming/blob/main/templates/layouts/navbar.html)
 3. [Project](https://github.com/kar722/a1-gaming/blob/main/templates/layouts/project.html)
