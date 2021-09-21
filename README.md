@@ -17,12 +17,9 @@ https://github.com/kar722/a1-gaming/edit/main/README.md
 
 
 ### Table of Contents (Sprint 5 and 6 From Sept. 20 - Oct. 1):
-1. [New Style, Colors, Fonts](https://github.com/kar722/a1-gaming/blob/main/templates/layouts/base.html)
-2. [New Mini Labs Location](https://github.com/kar722/a1-gaming/blob/main/templates/layouts/navbar.html)
-3. [Bootstrap Grid with Wireframe, Greet, and TPT3](https://github.com/kar722/a1-gaming/blob/main/templates/layouts/project.html)
-4. [Changed DOM](https://github.com/kar722/a1-gaming/blob/main/templates/greet.html)
-5. [Binary Math](https://github.com/kar722/a1-gaming/blob/main/templates/danielgreet.html)
-6. [Binary Display (will be updated)](https://github.com/kar722/a1-gaming/blob/main/templates/karthikgreet.html)
+1. [9/20 Student Review](https://github.com/kar722/a1-gaming/issues/30)
+2. [RGB Values Within an Image: Front End](Add here)
+3. [RGB Values Within an Image: Back End](Add Here)
 
 | Name | Score | Role | Work Done |
 | - | - | - | - |
