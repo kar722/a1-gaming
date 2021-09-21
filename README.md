@@ -17,21 +17,12 @@ https://github.com/kar722/a1-gaming/edit/main/README.md
 
 
 ### Table of Contents (Sprint 5 and 6 From Sept. 20 - Oct. 1):
-1. [Base](https://github.com/kar722/a1-gaming/blob/main/templates/layouts/base.html)
-2. [Navbar w/ Dropdown](https://github.com/kar722/a1-gaming/blob/main/templates/layouts/navbar.html)
-3. [Project](https://github.com/kar722/a1-gaming/blob/main/templates/layouts/project.html)
-4. [Greet function](https://github.com/kar722/a1-gaming/blob/main/templates/greet.html)
-5. [Daniel's about me page](https://github.com/kar722/a1-gaming/blob/main/templates/danielgreet.html)
-6. [Karthik's about me page](https://github.com/kar722/a1-gaming/blob/main/templates/karthikgreet.html)
-7. [William's about me page](https://github.com/kar722/a1-gaming/blob/main/templates/williamgreet.html)
-8. [Dylan's about me page](https://github.com/kar722/a1-gaming/blob/main/templates/dylangreet.html)
-9. [Index](https://github.com/kar722/a1-gaming/blob/main/templates/index.html)
-10. [Mobile accessories](https://github.com/kar722/a1-gaming/blob/main/templates/hawkers.html)
-11. [PCs](https://github.com/kar722/a1-gaming/blob/main/templates/kangaroos.html)
-12. [Consoles](https://github.com/kar722/a1-gaming/blob/main/templates/walruses.html)
-13. [Mini Labs](https://github.com/kar722/a1-gaming/blob/main/templates/mini-labs.html)
-14. [Brain Write (August 24)](https://docs.google.com/document/d/1jZKU3pm5WeYAIzSTbDu2zB90bgjFU4M6QuYsutwqypE/edit#)
-15. [Wireframe](https://docs.google.com/drawings/d/1VvyeTyWTGXQJn7mUw2x6wO_ZDId_wGWzCNg3LYlWItc/edit)
+1. [New Style, Colors, Fonts](https://github.com/kar722/a1-gaming/blob/main/templates/layouts/base.html)
+2. [New Mini Labs Location](https://github.com/kar722/a1-gaming/blob/main/templates/layouts/navbar.html)
+3. [Bootstrap Grid with Wireframe, Greet, and TPT3](https://github.com/kar722/a1-gaming/blob/main/templates/layouts/project.html)
+4. [Changed DOM](https://github.com/kar722/a1-gaming/blob/main/templates/greet.html)
+5. [Binary Math](https://github.com/kar722/a1-gaming/blob/main/templates/danielgreet.html)
+6. [Binary Display (will be updated)](https://github.com/kar722/a1-gaming/blob/main/templates/karthikgreet.html)
 
 | Name | Score | Role | Work Done |
 | - | - | - | - |
@@ -41,21 +32,12 @@ https://github.com/kar722/a1-gaming/edit/main/README.md
 | Dylan | 4/4 | Developer | Displayed in video/scrum board |
 
 ### Table of Contents (Sprint 3 and 4 From Sept. 10 - Sept. 17):
-1. [Base](https://github.com/kar722/a1-gaming/blob/main/templates/layouts/base.html)
-2. [Navbar w/ Dropdown](https://github.com/kar722/a1-gaming/blob/main/templates/layouts/navbar.html)
-3. [Project](https://github.com/kar722/a1-gaming/blob/main/templates/layouts/project.html)
-4. [Greet function](https://github.com/kar722/a1-gaming/blob/main/templates/greet.html)
-5. [Daniel's about me page](https://github.com/kar722/a1-gaming/blob/main/templates/danielgreet.html)
-6. [Karthik's about me page](https://github.com/kar722/a1-gaming/blob/main/templates/karthikgreet.html)
-7. [William's about me page](https://github.com/kar722/a1-gaming/blob/main/templates/williamgreet.html)
-8. [Dylan's about me page](https://github.com/kar722/a1-gaming/blob/main/templates/dylangreet.html)
-9. [Index](https://github.com/kar722/a1-gaming/blob/main/templates/index.html)
-10. [Mobile accessories](https://github.com/kar722/a1-gaming/blob/main/templates/hawkers.html)
-11. [PCs](https://github.com/kar722/a1-gaming/blob/main/templates/kangaroos.html)
-12. [Consoles](https://github.com/kar722/a1-gaming/blob/main/templates/walruses.html)
-13. [Mini Labs](https://github.com/kar722/a1-gaming/blob/main/templates/mini-labs.html)
-14. [Brain Write (August 24)](https://docs.google.com/document/d/1jZKU3pm5WeYAIzSTbDu2zB90bgjFU4M6QuYsutwqypE/edit#)
-15. [Wireframe](https://docs.google.com/drawings/d/1VvyeTyWTGXQJn7mUw2x6wO_ZDId_wGWzCNg3LYlWItc/edit)
+1. [New Style, Colors, Fonts](https://github.com/kar722/a1-gaming/blob/main/templates/layouts/base.html)
+2. [New Mini Labs Location](https://github.com/kar722/a1-gaming/blob/main/templates/layouts/navbar.html)
+3. [Bootstrap Grid with Wireframe, Greet, and TPT3](https://github.com/kar722/a1-gaming/blob/main/templates/layouts/project.html)
+4. [Changed DOM](https://github.com/kar722/a1-gaming/blob/main/templates/greet.html)
+5. [Binary Math](https://github.com/kar722/a1-gaming/blob/main/templates/danielgreet.html)
+6. [Binary Display (will be updated)](https://github.com/kar722/a1-gaming/blob/main/templates/karthikgreet.html)
 
 | Name | Score | Role | Work Done |
 | - | - | - | - |
