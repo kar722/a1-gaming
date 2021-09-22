@@ -1,5 +1,5 @@
 <!-- Extending the project layout, as this file will do minor customizations -->
-{% extends "layouts/project2.html" %}
+{% extends "layouts/base.html" %}
 
 <!-- Setting up variables to customize "project" details to be specific to walruses -->
 {% set project = "Consoles" %}
@@ -7,6 +7,23 @@
 {% set Xbox = "https://www.youtube.com/channel/UClIKOsDS5dsfzFA3zveDT3Q?view_as=subscriber" %}
 {% set Nintendo = "https://github.com/avabrooks/Python-Web-Portfolio-Series-Demo" %}
 
+{% block links %}
+
+    <div class="col-3">
+        <a style = "position:relative; left:-90px; top: -10px;" href="/PlayStation/" class="btn">PlayStation</a>
+    </div>
+
+    <div class="col-3">
+        <a style = "position:relative; left:-85px; top: -10px;" href="/xbox/" class="btn">Xbox</a>
+    </div>
+
+    <div class="col-3">
+        <a style = "position:relative; left:-200px; top: -10px;" href="{{ nintendo }}" class="btn">Nintendo</a>
+    </div>
+
+{% endblock %}
+
+</html>
 
 <!-- Setting up a block replacement to customize background to RINGS -->
 {% block background %}

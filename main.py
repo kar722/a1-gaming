@@ -91,6 +91,9 @@ def PCs():
 def Console():
     return render_template("walruses.html")
 
+@app.route('/PlayStation/')
+def PlayStation():
+    return render_template("PlayStation.html")
 
 @app.route('/Mobile/')
 def Mobile():
@@ -117,6 +120,9 @@ def Samsung():
     return render_template("Samsung.html")
 
 
+@app.route('/xbox/')
+def xbox():
+    return render_template("xbox.html")
 
 @app.route('/howitsmade/', methods=['GET', 'POST'])
 def greet1288():
