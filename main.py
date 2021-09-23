@@ -1,6 +1,6 @@
 # import "packages" from flask
 from flask import Flask, render_template, request
-
+from image import image_data
 # create a Flask instance
 app = Flask(__name__)
 
@@ -103,9 +103,15 @@ def Mobile():
 def mini():
     return render_template("Video Journals.html")
 
-@app.route('/binary/')
+@app.route("/binary/", methods = ['GET', 'POST'])
 def binary():
-    return render_template("binary.html")
+    BITS = 4
+    imgBulbOn = "/static/assets/bulb_on.gif"
+    # second time you call it, its a post action
+    if request.method == 'POST':
+        BITS = int(request.form['BITS'])
+        imgBulbOn = request.form['lightOn']
+    return render_template("binary.html", imgBulbOn=imgBulbOn, BITS=BITS)
 
 @app.route('/howitsmade/')
 def howitsmade():
@@ -134,7 +140,7 @@ def greet1288():
     # starting and empty input default
     return render_template("howitsmade.html.html", name1="World")
 
-@app.route('/rgb', methods=["GET", "POST"])
+@app.route('/rgb/')
 def rgb():
     return render_template("rgb.html", images=image_data())
 
