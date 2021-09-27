@@ -6,6 +6,7 @@ from pathlib import Path  # https://medium.com/@ageitgey/python-3-quick-tip-the-
 # create a Flask instance
 app = Flask(__name__)
 
+
 @app.route('/karthikgreet/')
 def greet0():
     return render_template("karthikgreet.html")
@@ -145,7 +146,8 @@ def greet1288():
 @app.route('/rgb/')
 def rgb():
     path = Path(app.root_path) / "static" / "img"
-    return render_template('starter/rgb.html', images=image_data(path))
+#    return render_template('starter/rgb.html', images=image_data(path))
+    return render_template('rgb.html', images=image_data(path))
 
 # runs the application on the development server
 if __name__ == "__main__":

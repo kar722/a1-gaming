@@ -4,12 +4,15 @@ import base64
 from io import BytesIO
 from pathlib import Path  # https://medium.com/@ageitgey/python-3-quick-tip-the-easy-way-to-deal-with-file-paths-on-windows-mac-and-linux-11a072b58d5f
 
-
 # image (PNG, JPG) to base64 conversion (string), learn about base64 on wikipedia https://en.wikipedia.org/wiki/Base64
 def image_base64(img, img_type):
     with BytesIO() as buffer:
         img.save(buffer, img_type)
         return base64.b64encode(buffer.getvalue()).decode()
+
+def image_data(path=Path("static/assets/"), img_list=None):  # path of static images is defaulted
+    for img_dict in img_list:
+        file = path / img_dict['file']
 
 
 # formatter preps base64 string for inclusion, ie <img src=[this return value] ... />
@@ -18,14 +21,10 @@ def image_formatter(img, img_type):
 
 
 # color_data prepares a series of images for data analysis
-def image_data(path=Path("static/img/"), img_list=None):  # path of static images is defaulted
+def image_data(path=Path("static/assets/"), img_list=None):  # path of static images is defaulted
     if img_list is None:  # color_dict is defined with defaults
         img_list = [
-            {'source': "Peter Carolin", 'label': "Lassen Volcano", 'file': "lassen-volcano-256.jpg"},
-            {'source': "iconsdb.com", 'label': "Black square", 'file': "black-square-16.png"},
-            {'source': "iconsdb.com", 'label': "Red square", 'file': "red-square-16.png"},
-            {'source': "iconsdb.com", 'label': "Green square", 'file': "green-square-16.png"},
-            {'source': "iconsdb.com", 'label': "Blue square", 'file': "blue-square-16.jpg"},
+            {'source': "danielscomputer", 'label': "Daniel is the Best Scrum Master", 'file': "DanielPhotograph.PNG"},
             {'source': "iconsdb.com", 'label': "White square", 'file': "white-square-16.png"},
         ]
     # gather analysis data and meta data for each image, adding attributes to each row in table
@@ -69,7 +68,8 @@ def image_data(path=Path("static/img/"), img_list=None):  # path of static image
 
 # run this as standalone tester to see data printed in terminal
 if __name__ == "__main__":
-    local_path = Path("../starter/static/img/")
+#   local_path = Path("../starter/static/img/")
+    local_path = Path("static/img/")
     img_test = [
         {'source': "Peter Carolin", 'label': "Lassen Volcano", 'file': "lassen-volcano-256.jpg"},
     ]
