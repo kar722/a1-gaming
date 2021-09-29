@@ -166,12 +166,12 @@
     }
 
     .active, .collapsible:hover {
-      background-color: #555;
+      background-color: black;
     }
 
     .collapsible:after {
       content: '\002B';
-      color: white;
+      color: black;
       font-weight: bold;
       float: right;
       margin-left: 5px;
@@ -186,7 +186,7 @@
       max-height: 0;
       overflow: hidden;
       transition: max-height 0.2s ease-out;
-      background-color: #f1f1f1;
+      background-color: #101010;
     }
   </style>
 
@@ -215,7 +215,10 @@
   <div class="card" style="border: white; width: 35rem;"><div class="cell cell-1"><img src="/static/assets/Alienware_2D00_17_2D00_Front_2D00_Reflection_2D00_1200_5F00_74014EC9.jpg" alt="Greeting" width="550" height="400"></div>
     <div class="card-body">
       <h5 class="card-title">Alienware 17 3D Laptop</h5>
-      <p class="card-text" style = "color: #696969;">Refreshing gaming laptop with sleek blue appearance</p>
+      <button class="collapsible">Hardware</button>
+      <div class="content">
+        <p>Processor</p>
+      </div>
     </div>
   </div>
   <div class="card" style="border: white; width: 35rem;"><div class="cell cell-2"><img src="/static/assets/razer.jpeg" alt="Greeting" width="550" height="400"></div>
@@ -223,20 +226,26 @@
       <h5 class="card-title">Razer Blade 15 Gaming Laptop</h5>
       <button class="collapsible">Hardware</button>
       <div class="content">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <p>Processor</p>
       </div>
     </div>
   </div>
   <div class="card" style="border: white; width: 35rem;"><div class="cell cell-3"><img src="/static/assets/1622470414596.jpg" alt="Greeting" width="550" height="400"></div>
     <div class="card-body">
       <h5 class="card-title">Asus ROG Gaming Laptop</h5>
-      <p class="card-text" style = "color: #696969;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <button class="collapsible">Hardware</button>
+      <div class="content">
+        <p>Processor</p>
+      </div>
     </div>
   </div>
   <div class="card" style="border: white; width: 35rem;"><div class="cell cell-4"><img src="/static/assets/Falcon-Northwest-FB-share-1200x628.jpg" alt="Greeting" width="550" height="400"></div>
     <div class="card-body">
       <h5 class="card-title">Falcon Northwest DRX and TLX Gaming Laptops Bundle</h5>
-      <p class="card-text" style = "color: #696969;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <button class="collapsible">Hardware</button>
+      <div class="content">
+        <p>Processor</p>
+      </div>
     </div>
   </div>
 </div>
