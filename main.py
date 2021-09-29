@@ -132,6 +132,10 @@ def Samsung():
 def xbox():
     return render_template("xbox.html")
 
+@app.route('/Laptops/')
+def Laptops():
+    return render_template("Laptops.html")
+
 @app.route('/howitsmade/', methods=['GET', 'POST'])
 def greet1288():
     # submit button has been pushed
@@ -140,9 +144,9 @@ def greet1288():
         if len(name) != 0:  # input field has content
             return render_template("howitsmade.html", name1=name)
     # starting and empty input default
-    return render_template("howitsmade.html.html", name1="World")
+    return render_template("howitsmade.html", name1="World")
 
-@app.route('/rgb/')
+@app.route('/rgb/', methods=['GET', 'POST'])
 def rgb():
     path = Path(app.root_path) / "static" / "img"
 #    return render_template('starter/rgb.html', images=image_data(path))
