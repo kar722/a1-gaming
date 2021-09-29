@@ -18,15 +18,16 @@ https://github.com/kar722/a1-gaming/edit/main/README.md
 
 ### Table of Contents (Sprint 5 and 6 From Sept. 20 - Oct. 1):
 1. [9/20 Student Review](https://github.com/kar722/a1-gaming/issues/30)
-2. [RGB Values Within an Image: Front End](Add here)
-3. [RGB Values Within an Image: Back End](Add Here)
+2. [RGB Values Within an Image](https://github.com/kar722/a1-gaming/blob/main/templates/rgb.html)
+3. [Cards/Other Developments](https://github.com/kar722/a1-gaming/blob/main/templates/Apple.html)
+4. [Hackathon](https://github.com/kar722/a1-gaming/blob/main/templates/ListHackathon.py)
 
 | Name | Score | Role | Work Done |
 | - | - | - | - |
-| Daniel | 4/4 | Scrum Master | Displayed in video/scrum board |
-| Karthik | 4/4 | Designer | Displayed in video/scrum board |
-| William | 4/4 | Technical Lead | Displayed in video/scrum board | 
-| Dylan | 4/4 | Developer | Displayed in video/scrum board |
+| Daniel | 4/4 | Scrum Master | [Displayed in video/scrum board](https://github.com/kar722/a1-gaming/issues/38) |
+| Karthik | 4/4 | Designer | [Displayed in video/scrum board](https://github.com/kar722/a1-gaming/issues/41) |
+| William | 4/4 | Technical Lead | [Displayed in video/scrum board](https://github.com/kar722/a1-gaming/issues/39) | 
+| Dylan | 4/4 | Developer | [Displayed in video/scrum board](https://github.com/kar722/a1-gaming/projects/1) |
 
 ### Table of Contents (Sprint 3 and 4 From Sept. 10 - Sept. 17):
 1. [New Style, Colors, Fonts 1](https://github.com/kar722/a1-gaming/blob/main/templates/Apple.html)
