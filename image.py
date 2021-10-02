@@ -22,7 +22,8 @@ def image_formatter(img, img_type):
 def image_data(path=Path("static/assets/"), img_list=None):  # path of static images is defaulted
     if img_list is None:  # color_dict is defined with defaults
         img_list = [
-         {'source': "danielscomputer", 'label': "Daniel is the Best Scrum Master", 'file': "DanielPhotograph.PNG"},
+#            {'source': "danielscomputer", 'label': "Daniel is the Best Scrum Master", 'file': "DanielPhotograph.PNG"},
+            {'source': "iconsdb.com", 'label': "White square", 'file': "white-square-16.png"},
         ]
     # gather analysis data and meta data for each image, adding attributes to each row in table
     for img_dict in img_list:

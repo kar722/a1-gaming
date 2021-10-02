@@ -1,26 +1,24 @@
 <!DOCTYPE html>
-{% include "layouts/navbar.html" %}
+{% extends "layouts/base.html" %}
+
 {% block background %}
 {% block meta %}
-
-<script
-        src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
-</script>
 
 <script>
     var imageType = 0; // 0 is color, 1 is gray
 
     function toggle() {
         if (imageType == 0) {
-            $('#colored').hide();
-            $('#grayscale').show();
+            $('#colored').hide()
+            $('#grayscale').show()
             imageType = 1;
         } else {
-            $('#grayscale').hide();
-            $('#colored').show();
+            $('#grayscale').hide()
+            $('#colored').show()
             imageType = 0;
         }
     }
+
 
 </script>
 
