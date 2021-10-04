@@ -1,31 +1,32 @@
 <!DOCTYPE html>
 {% extends "layouts/base.html" %}
-
 {% block background %}
+{% block body %}
 {% block meta %}
+{% block content %}
 
+<script
+        src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+</script>
 <script>
-    var imageType = 0; // 0 is color, 1 is gray
+    var imageType = 0;
 
     function toggle() {
         if (imageType == 0) {
-            $('#colored').hide()
-            $('#grayscale').show()
+            $('#colored').hide();
+            $('#grayscale').show(); 3
             imageType = 1;
         } else {
-            $('#grayscale').hide()
-            $('#colored').show()
+            $('#grayscale').hide();
+            $('#colored').show();
             imageType = 0;
         }
     }
 
-
 </script>
 
 <title>RGB starter</title>
-{% endblock %}
 
-{% block content %}
 <h1 class="text-center">RGB values within an Image</h1>
 <div class="container">
     <button onclick="toggle()">Toggle the Colors!</button>
@@ -141,16 +142,15 @@
             </tbody>
         </table>
 
-    </div> <!-- end gray -->
+    </div>
 </div>
-
-
 <script>
-    $( document ).ready(function() {
+    $( document ).ready(function()
+    {
         $('#grayscale').hide()
     });
 </script>
 {% endblock %}
 {% endblock %}
-
-
+{% endblock %}
+{% endblock %}

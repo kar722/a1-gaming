@@ -1,3 +1,5 @@
+from PIL import Image, ImageDraw
+import numpy
 import base64
 from io import BytesIO
 from pathlib import Path  # https://medium.com/@ageitgey/python-3-quick-tip-the-easy-way-to-deal-with-file-paths-on-windows-mac-and-linux-11a072b58d5f
@@ -22,8 +24,10 @@ def image_formatter(img, img_type):
 def image_data(path=Path("static/assets/"), img_list=None):  # path of static images is defaulted
     if img_list is None:  # color_dict is defined with defaults
         img_list = [
-#            {'source': "danielscomputer", 'label': "Daniel is the Best Scrum Master", 'file': "DanielPhotograph.PNG"},
-            {'source': "iconsdb.com", 'label': "White square", 'file': "white-square-16.png"},
+                {'source': "danielscomputer", 'label': "Daniel is the Best Scrum Master", 'file': "DanielPhotograph.PNG"},
+                {'source': "danielscomputer", 'label': "Dylan Is the Best Designer", 'file': "dylan.JPG"},
+                {'source': "danielscomputer", 'label': "Karthik Is the Best Developer", 'file': "karthik.PNG"},
+                {'source': "danielscomputer", 'label': "William Is the Best Tech Lead", 'file': "william.JPG"},
         ]
     # gather analysis data and meta data for each image, adding attributes to each row in table
     for img_dict in img_list:
