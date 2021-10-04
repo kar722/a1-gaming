@@ -12,7 +12,7 @@
 # Team Repository: A1 Gaming (Daniel, William, Karthik, Dylan)
 
 1. (Multiply and Divide By 2)[]
-2. (Extend/Switch ASCII to Univode)[]
+2. (Extend/Switch ASCII to Unicode)[]
 3. (Color Codes)[]
 4. (Unsigned Addition)[]
 5. (Logic Gates)[]
