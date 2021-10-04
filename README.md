@@ -11,6 +11,7 @@
 
 # Team Repository: A1 Gaming (Daniel, William, Karthik, Dylan)
 
+### Timeboxes (Sprint 7 and 8 From Oct. 4 - Oct. 15):
 1. (Multiply and Divide By 2)[]
 2. (Extend/Switch ASCII to Unicode)[]
 3. (Color Codes)[]
