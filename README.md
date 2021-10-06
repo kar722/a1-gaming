@@ -19,6 +19,15 @@
 5. (Logic Gates)[]
 6. (Signed Addition)[]
 
+Review Ticket October 6
+
+| Name | Score | Role | Work Done |
+| - | - | - | - |
+| Daniel | 4/4 | Scrum Master | [Ticket](https://github.com/kar722/a1-gaming/issues/45) |
+| Karthik | 4/4 | Designer | [Ticket](https://github.com/kar722/a1-gaming/issues/41) |
+| William | 4/4 | Technical Lead | [Ticket](https://github.com/kar722/a1-gaming/issues/39) | 
+| Dylan | 4/4 | Developer | [Ticket](https://github.com/kar722/a1-gaming/projects/1) |
+
 ### Repository:
 https://github.com/kar722/a1-gaming/edit/main/README.md
 
