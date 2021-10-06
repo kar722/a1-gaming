@@ -9,93 +9,25 @@
         src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
 </script>
 <script>
-    var imageType = 0; // 0 is color, 1 is gray
+    var imageType = 0;
 
     function toggle() {
         if (imageType == 0) {
-            $('#colored').hide()
-            $('#grayscale').show()
+            $('#colored').hide();
+            $('#grayscale').show(); 3
             imageType = 1;
         } else {
+<<<<<<< HEAD
             $('#grayscale').hide()
             $('#colored').show()
-            imageType = 0;  
-        }
-    }
-
-    function blurimage() {
-        if (imageType == 0) {
-            $('#colored').hide()
-            $('#blurimage').show()
-            imageType = 1;
-        } else {
-            $('#blurimage').hide()
-            $('#colored').show()
             imageType = 0;
-        }
-    }
-    function rotateimage() {
-        if (imageType == 0) {
-            $('#colored').hide()
-            $('#rotateimage').show()
-            imageType = 1;
-        } else {
-            $('#rotateimage').hide()
-            $('#colored').show()
+=======
+            $('#grayscale').hide();
+            $('#colored').show();
             imageType = 0;
+>>>>>>> origin/main
         }
     }
-
-    function cropimage() {
-        if (imageType == 0) {
-            $('#colored').hide()
-            $('#cropimage').show()
-            imageType = 1;
-        } else {
-            $('#cropimage').hide()
-            $('#colored').show()
-            imageType = 0;
-        }
-    }
-
-    function textimage() {
-        if (imageType == 0) {
-            $('#colored').hide()
-            $('#textimage').show()
-            imageType = 1;
-        } else {
-            $('#textimage').hide()
-            $('#colored').show()
-            imageType = 0;
-        }
-    }
-
-    // var color = {{ colored|safe }}
-    // var gray = {{ grayed|safe }}
-    // var imageType = 0; // 0 is color, 1 is gray
-
-    // function toggleColors(array) {
-    //     for (var i = 1; i <= array.length; i++) {
-    //         let id = "img" + i;
-    //         setImg(id, array[i-1]);
-    //     }
-    // }
-
-    // function toggle() {
-    //     if (imageType == 0) {
-    //         toggleColors(gray);
-    //         imageType = 1;
-    //     } else {
-    //         toggleColors(color);
-    //         imageType = 0;
-    //     }
-    // }
-
-    // function setImg(img, base64) {
-    //     // add button and rotate image from original to gray and back (toggle)
-    //     document.getElementById(img).src = base64;  //change img src to inner html on <p> tag
-    // }
-
 
 </script>
 
@@ -103,11 +35,7 @@
 
 <h1 class="text-center">RGB values within an Image</h1>
 <div class="container">
-    <button onclick="toggle()">Toggle Colors!</button>
-    <button onclick="blurimage()">Blur Images!</button>
-    <button onclick="rotateimage()">Rotate Images!</button>
-    <button onclick="cropimage()">Crop Images!</button>
-    <button onclick="textimage()">Add Text to Images!</button>
+    <button onclick="toggle()">Toggle the Colors!</button>
     <div class="row justify-content-md-center" id="colored">
         <table class="table">
             <thead>
@@ -204,8 +132,8 @@
                             <tr>
                                 <td>{{loop.index}}</td>
                                 <td>{{row}}</td>
-                                <td>{{image.hex_array_GRAY[loop.index - 1]}}</td>
-                                <td>{{image.binary_array_GRAY[loop.index - 1]}}
+                                <td>{{image.hex_array[loop.index - 1]}}</td>
+                                <td>{{image.binary_array[loop.index - 1]}}
                             </tr>
                             {% if loop.index > 256 %}
                             <tr><td>...</td><td>truncated</td><td>...</td><td>...</td></tr>
@@ -220,245 +148,12 @@
             </tbody>
         </table>
 
-    </div> <!-- end gray -->
-
-    <div class="row justify-content-md-center" id="blurimage">
-        <table class="table">
-            <thead>
-            <tr>
-                <th>Meta Data</th>
-                <th>Image</th>
-                <th>Data</th>
-            </tr>
-            </thead>
-            <tbody>
-            {% for image in images %}
-            <tr>
-                <td>
-                    <div>{{image.file}}</div>
-                    <div>{{image.format}}</div>
-                    <div>{{image.size}}</div>
-                    <div>{{image.label}}</div>
-                    <div>{{image.source}}</div>
-                </td>
-                <td>
-                    <img class="img-responsive py-3" id=img{{loop.index}} alt="" width="256" height="Auto" src="{{image.base64_BLUR}}" >
-                    <p hidden id="img_blur{{loop.index}}">{{image.base64_BLUR}}</p>
-                </td>
-                <td>
-                    <div class="overflow-auto" style="height: 256px">
-                        <table class="table">
-                            <thead>
-                            <tr>
-                                <th>#</th>
-                                <th>{{image.mode}}</th>
-                                <th>Hex Code</th>
-                                <th>Binary</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            {% for row in image.blur_data[:256+1] %}
-                            <tr>
-                                <td>{{loop.index}}</td>
-                                <td>{{row}}</td>
-                                <td>{{image.hex_array_BLUR[loop.index - 1]}}</td>
-                                <td>{{image.binary_array_BLUR[loop.index - 1]}}
-                            </tr>
-                            {% if loop.index > 256 %}
-                            <tr><td>...</td><td>truncated</td><td>...</td><td>...</td></tr>
-                            {% endif %}
-                            {% endfor %}
-                            </tbody>
-                        </table>
-                    </div>
-                </td>
-            </tr>
-            {% endfor %}
-            </tbody>
-        </table>
-
-    </div> <!-- end blurimage -->
-
-    <div class="row justify-content-md-center" id="rotateimage">
-        <table class="table">
-            <thead>
-            <tr>
-                <th>Meta Data</th>
-                <th>Image</th>
-                <th>Data</th>
-            </tr>
-            </thead>
-            <tbody>
-            {% for image in images %}
-            <tr>
-                <td>
-                    <div>{{image.file}}</div>
-                    <div>{{image.format}}</div>
-                    <div>{{image.size}}</div>
-                    <div>{{image.label}}</div>
-                    <div>{{image.source}}</div>
-                </td>
-                <td>
-                    <img class="img-responsive py-3" id=img{{loop.index}} alt="" width="256" height="Auto" src="{{image.base64_ROTATE}}" >
-                    <p hidden id="img_rotate{{loop.index}}">{{image.base64_ROTATE}}</p>
-                </td>
-                <td>
-                    <div class="overflow-auto" style="height: 256px">
-                        <table class="table">
-                            <thead>
-                            <tr>
-                                <th>#</th>
-                                <th>{{image.mode}}</th>
-                                <th>Hex Code</th>
-                                <th>Binary</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            {% for row in image.rotate_data[:256+1] %}
-                            <tr>
-                                <td>{{loop.index}}</td>
-                                <td>{{row}}</td>
-                                <td>{{image.hex_array_ROTATE[loop.index - 1]}}</td>
-                                <td>{{image.binary_array_ROTATE[loop.index - 1]}}
-                            </tr>
-                            {% if loop.index > 256 %}
-                            <tr><td>...</td><td>truncated</td><td>...</td><td>...</td></tr>
-                            {% endif %}
-                            {% endfor %}
-                            </tbody>
-                        </table>
-                    </div>
-                </td>
-            </tr>
-            {% endfor %}
-            </tbody>
-        </table>
-
-    </div> <!-- end rotateimage -->
-
-    <div class="row justify-content-md-center" id="cropimage">
-        <table class="table">
-            <thead>
-            <tr>
-                <th>Meta Data</th>
-                <th>Image</th>
-                <th>Data</th>
-            </tr>
-            </thead>
-            <tbody>
-            {% for image in images %}
-            <tr>
-                <td>
-                    <div>{{image.file}}</div>
-                    <div>{{image.format}}</div>
-                    <div>{{image.size}}</div>
-                    <div>{{image.label}}</div>
-                    <div>{{image.source}}</div>
-                </td>
-                <td>
-                    <img class="img-responsive py-3" id=img{{loop.index}} alt="" width="256" height="Auto" src="{{image.base64_CROP}}" >
-                    <p hidden id="img_crop{{loop.index}}">{{image.base64_CROP}}</p>
-                </td>
-                <td>
-                    <div class="overflow-auto" style="height: 256px">
-                        <table class="table">
-                            <thead>
-                            <tr>
-                                <th>#</th>
-                                <th>{{image.mode}}</th>
-                                <th>Hex Code</th>
-                                <th>Binary</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            {% for row in image.crop_data[:256+1] %}
-                            <tr>
-                                <td>{{loop.index}}</td>
-                                <td>{{row}}</td>
-                                <td>{{image.hex_array_CROP[loop.index - 1]}}</td>
-                                <td>{{image.binary_array_CROP[loop.index - 1]}}
-                            </tr>
-                            {% if loop.index > 256 %}
-                            <tr><td>...</td><td>truncated</td><td>...</td><td>...</td></tr>
-                            {% endif %}
-                            {% endfor %}
-                            </tbody>
-                        </table>
-                    </div>
-                </td>
-            </tr>
-            {% endfor %}
-            </tbody>
-        </table>
-
-    </div> <!-- end blurimage -->
-
-    <div class="row justify-content-md-center" id="textimage">
-        <table class="table">
-            <thead>
-            <tr>
-                <th>Meta Data</th>
-                <th>Image</th>
-                <th>Data</th>
-            </tr>
-            </thead>
-            <tbody>
-            {% for image in images %}
-            <tr>
-                <td>
-                    <div>{{image.file}}</div>
-                    <div>{{image.format}}</div>
-                    <div>{{image.size}}</div>
-                    <div>{{image.label}}</div>
-                    <div>{{image.source}}</div>
-                </td>
-                <td>
-                    <img class="img-responsive py-3" id=img{{loop.index}} alt="" width="256" height="Auto" src="{{image.base64_TEXT}}" >
-                    <p hidden id="img_text{{loop.index}}">{{image.base64_TEXT}}</p>
-                </td>
-                <td>
-                    <div class="overflow-auto" style="height: 256px">
-                        <table class="table">
-                            <thead>
-                            <tr>
-                                <th>#</th>
-                                <th>{{image.mode}}</th>
-                                <th>Hex Code</th>
-                                <th>Binary</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            {% for row in image.text_data[:256+1] %}
-                            <tr>
-                                <td>{{loop.index}}</td>
-                                <td>{{row}}</td>
-                                <td>{{image.hex_array_TEXT[loop.index - 1]}}</td>
-                                <td>{{image.binary_array_TEXT[loop.index - 1]}}
-                            </tr>
-                            {% if loop.index > 256 %}
-                            <tr><td>...</td><td>truncated</td><td>...</td><td>...</td></tr>
-                            {% endif %}
-                            {% endfor %}
-                            </tbody>
-                        </table>
-                    </div>
-                </td>
-            </tr>
-            {% endfor %}
-            </tbody>
-        </table>
-
-    </div> <!-- end textimage -->
-
+    </div>
 </div>
-
 <script>
-    $( document ).ready(function() {
+    $( document ).ready(function()
+    {
         $('#grayscale').hide()
-        $('#blurimage').hide()
-        $('#rotateimage').hide()
-        $('#cropimage').hide()
-        $('#textimage').hide()
     });
 </script>
 {% endblock %}

@@ -105,6 +105,10 @@ def Mobile():
 def mini():
     return render_template("Video Journals.html")
 
+@app.route('/binary RGB 2/')
+def colorcodes():
+    return render_template("binary RGB 2.html")
+
 @app.route("/binary/", methods = ['GET', 'POST'])
 def binary():
     BITS = 4
