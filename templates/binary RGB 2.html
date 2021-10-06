@@ -32,8 +32,8 @@
 <div class="container-fluid content">
 
 
-    <h1 style="text-align: center; font-family: 'Times New Roman'; color: white">Binary Lab</h1>
-    <p style="text-align: center; font-family: 'Times New Roman'; color: white">Click the buttons in order to generate colors</p>
+    <h1 style="text-align: center; font-family: 'Times New Roman'; color: white">Color Codes RGB Lab</h1>
+    <p style="text-align: center; font-family: 'Times New Roman'; color: white">Click the buttons in order to generate different color combinations</p>
 
     <br />
 
@@ -124,7 +124,7 @@
 
     <br />
     <button style="justify-content: center;" onclick="reset()">Reset All the Buttons</button>
-
+    <button style="justify-content: center;" onclick="select()">Select All</button>
 
     <script>
 
@@ -209,6 +209,28 @@
         }
 
         window.onload = reset();  // init buttons
+
+        function select () {   // function to select all buttons to on
+            for (var i = 0; i >= 8; i++) {
+                document.getElementById('r' + i).innerHTML = "0";
+                document.getElementById('g' + i).innerHTML = "0";
+                document.getElementById('b' + i).innerHTML = "0";
+
+                calculateRow('r');
+                calculateRow('b');
+                calculateRow('g');
+
+                document.getElementById('r' + i).classList.remove("buttonOff");
+                document.getElementById('g' + i).classList.remove("buttonOff");
+                document.getElementById('b' + i).classList.remove("buttonOff");
+
+                document.getElementById('r' + i).classList.add("buttonOn");
+                document.getElementById('g' + i).classList.add("buttonOn");
+                document.getElementById('b' + i).classList.add("buttonOn");
+            }
+        }
+
+        window.onload = select();  // init buttons
 
     </script>
 
