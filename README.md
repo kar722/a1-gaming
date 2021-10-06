@@ -19,6 +19,8 @@
 5. (Logic Gates)[]
 6. (Signed Addition)[]
 
+Review Ticket October 6
+
 | Name | Score | Role | Work Done |
 | - | - | - | - |
 | Daniel | 4/4 | Scrum Master | [Ticket](https://github.com/kar722/a1-gaming/blob/main/templates/binary%20RGB%202.html) |
