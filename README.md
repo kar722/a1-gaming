@@ -11,12 +11,27 @@
 
 # Team Repository: A1 Gaming (Daniel, William, Karthik, Dylan)
 
+### Timeboxes (Sprint 7 and 8 From Oct. 4 - Oct. 15):
+1. (Multiply and Divide By 2)[]
+2. (Extend/Switch ASCII to Unicode)[]
+3. (Color Codes)[]
+4. (Unsigned Addition)[]
+5. (Logic Gates)[]
+6. (Signed Addition)[]
+
+Review Ticket October 6
+
+| Name | Score | Role | Work Done |
+| - | - | - | - |
+| Daniel | 4/4 | Scrum Master | [Ticket](https://github.com/kar722/a1-gaming/issues/45) |
+| Karthik | 4/4 | Designer | [Ticket](https://github.com/kar722/a1-gaming/issues/41) |
+| William | 4/4 | Technical Lead | [Ticket](https://github.com/kar722/a1-gaming/issues/39) | 
+| Dylan | 4/4 | Developer | [Ticket](https://github.com/kar722/a1-gaming/projects/1) |
 
 ### Repository:
 https://github.com/kar722/a1-gaming/edit/main/README.md
 
-
-### Table of Contents (Sprint 5 and 6 From Sept. 20 - Oct. 1):
+### Timeboxes (Sprint 5 and 6 From Sept. 20 - Oct. 1):
 1. [9/20 Student Review](https://github.com/kar722/a1-gaming/issues/30)
 2. [RGB Values Within an Image](https://github.com/kar722/a1-gaming/blob/main/templates/rgb.html)
 3. [Cards/Other Developments](https://github.com/kar722/a1-gaming/blob/main/templates/Apple.html)
@@ -29,7 +44,7 @@ https://github.com/kar722/a1-gaming/edit/main/README.md
 | William | 4/4 | Technical Lead | [Displayed in video/scrum board](https://github.com/kar722/a1-gaming/issues/39) | 
 | Dylan | 4/4 | Developer | [Displayed in video/scrum board](https://github.com/kar722/a1-gaming/projects/1) |
 
-### Table of Contents (Sprint 3 and 4 From Sept. 10 - Sept. 17):
+### Timeboxes (Sprint 3 and 4 From Sept. 10 - Sept. 17):
 1. [New Style, Colors, Fonts 1](https://github.com/kar722/a1-gaming/blob/main/templates/Apple.html)
 2. [New Style, Colors, Fonts 2](https://github.com/kar722/a1-gaming/blob/main/templates/Samsung.html)
 3. [New Mini Labs Location](https://github.com/kar722/a1-gaming/blob/main/templates/layouts/navbar.html)
@@ -46,7 +61,7 @@ https://github.com/kar722/a1-gaming/edit/main/README.md
 | Dylan | 4/4 | Developer | Displayed in video/scrum board |
 
 
-### Table of Contents (Sprint 1 and 2 From Aug. 23 - Sept. 3):
+### Timeboxes (Sprint 1 and 2 From Aug. 23 - Sept. 3):
 1. [Base](https://github.com/kar722/a1-gaming/blob/main/templates/layouts/base.html)
 2. [Navbar w/ Dropdown](https://github.com/kar722/a1-gaming/blob/main/templates/layouts/navbar.html)
 3. [Project](https://github.com/kar722/a1-gaming/blob/main/templates/layouts/project.html)

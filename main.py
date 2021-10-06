@@ -1,6 +1,5 @@
 # import "packages" from flask
 from flask import Flask, render_template, request
-from image import image_data
 from pathlib import Path  # https://medium.com/@ageitgey/python-3-quick-tip-the-easy-way-to-deal-with-file-paths-on-windows-mac-and-linux-11a072b58d5f
 
 # create a Flask instance
@@ -136,6 +135,10 @@ def xbox():
 @app.route('/Laptops/')
 def Laptops():
     return render_template("Laptops.html")
+
+@app.route('/LogicGateLab/')
+def LogicGateLab():
+    return render_template("LogicGateLab.html")
 
 @app.route('/howitsmade/', methods=['GET', 'POST'])
 def greet1288():

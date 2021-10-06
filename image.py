@@ -1,8 +1,9 @@
-from PIL import Image, ImageDraw
-import numpy
 import base64
 from io import BytesIO
 from pathlib import Path  # https://medium.com/@ageitgey/python-3-quick-tip-the-easy-way-to-deal-with-file-paths-on-windows-mac-and-linux-11a072b58d5f
+from PIL import Image, ImageFilter
+
+
 
 # image (PNG, JPG) to base64 conversion (string), learn about base64 on wikipedia https://en.wikipedia.org/wiki/Base64
 def image_base64(img, img_type):
@@ -19,7 +20,6 @@ def image_data(path=Path("static/assets/"), img_list=None):  # path of static im
 def image_formatter(img, img_type):
     return "data:image/" + img_type + ";base64," + image_base64(img, img_type)
 
-
 # color_data prepares a series of images for data analysis
 def image_data(path=Path("static/assets/"), img_list=None):  # path of static images is defaulted
     if img_list is None:  # color_dict is defined with defaults
@@ -29,6 +29,7 @@ def image_data(path=Path("static/assets/"), img_list=None):  # path of static im
                 {'source': "danielscomputer", 'label': "Karthik Is the Best Developer", 'file': "karthik.PNG"},
                 {'source': "danielscomputer", 'label': "William Is the Best Tech Lead", 'file': "william.JPG"},
         ]
+
     # gather analysis data and meta data for each image, adding attributes to each row in table
     for img_dict in img_list:
         # File to open

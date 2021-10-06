@@ -1,0 +1,267 @@
+
+<html>
+
+<!--<made by daniel and karthik>
+
+{% include "layouts/navbar.html" %}
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="/static/css/default.css" type="text/css">
+
+
+    <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" >
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" ></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+
+    <title>Color Codes RGB</title>
+
+
+</head>
+
+
+</nav>
+<div class="container-fluid content">
+
+
+    <h1 style="text-align: center; font-family: 'Times New Roman'; color: white">Color Codes RGB Lab</h1>
+    <p style="text-align: center; font-family: 'Times New Roman'; color: white">Click the buttons in order to generate different color combinations</p>
+
+    <br />
+
+    <div class="row">
+        <div class="col-sm-1"></div> <!-- This is to create the buttons -->
+
+        <button class="col-sm-1" id="r1" onclick="toggleSwitch('r1')">0</button>
+
+        <button class="col-sm-1" id="r2" onclick="toggleSwitch('r2')">0</button>
+
+        <button class="col-sm-1" id="r3" onclick="toggleSwitch('r3')">0</button>
+
+        <button class="col-sm-1" id="r4" onclick="toggleSwitch('r4')">0</button>
+
+        <button class="col-sm-1" id="r5" onclick="toggleSwitch('r5')">0</button>
+
+        <button class="col-sm-1" id="r6" onclick="toggleSwitch('r6')">0</button>
+
+        <button class="col-sm-1" id="r7" onclick="toggleSwitch('r7')">0</button>
+
+        <button class="col-sm-1" id="r8" onclick="toggleSwitch('r8')">0</button>
+
+
+        <div class="offset-sm-1 col-sm-2">
+            <p id="r">Decimal value: 0</p>
+        </div>
+    </div>
+
+    <br />
+
+    <div class="row">
+        <div class="col-sm-1"></div>
+
+        <button class="col-sm-1" id="g1" onclick="toggleSwitch('g1')">0</button>
+
+        <button class="col-sm-1" id="g2" onclick="toggleSwitch('g2')">0</button>
+
+        <button class="col-sm-1" id="g3" onclick="toggleSwitch('g3')">0</button>
+
+        <button class="col-sm-1" id="g4" onclick="toggleSwitch('g4')">0</button>
+
+        <button class="col-sm-1" id="g5" onclick="toggleSwitch('g5')">0</button>
+
+        <button class="col-sm-1" id="g6" onclick="toggleSwitch('g6')">0</button>
+
+        <button class="col-sm-1" id="g7" onclick="toggleSwitch('g7')">0</button>
+
+        <button class="col-sm-1" id="g8" onclick="toggleSwitch('g8')">0</button>
+
+
+        <div class="offset-sm-1 col-sm-2">
+            <p id="g">Decimal value: 0</p>
+        </div>
+    </div>
+
+    <br />
+
+    <div class="row">
+        <div class="col-sm-1"></div>
+
+        <button class="col-sm-1" id="b1" onclick="toggleSwitch('b1')">0</button>
+
+        <button class="col-sm-1" id="b2" onclick="toggleSwitch('b2')">0</button>
+
+        <button class="col-sm-1" id="b3" onclick="toggleSwitch('b3')">0</button>
+
+        <button class="col-sm-1" id="b4" onclick="toggleSwitch('b4')">0</button>
+
+        <button class="col-sm-1" id="b5" onclick="toggleSwitch('b5')">0</button>
+
+        <button class="col-sm-1" id="b6" onclick="toggleSwitch('b6')">0</button>
+
+        <button class="col-sm-1" id="b7" onclick="toggleSwitch('b7')">0</button>
+
+        <button class="col-sm-1" id="b8" onclick="toggleSwitch('b8')">0</button>
+
+
+        <div class="offset-sm-1 col-sm-2">
+            <p id="b">Decimal value: 0</p>
+        </div>
+    </div>
+
+    <br />
+
+    <div class="offset-sm-1 col-sm-10" id="color" style="background-color: #000000; height: 20vh;">  <!-- Div that shows off color -->
+    </div>
+    <p style="text-align: center; color: white" id="code">#000000</p>
+
+    <br />
+    <button style="justify-content: center;" onclick="reset()">Reset All the Buttons</button>   <!-- reset button -->
+    <button style="justify-content: center;" onclick="select()">Select All</button>
+
+    <script>
+
+        var red = 0;
+        var green = 0;
+        var blue = 0;
+
+        function toggleSwitch (id) {     // toggles button between on and off
+            const element = document.getElementById(id);
+            if (element.innerHTML == "1") {
+                element.innerHTML = "0";
+            } else {
+                element.innerHTML = "1";
+            }
+            element.classList.toggle("buttonOn");
+            element.classList.toggle("buttonOff");
+
+            calculateRow(id.charAt(0));
+        }
+
+        function calculateRow (color) {    // function that calculates the decimal value for a certain row after one of its buttons is toggled
+            let sum = 0;
+            for (var i = 1; i <= 8; i++) {
+                let element = document.getElementById(color + i);
+                sum += Math.pow(2, 8 - i) * parseInt(element.innerHTML);
+            }
+            document.getElementById(color).innerHTML = "Decimal value: " + sum;
+            switch (color) {
+                case 'r':
+                    red = sum;
+                    break;
+                case 'g':
+                    green = sum;
+                    break;
+                case 'b':
+                    blue = sum;
+                    break;
+                default:
+                    break;
+            }
+            setColorCode();
+        }
+
+        function setColorCode () {    // uses values from each row to create a color
+            let r = red.toString(16);
+            let g = green.toString(16);
+            let b = blue.toString(16);
+
+            if (r.length == 1) {
+                r = "0" + r;
+            }
+            if (g.length == 1) {
+                g = "0" + g;
+            }
+            if (b.length == 1) {
+                b = "0" + b;
+            }
+
+            let code = "#" + r + g + b;
+            document.getElementById("color").style.backgroundColor = code;
+            document.getElementById("code").innerHTML = "Hexcode: " + code;
+        }
+
+        function reset () {   // function to reset all buttons back to off
+            for (var i = 1; i <= 8; i++) {
+                document.getElementById('r' + i).innerHTML = "0";
+                document.getElementById('g' + i).innerHTML = "0";
+                document.getElementById('b' + i).innerHTML = "0";
+
+                calculateRow('r');
+                calculateRow('b');
+                calculateRow('g');
+
+                document.getElementById('r' + i).classList.add("buttonOff");
+                document.getElementById('g' + i).classList.add("buttonOff");
+                document.getElementById('b' + i).classList.add("buttonOff");
+
+                document.getElementById('r' + i).classList.remove("buttonOn");
+                document.getElementById('g' + i).classList.remove("buttonOn");
+                document.getElementById('b' + i).classList.remove("buttonOn");
+            }
+        }
+
+        window.onload = reset();  // init buttons
+
+        function select () {   // function to select all buttons to on
+            for (var i = 0; i >= 8; i++) {
+                document.getElementById('r' + i).innerHTML = "0";
+                document.getElementById('g' + i).innerHTML = "0";
+                document.getElementById('b' + i).innerHTML = "0";
+
+                calculateRow('r');
+                calculateRow('b');
+                calculateRow('g');
+
+                document.getElementById('r' + i).classList.remove("buttonOff");
+                document.getElementById('g' + i).classList.remove("buttonOff");
+                document.getElementById('b' + i).classList.remove("buttonOff");
+
+                document.getElementById('r' + i).classList.add("buttonOn");
+                document.getElementById('g' + i).classList.add("buttonOn");
+                document.getElementById('b' + i).classList.add("buttonOn");
+            }
+        }
+
+        window.onload = select();  // init buttons
+
+    </script>
+
+    <!-- Distinct styling for on/off -->
+    <style>
+
+        .buttonOff {
+            background-color: red;
+            color: white;
+            font-style: normal;
+        }
+
+        .buttonOn {
+            background-color: deepskyblue;
+            color: white;
+            font-style: italic;
+        }
+
+    </style>
+    {% block background %}
+
+    <style>
+        body {
+            background-image: url('https://images5.alphacoders.com/411/thumb-1920-411177.jpg');
+        }
+    </style>
+
+    {% endblock %}
+
+</div>
+</body>
+</html>
