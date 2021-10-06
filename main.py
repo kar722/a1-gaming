@@ -133,6 +133,10 @@ def Samsung():
 def xbox():
     return render_template("xbox.html")
 
+@app.route('/binary RGB 2/')
+def binaryRGB2():
+    return render_template("binary RGB 2.html")
+
 @app.route('/Laptops/')
 def Laptops():
     return render_template("Laptops.html")
