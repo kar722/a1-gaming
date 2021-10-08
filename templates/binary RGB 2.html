@@ -30,6 +30,7 @@
     <br />
 
     <div class="row">
+
         <div class="col-sm-1"></div> <!-- This is to create the buttons -->
 
         <button class="col-sm-1" id="r1" onclick="toggleSwitch('r1')">0</button>
@@ -51,6 +52,10 @@
 
         <div class="offset-sm-1 col-sm-2">
             <p id="r">Decimal value: 0</p>
+        </div>
+
+        <div class="offset-sm-1 col-sm-3">
+            <p style="padding-left: 475px; color: #fb3958; font-size: 25px">Red</p>
         </div>
     </div>
 
@@ -79,6 +84,11 @@
         <div class="offset-sm-1 col-sm-2">
             <p id="g">Decimal value: 0</p>
         </div>
+
+        <div class="offset-sm-1 col-sm-3">
+            <p style="padding-left: 475px; color: mediumseagreen; font-size: 25px">Green</p>
+        </div>
+
     </div>
 
     <br />
@@ -106,6 +116,11 @@
         <div class="offset-sm-1 col-sm-2">
             <p id="b">Decimal value: 0</p>
         </div>
+
+        <div class="offset-sm-1 col-sm-3">
+            <p style="padding-left: 475px; color: dodgerblue; font-size: 25px">Blue</p>
+        </div>
+
     </div>
 
     <br />
@@ -115,8 +130,7 @@
     <p style="text-align: center; color: white" id="code">#000000</p>
 
     <br />
-    <button style="justify-content: center;" onclick="reset()">Reset All the Buttons</button>   <!-- reset button -->
-    <button style="justify-content: center;" onclick="select()">Select All</button>
+    <button style="justify-content: center;" onclick="reset()">Reset</button>   <!-- reset button -->
 
     <script>
 
@@ -230,8 +244,8 @@
     <style>
 
         .buttonOff {
-            background-color: red;
-            color: white;
+            background-color: antiquewhite;
+            color: black;
             font-style: normal;
         }
 
