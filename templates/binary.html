@@ -159,11 +159,12 @@
         let binary = getBits();
         // convert to decimal and do math
         let decimal = parseInt(binary, 2);
-        if (n > 0) {  // PLUS
+        if (n > 0 ) {  // PLUS
             decimal = MAX === decimal ? 0 : decimal /= n; // OVERFLOW or PLUS
         } else  {     // MINUS
-            decimal = 0 === decimal ? MAX : decimal /= n; // OVERFLOW or MINUS
+            decimal = 0 === decimal ? MAX : decimal *= n; // OVERFLOW or MINUS
         }
+
         // convert the result back to binary
         binary = decimal_2_base(decimal, 2);
         // update conversions
