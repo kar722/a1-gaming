@@ -1,87 +1,94 @@
-<!-- Custom file for standardizing Project Data
-This HTML is setup as as a Jinja2 layout, coders use layouts for:
- ... standardization of style
- ... setting expectations for data
- ... code reuse
--->
-<!DOCTYPE HTML>
-<html lang="en">
+{% set imageList = ["And-gate.png", "nand.png", "or.png"]  %}
+{% set textList = ["And Gate", "Nand Gate", "Or Gate"] %}
+{% set result = ["0", "1", "0", "1", "0", "1"]  %}
+{% set gate = ["and1", "nand1", "or1"] %}
+{% set textGate = ["and", "nand", "or"] %}
 
 
+{% block meta %}
 
-<head>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <style>
-        :root{
-            --white: whitesmoke;
-            --black: black;
-            --grey: grey;
+<script>
+
+
+    function logic(){
+
+        const x = document.getElementById("checkbox1")
+        const y = document.getElementById("checkbox2")
+        if (x.checked && y.checked){
+            document.getElementById("and").innerHTML = "1";
         }
+        else { // if none or one are checked
+            document.getElementById("and").innerHTML = "0";
+        }
+        if (!(x.checked && y.checked)){
+            document.getElementById("nand").innerHTML = "1";
+        }
+        else { // if and
+            document.getElementById("nand").innerHTML = "0";
+        }
+        if (x.checked || y.checked){
+            document.getElementById("or").innerHTML = "1";
+        }
+        else {
+            document.getElementById("or").innerHTML = "0";
+        }
+    }
+</script>
+{% endblock %}
 
-
-        <title>Logic Gate Lab</title>
-
-
-                        <body>
-                        {% include "layouts/navbar.html" %}
-
-        <h1 style="text-align: center; color: aqua; font-family: Mytupi";>Samsung</h1>
-
-                                                                                   </body>
-
-                                                                                     </html>
-
-                                                                                       {% block background %}
-
-        <style>
-         body {
-             background-image: url('https://images.hdqwalls.com/download/minimalist-landscape-to-1920x1080.jpg');
-         }
-    </style>
-
-</head>
-
-<body>
-{% include "layouts/navbar.html" %}
-
-<h1 class="text-center" style="margin-top: 15px; margin-bottom: -11px; ">Logic Gate Lab</h1>
-<table class="center">
-    <table border="1">
-    <tr>
-        <th>ㅤㅤSymbolㅤㅤ</th>
-        <th>ㅤㅤLogic Gateㅤㅤ</th>
-        <th>ㅤㅤResultㅤㅤ</th>
-    </tr>
-    <tr>
-        <TD Background = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAWUAAACNCAMAAABYO5vSAAAAh1BMVEX39/f///8AAAD6+vr8/PzT09OxsbEtLS1CQkLy8vLAwMDX19c1NTVzc3PNzc3t7e2Li4vl5eXg4OAfHx97e3uSkpKBgYG5ubni4uIXFxeZmZk6OjpeXl6pqamfn5/GxsZKSkpnZ2dWVlYmJiZRUVFcXFwNDQ0SEhJubm5FRUUbGxtlZWWGhoYUOwzdAAAJhklEQVR4nO2d/0O6PBDHOTa/hUJ+xSzFrDSt///ve9zGxlBAxkb26bn3T6WEx6tzuztuw/NQKBQKhUKhUCgUCoVCoVAoFAqF+t2i1KPk3kb8ddHk2Z+N6b3N+NsiS/+s6QPc25A/Ldr1uWYDdOf2JCn7ww66c2tSlH3/keAk2JI0yv42QHduRzpl398AunMbEpSf9inmD4zp2pCgPFweU8yHGN3ZvQTlHsBGjhqfEbqzaynKEAxTzG8JToKOlVEGWEh3XhB0Z6fSKUPyhilKK8pRBu9VuvMKJ0GHylMGiGVMt13iqOFMl5Qh+pDu3MWysytdUQZYS8xfGNM5UgFlmGxTzE8PiNmJiigDPEp3nnnI2YGKKUNHpii9EGM6e5VQBm8m3XmOKYq1yiifU5RDirmPZWdblVOGSKUoa4zp7FRBGUBV+LHsbKdKyjDeYYriQtWUAVaq7IytBM11izJMnlPMJ+yMaayblIGoFOUbU5SGuk0ZIDxh2dlOdSiDN1JlZ+yMaaJalAFiiXk7Rnc2V03KMHjBFKW56lLGsrON6lOGqC85Y2eMoQwoA8xV2RlTFCMZUYZAthL0MKYzkRlloKoz5hFTlPoypAzwIDH3J3/YnYnwKVenM6YMWWfM5s+mKCR8HY1Gn11XmM0p/x/KziA8aejqfE0oQ/Req+xMKPUGUTTw6D+WyJBxenmJIy9qRLlWtzOBcTw7vh320+Oou6T/ktdTeXkjR1NPQ8oQyLLztLjbmUBHjd98cAnv6M/U8H9MVP4VuTG6KWWtM2ZRkKLQ8ci/0NfdYpIoSZLI4HjSYfbyUXHt5ivYnDIk05Tf81WKAsnTJWSfJeZOTDYVh2bSiwbcQyYsA+vfnTIQ5a/zfEyXVZbyWt0FMwkMKXusu/gdvpnJHSdDhg1lrdv5XR8Osmr0+yrpdJLVTv6+vgdmU8oCSRfYn/nfTiy2o6x1O2dlZ9pJX/pcysPGsh/sHk2kxpSZU5wiQtjqvOnAhQmWlLUU5UumKIMe//0Q6ocFYhB/cjRpnw3np80FLoToA5f8jVBGOQFC8u+XiUyYoecYTsRzsQu/sKYMSxn27B942Tmtj06X+cMiwX7mZsygXrx47x8/5qFWbOiE4URhJEEYdsSr7BI35zdD/f1SieApPJ824oOeC4PtKWudMaNzTEci8fPy8qhIhB01rrOG1dn02g8l5sGTPoyyJJlnyM++pvltzwQ215zYeeDLlcEuKEPQSy+iF8q0sHt9lKjmPTrwDZILxrvpGdlIlZ2dhWN99oMhZcrNnLPz0ET9aCknlAFUt/O3xweQftFBO/5R9tOJ+LRREo1jvjYjndlKKMdd9l177HLdDsx0Bx6wkHnoYP5zRDlLQ4b7Elc+H+PLEc/OZO5tD+eZj1DKBtGpmFJLKFMQsx9luglZFIp24jgRMl+WjCgxFjiiDN6X/s2MCg/hccYazK0kufUAW22YgA81DpRQNovkKJ9k0sIy/0v/Mz9k0PjkN5MDylpnjO9vi494Kbfglj4zb2PhuMp8edx1ckiZD+NR/rdcuDiusPIHKMNYlZ1fiw9YVNlwQ2re4t6WVXF4DsGHUReUScg+SxU8RSyTKxnRuNzGH6EMIIudo+K3HyuNqJaKWyn7kEC5F4fOv+EuKItCUSjPLsLSfs6XJ3emTFSk8Vl8gI0vLxRlFsRkX2LuW3NXlCM2d/cyqvQzR52/tKoys3XKwVSd7734iK8KE27oqOIp8parLvDvOP8XOKAsRggtqBYh8yI3/0HUMVWwckV5rjHZF8cYPHl5DIyNPJuZxWDk/M98y66ZT4bOKO+YhWPNZsJsPuRD5vtFcqqa4fN4+aHoGFGrCxtFcto1nq/7Kbts7m3fbiiLyG3/PMz0zPMA25KRo6xE3W19jXjwsys6iM+NU5N7Q4UWs3B5nI3L7AJWBePyqznl0ul5Z5llO6EcqUC4S9ORI7k+ijuKfVGO59dZAkm/JcPBUD87DBv4cum0ENiVjFxQzm6NLEFG7aerkVmMyrb2phZrtzDYunzx/TieJ0n5OjfDkHJFKGxZMrKnPFAFMtHRlVaOjoP8YWTHX/6yrnDxHaMPMpTjZEQszaMuOWDzr5RGuc7NaBEDdcO8EpZQW5aMrCmrBVTyTjaJxDL5Ya7CHKWbLzqo1lL2b52JoINGLHwUkxO/lI0wQsy0grLHKtsjuJhEryXyjd4gXw2iwENmuy4jS8qkoNOWyrbQuRo1BnJ2dNHfJ8akWQSUQofNtS9Eez0GoEDivX9QlCnL/FfB+KyqqVfcgVpcWigu59XqO2hHWXUYnfQOI5UdHUZxEEWTeCbzlW8nN1fF+DkdbVZ81lX3EkWI8D7fLM5h5csoo6y6gUUwUiLCd14pqEDzv7S6YWlFObsVlW8Zz2Uomhzd9PPgYZ+ddJs1npKsaeyFZpQ1eyrulVBeKOpdwxQTjVWXkQXlpSrBxZfVcVrY9rJx13U9XqSch2sv+2zibcTLp40Hi7fehzp+snrpD3u9aYUJolBUEEwI/P2CP6lvb2PKqkXgpaDtE4LtBWK/73IpCqGDTne9jicX6y7oIOyuux3euZdLGCm9MfsRXigqnJ0HZUNJbTWlHKnKT/EqS0rio874uet6HQopvsNE6tx3KpD4+vWL/lSM91fTosnJm1F+kJsaHSdlH069YJ46dP8x+PVrfXgnUfGgJnpAfYvSQCPK2er3eXUvPnjRchJ58PtXYZJJf3vWstjQr/Nb/aT5RTSh3FHtF53bHvrPrPCpusdd7/53xbnNKePGicYypjyRheQn3GGntkwpq0D4FXcWqC8zytoStN8/of0iGVHOdnzBjcaNZEA569HCTfMNVZ9ytiQKd1c1VV3K2ZYNuKucuWpSVrtev+Gu1w1Uj3JWSMb4rYnqUFYdLU+4LVQz1aCsEpGXv7odRuu6SVlbN4mO3FS3KMdyvcj2L29T1LaqKWdPelh56MjNVUk5xCfRuVEV5cp9RlAGKqc8wSeEOlMpZXzarUOVUFaLyvZYSHagYsqqo2WHiYgLFVEe/A/2mPxZFVBOJGN8TJcrXVPGvX/d65JyIFvr8fGJDnVBGfdkb0U5ymPZpnnAQrJT6ZTxWRltKaMc4XNfWpOirFa4sKWRKLcSlIf4PK5WJShPyzf5RTkQVSULXkjGRKQV6ZRLNl9HWUujjM+vbU0Z5aulkShnkpRf8BmULUps1eOvMX5rVbS7x0Jy+6LRGEfkHxAyRqFQKBQKhUL9W/oPm22HBc0Oj34AAAAASUVORK5CYII=">
-        <td>And Gate</td>
-        <td>1</td>
-    </tr>
-    <tr>
-        <TD Background = "data:image/png;base64,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">
-        <td>Nand Gate</td>
-        <td>0</td>
-    </tr>
-    <tr>
-        <TD Background = "data:image/png;base64,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">
-        <td>Or Gate</td>
-        <td>02</td>
-    </tr>
-</table>
-
-
-</html>
+{% block body %}
+<h1 style="center: #fcfcfc; font-family: 'Arial Black'; font-size: 65">Logic Gate Lab</h1>
 
 
 
 
+<div class="col-3">
+            <h2 class="text-left">Inputs
+            A             B</h2>
+            <form name="form" method="POST">
+                <label>
+                    <input type="checkbox" name="a" class="inline checkbox" id="checkbox1" value="unchecked">
+                </label>
 
+                <label>
+                    <input type="checkbox" name="b" class="incline checkbox" id="checkbox2" value="unchecked">
+                </label>
+
+                <input type="button" onclick="logic()" value="Submit">
+            </form>
+        </div>
+        <div class="col-9">
+            <table>
+                <table border="2">
+
+                <tr>
+                    <th>Symbol</th>
+                    <th>Name</th>
+                    <th>Result</th>
+                </tr>
+                {% for item in imageList %}
+
+                <tr>
+                    <td class="col-3">
+                        <img class="img-responsive py-3" id="{{ gate[loop.index0] }}" alt="" width="256" height="Auto" src="/static/assets/{{ item }}" >
+                    </td>
+                    <td class="col-3"> {{ textList[loop.index0] }}</td>
+                    <td id="{{ textGate[loop.index0] }}" class="col-3">{{ result[loop.index0] }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+</div>
     <style>
         body {
-            background-image: url('https://images.unsplash.com/photo-1579546929518-9e396f3cc809?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80');
-            background-size: 1920px 1100px;
+
+
+        background-image: url('https://images.unsplash.com/photo-1579546929518-9e396f3cc809?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80');
+            background-size: 1920px 1200px;
 
         }
+
     </style>
+
     {% endblock %}
