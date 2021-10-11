@@ -164,6 +164,10 @@ def rgb():
 def ListHackathon():
     return render_template("ListHackathon.html")
 
+@app.route('/Unsigned Addition Binary/', methods=['GET', 'POST'])
+def unsigned_addition():
+    return render_template("Unsigned Addition Binary.html", BITS=8, imageOn="/static/assets/on.PNG", imageOff="/static/assets/off.PNG")
+
 # runs the application on the development server
 if __name__ == "__main__":
     app.run(debug=True)
