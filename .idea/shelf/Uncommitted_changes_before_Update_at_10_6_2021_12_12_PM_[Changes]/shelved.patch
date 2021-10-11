@@ -1,0 +1,104 @@
+Index: image.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>from PIL import Image, ImageDraw\r\nimport numpy\r\nimport base64\r\nfrom io import BytesIO\r\nfrom pathlib import Path  # https://medium.com/@ageitgey/python-3-quick-tip-the-easy-way-to-deal-with-file-paths-on-windows-mac-and-linux-11a072b58d5f\r\n\r\n# image (PNG, JPG) to base64 conversion (string), learn about base64 on wikipedia https://en.wikipedia.org/wiki/Base64\r\ndef image_base64(img, img_type):\r\n    with BytesIO() as buffer:\r\n        img.save(buffer, img_type)\r\n        return base64.b64encode(buffer.getvalue()).decode()\r\n\r\ndef image_data(path=Path(\"static/assets/\"), img_list=None):  # path of static images is defaulted\r\n    for img_dict in img_list:\r\n        file = path / img_dict['file']\r\n\r\n\r\n# formatter preps base64 string for inclusion, ie <img src=[this return value] ... />\r\ndef image_formatter(img, img_type):\r\n    return \"data:image/\" + img_type + \";base64,\" + image_base64(img, img_type)\r\n\r\n\r\n# color_data prepares a series of images for data analysis\r\ndef image_data(path=Path(\"static/assets/\"), img_list=None):  # path of static images is defaulted\r\n    if img_list is None:  # color_dict is defined with defaults\r\n        img_list = [\r\n                {'source': \"danielscomputer\", 'label': \"Daniel is the Best Scrum Master\", 'file': \"DanielPhotograph.PNG\"},\r\n                {'source': \"danielscomputer\", 'label': \"Dylan Is the Best Designer\", 'file': \"dylan.JPG\"},\r\n                {'source': \"danielscomputer\", 'label': \"Karthik Is the Best Developer\", 'file': \"karthik.PNG\"},\r\n                {'source': \"danielscomputer\", 'label': \"William Is the Best Tech Lead\", 'file': \"william.JPG\"},\r\n        ]\r\n    # gather analysis data and meta data for each image, adding attributes to each row in table\r\n    for img_dict in img_list:\r\n        # File to open\r\n        file = path / img_dict['file']  # file with path for local access (backend)\r\n        print(file)\r\n        # Python Image Library operations\r\n        img_reference = Image.open(file)  # PIL\r\n        img_data = img_reference.getdata()  # Reference https://www.geeksforgeeks.org/python-pil-image-getdata/\r\n        img_dict['format'] = img_reference.format\r\n        img_dict['mode'] = img_reference.mode\r\n        img_dict['size'] = img_reference.size\r\n        # Conversion of original Image to Base64, a string format that serves HTML nicely\r\n        img_dict['base64'] = image_formatter(img_reference, img_dict['format'])\r\n        # Numpy is used to allow easy access to data of image, python list\r\n        img_dict['data'] = numpy.array(img_data)\r\n        img_dict['hex_array'] = []\r\n        img_dict['binary_array'] = []\r\n        # 'data' is a list of RGB data, the list is traversed and hex and binary lists are calculated and formatted\r\n        for pixel in img_dict['data']:\r\n            # hexadecimal conversions\r\n            hex_value = hex(pixel[0])[-2:] + hex(pixel[1])[-2:] + hex(pixel[2])[-2:]\r\n            hex_value = hex_value.replace(\"x\", \"0\")\r\n            img_dict['hex_array'].append(\"#\" + hex_value)\r\n            # binary conversions\r\n            bin_value = bin(pixel[0])[2:].zfill(8) + \" \" + bin(pixel[1])[2:].zfill(8) + \" \" + bin(pixel[2])[2:].zfill(8)\r\n            img_dict['binary_array'].append(bin_value)\r\n        # create gray scale of image, ref: https://www.geeksforgeeks.org/convert-a-numpy-array-to-an-image/\r\n        img_dict['gray_data'] = []\r\n        for pixel in img_dict['data']:\r\n            average = (int(pixel[0]) + pixel[1] + pixel[2]) // 3  # integer division\r\n            if len(pixel) > 3:\r\n                img_dict['gray_data'].append((average, average, average, pixel[3]))\r\n            else:\r\n                img_dict['gray_data'].append((average, average, average))\r\n        img_reference.putdata(img_dict['gray_data'])\r\n        img_dict['base64_GRAY'] = image_formatter(img_reference, img_dict['format'])\r\n    return img_list  # list is returned with all the attributes for each image dictionary\r\n\r\n\r\n# run this as standalone tester to see data printed in terminal\r\nif __name__ == \"__main__\":\r\n#   local_path = Path(\"../starter/static/img/\")\r\n    local_path = Path(\"static/img/\")\r\n    img_test = [\r\n        {'source': \"Peter Carolin\", 'label': \"Lassen Volcano\", 'file': \"lassen-volcano-256.jpg\"},\r\n    ]\r\n    items = image_data(local_path, img_test)  # path of local run\r\n    for row in items:\r\n        # print some details about the image so you can validate that it looks like it is working\r\n        # meta data\r\n        print(\"---- meta data -----\")\r\n        print(row['label'])\r\n        print(row['format'])\r\n        print(row['mode'])\r\n        print(row['size'])\r\n        # data\r\n        print(\"----  data  -----\")\r\n        print(row['data'])\r\n        print(\"----  gray data  -----\")\r\n        print(row['gray_data'])\r\n        print(\"----  hex of data  -----\")\r\n        print(row['hex_array'])\r\n        print(\"----  bin of data  -----\")\r\n        print(row['binary_array'])\r\n        # base65\r\n        print(\"----  base64  -----\")\r\n        print(row['base64'])\r\n        # display image\r\n        print(\"----  render and write in image  -----\")\r\n        filename = local_path / row['file']\r\n        image_ref = Image.open(filename)\r\n        draw = ImageDraw.Draw(image_ref)\r\n        draw.text((0, 0), \"Size is {0} X {1}\".format(*row['size']))  # draw in image\r\n        image_ref.show()\r\nprint()
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/image.py b/image.py
+--- a/image.py	(revision 063add2ec7801bcba108c6e007b1d82090d5c8fe)
++++ b/image.py	(date 1633377296454)
+@@ -1,4 +1,3 @@
+-from PIL import Image, ImageDraw
+ import numpy
+ import base64
+ from io import BytesIO
+Index: main.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+># import \"packages\" from flask\r\nfrom flask import Flask, render_template, request\r\nfrom image import image_data\r\nfrom pathlib import Path  # https://medium.com/@ageitgey/python-3-quick-tip-the-easy-way-to-deal-with-file-paths-on-windows-mac-and-linux-11a072b58d5f\r\n\r\n# create a Flask instance\r\napp = Flask(__name__)\r\n\r\n\r\n@app.route('/karthikgreet/')\r\ndef greet0():\r\n    return render_template(\"karthikgreet.html\")\r\n\r\n@app.route('/karthikgreet/', methods=['GET', 'POST'])\r\ndef greet1():\r\n    # submit button has been pushed\r\n    if request.form:\r\n        name = request.form.get(\"name\")\r\n        if len(name) != 0:  # input field has content\r\n            return render_template(\"karthikgreet.html\", name=name)\r\n    # starting and empty input default\r\n    return render_template(\"karthikgreet.html\", name=\"World\")\r\n\r\n@app.route('/danielgreet/')\r\ndef greet2():\r\n    return render_template(\"danielgreet.html\")\r\n\r\n@app.route('/danielgreet/', methods=['GET', 'POST'])\r\ndef greet3():\r\n    # submit button has been pushed\r\n    if request.form:\r\n        name = request.form.get(\"name\")\r\n        if len(name) != 0:  # input field has content\r\n            return render_template(\"danielgreet.html\", name1=name)\r\n    # starting and empty input default\r\n    return render_template(\"danielgreet.html\", name1=\"World\")\r\n\r\n@app.route('/dylangreet/')\r\ndef greet4():\r\n    return render_template(\"dylangreet.html\")\r\n\r\n@app.route('/dylangreet/', methods=['GET', 'POST'])\r\ndef greet5():\r\n    # submit button has been pushed\r\n    if request.form:\r\n        name = request.form.get(\"name\")\r\n        if len(name) != 0:  # input field has content\r\n            return render_template(\"dylangreet.html\", name1=name)\r\n    # starting and empty input default\r\n    return render_template(\"dylangreet.html\", name1=\"World\")\r\n\r\n@app.route('/williamgreet/')\r\ndef greet6():\r\n    return render_template(\"williamgreet.html\")\r\n\r\n@app.route('/williamgreet/', methods=['GET', 'POST'])\r\ndef greet7():\r\n    # submit button has been pushed\r\n    if request.form:\r\n        name = request.form.get(\"name\")\r\n        if len(name) != 0:  # input field has content\r\n            return render_template(\"williamgreet.html\", name1=name)\r\n    # starting and empty input default\r\n    return render_template(\"williamgreet.html\", name1=\"World\")\r\n\r\n@app.route('/greet/')\r\ndef greet8():\r\n    return render_template(\"greet.html\")\r\n\r\n@app.route('/greet/', methods=['GET', 'POST'])\r\ndef greet9():\r\n    # submit button has been pushed\r\n    if request.form:\r\n        name = request.form.get(\"name\")\r\n        if len(name) != 0:  # input field has content\r\n            return render_template(\"greet.html\", name1=name)\r\n    # starting and empty input default\r\n    return render_template(\"greet.html\", name1=\"World\")\r\n\r\n\r\n# connects default URL to render index.html\r\n@app.route('/')\r\ndef index():\r\n    return render_template(\"index.html\")\r\n\r\n\r\n# connects /kangaroos path to render kangaroos.html\r\n@app.route('/PCs/')\r\ndef PCs():\r\n    return render_template(\"kangaroos.html\")\r\n\r\n\r\n@app.route('/Console/')\r\ndef Console():\r\n    return render_template(\"walruses.html\")\r\n\r\n@app.route('/PlayStation/')\r\ndef PlayStation():\r\n    return render_template(\"PlayStation.html\")\r\n\r\n@app.route('/Mobile/')\r\ndef Mobile():\r\n    return render_template(\"hawkers.html\")\r\n\r\n@app.route('/Video Journals/')\r\ndef mini():\r\n    return render_template(\"Video Journals.html\")\r\n\r\n@app.route(\"/binary/\", methods = ['GET', 'POST'])\r\ndef binary():\r\n    BITS = 4\r\n    imgBulbOn = \"/static/assets/bulb_on.gif\"\r\n    # second time you call it, its a post action\r\n    if request.method == 'POST':\r\n        BITS = int(request.form['BITS'])\r\n        imgBulbOn = request.form['lightOn']\r\n    return render_template(\"binary.html\", imgBulbOn=imgBulbOn, BITS=BITS)\r\n\r\n@app.route('/howitsmade/')\r\ndef howitsmade():\r\n    return render_template(\"howitsmade.html\")\r\n\r\n@app.route('/Apple/')\r\ndef Apple():\r\n    return render_template(\"Apple.html\")\r\n\r\n@app.route('/Samsung/')\r\ndef Samsung():\r\n    return render_template(\"Samsung.html\")\r\n\r\n\r\n@app.route('/xbox/')\r\ndef xbox():\r\n    return render_template(\"xbox.html\")\r\n\r\n@app.route('/Laptops/')\r\ndef Laptops():\r\n    return render_template(\"Laptops.html\")\r\n\r\n@app.route('/howitsmade/', methods=['GET', 'POST'])\r\ndef greet1288():\r\n    # submit button has been pushed\r\n    if request.form:\r\n        name = request.form.get(\"name\")\r\n        if len(name) != 0:  # input field has content\r\n            return render_template(\"howitsmade.html\", name1=name)\r\n    # starting and empty input default\r\n    return render_template(\"howitsmade.html\", name1=\"World\")\r\n\r\n@app.route('/rgb/', methods=['GET', 'POST'])\r\ndef rgb():\r\n    path = Path(app.root_path) / \"static\" / \"img\"\r\n    return render_template('rgb.html', images=image_data(path))\r\n\r\n# runs the application on the development server\r\nif __name__ == \"__main__\":\r\n    app.run(debug=True)
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/main.py b/main.py
+--- a/main.py	(revision 063add2ec7801bcba108c6e007b1d82090d5c8fe)
++++ b/main.py	(date 1633468146891)
+@@ -1,6 +1,5 @@
+ # import "packages" from flask
+ from flask import Flask, render_template, request
+-from image import image_data
+ from pathlib import Path  # https://medium.com/@ageitgey/python-3-quick-tip-the-easy-way-to-deal-with-file-paths-on-windows-mac-and-linux-11a072b58d5f
+ 
+ # create a Flask instance
+@@ -106,7 +105,11 @@
+ def mini():
+     return render_template("Video Journals.html")
+ 
+-@app.route("/binary/", methods = ['GET', 'POST'])
++@app.route('/LogicGateLab/')
++def LogicGateLab():
++    return render_template("LogicGateLab.html")
++
++@app.route("/LogicGateLab/", methods = ['GET', 'POST'])
+ def binary():
+     BITS = 4
+     imgBulbOn = "/static/assets/bulb_on.gif"
+@@ -114,7 +117,8 @@
+     if request.method == 'POST':
+         BITS = int(request.form['BITS'])
+         imgBulbOn = request.form['lightOn']
+-    return render_template("binary.html", imgBulbOn=imgBulbOn, BITS=BITS)
++    return render_template("LogicGateLab.html", imgBulbOn=imgBulbOn, BITS=BITS)
++
+ 
+ @app.route('/howitsmade/')
+ def howitsmade():
+Index: templates/layouts/navbar.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><!-- Navigation Bar from bootstrap\r\nThis HTML is setup as a fragment allowing it to be \"included\" by other HTML files via Jinja2\r\n-->\r\n<!DOCTYPE html>\r\n<html>\r\n<head>\r\n    <script src=\"https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js\" ></script>\r\n    <script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js\" integrity=\"sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT\" crossorigin=\"anonymous\"></script>\r\n\r\n</head>\r\n\r\n<body>\r\n\r\n<nav class=\"navbar navbar-expand-lg navbar-light bg-light\">\r\n    <a class=\"navbar-brand\" href=\"https://csp.nighthawkcodingsociety.com/\">{{basename}}</a>\r\n    <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarNavAltMarkup\" aria-controls=\"navbarNavAltMarkup\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\r\n        <span class=\"navbar-toggler-icon\"></span>\r\n    </button>\r\n    <div class=\"collapse navbar-collapse\" id=\"navbarNavAltMarkup\">\r\n        <div class=\"navbar-nav\">\r\n            <!-- url_for is a Jinja2 pre-processor that finds route from function name (def) -->\r\n            <a class=\"nav-link\" href={{ url_for('index') }}>A1 Gaming</a>\r\n            <a class=\"nav-link\" href={{ url_for('PCs') }}>PCs</a>\r\n            <a class=\"nav-link\" href={{ url_for('Console') }}>Console</a>\r\n            <a class=\"nav-link\" href={{ url_for('Mobile') }}>Mobile</a>\r\n\r\n            <!-- stub is shown using the name of the route -->\r\n\r\n            <li class=\"nav-item dropdown\">\r\n                <a class=\"nav-link dropdown-toggle\" href=\"#\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\" id=\"dropdownMenuButton1\" type=\"button\">\r\n                    About Us\r\n                </a>\r\n                <div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton1\">\r\n                    <a class=\"dropdown-item\" href=\"/danielgreet/\">About Daniel</a>\r\n                    <a class=\"dropdown-item\" href=\"/dylangreet/\">About Dylan</a>\r\n                    <a class=\"dropdown-item\" href=\"/karthikgreet/\">About Karthik</a>\r\n                    <a class=\"dropdown-item\" href=\"/williamgreet/\">About William</a>\r\n                    <a class=\"dropdown-item\" href=\"/rgb/\">About Us -- RGB</a>\r\n                </div>\r\n            </li>\r\n\r\n            <li class=\"nav-item dropdown\">\r\n                <a class=\"nav-link dropdown-toggle\" href=\"#\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\" id=\"dropdownMenuButton1\" type=\"button\">\r\n                    Mini-Labs\r\n                </a>\r\n                <div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton1\">\r\n                    <a class=\"nav-link\" href=\"/Video Journals/\">Video Journals</a>\r\n                    <a class=\"nav-link\" href=\"/binary/\">Binary</a>\r\n                    <a class=\"nav-link\" href=\"/howitsmade/\">How It's Made</a>\r\n                    <a class=\"nav-link\" href=\"ListHackathon\"/>List Hackathon</a>\r\n                </div>\r\n\r\n            </div>\r\n        </div>\r\n    </div>\r\n</nav>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/templates/layouts/navbar.html b/templates/layouts/navbar.html
+--- a/templates/layouts/navbar.html	(revision 063add2ec7801bcba108c6e007b1d82090d5c8fe)
++++ b/templates/layouts/navbar.html	(date 1633467965173)
+@@ -48,6 +48,8 @@
+                     <a class="nav-link" href="/binary/">Binary</a>
+                     <a class="nav-link" href="/howitsmade/">How It's Made</a>
+                     <a class="nav-link" href="ListHackathon"/>List Hackathon</a>
++                    <a class="nav-link" href="LogicGateLab"/>Logic Gate Lab</a>
++
+                 </div>
+ 
+             </div>
+Index: templates/LogicGateLab.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/templates/LogicGateLab.html b/templates/LogicGateLab.html
+new file mode 100644
+--- /dev/null	(date 1633468197241)
++++ b/templates/LogicGateLab.html	(date 1633468197241)
+@@ -0,0 +1,19 @@
++<!DOCTYPE html>
++{% extends "layouts/base.html" %}
++{% block background %}
++{% endblock %}
++
++{% set project = "LogicGateLab" %}
++
++{% block body %}
++
++<form action="/LogicGateLab/" method="post">
++
++
++<style>
++    body {
++        background-image: url('https://www.solidbackgrounds.com/images/1920x1080/1920x1080-medium-violet-red-solid-color-background.jpg')
++    }
++</style>
++
++{% endblock %}
+\ No newline at end of file
