@@ -1,274 +1,37 @@
 <!-- Extending the project layout, as this file will do minor customizations -->
 {% extends "layouts/project.html" %}
 
+<!-- Setting up variables to customize "project" details to be specific to kangaroos  -->
+{% set project = "PC" %}
+{% set Laptops = "https://www.youtube.com/watch?v=qXU-4Dwkv2E" %}
+{% set Desktops = "https://www.youtube.com/channel/UClIKOsDS5dsfzFA3zveDT3Q?view_as=subscriber" %}
+{% set Monitors = "https://github.com/avabrooks/Python-Web-Portfolio-Series-Demo" %}
+{% set Mice = "https://thesmack.nighthawkcodingsociety.com/digitalPortfolios/"  %}
 
-    <br>
-    <input type="submit" value="Submit">
-
-</form>
-<!-- Hack: use 8 as default -->
-
-{% set MAX = ((2 ** BITS) - 1) %}
-
-<!-- Hack: Set bulbs and pass as variables via Python render_template
-           add new images (ie PNGs) to project -->
-<!-- use your PNGs as default -->
-{% set imgBulbOn = "/static/assets/bulb_on2.png" %}
-{% set imgBulbOff = "/static/assets/bulb_off2.png" %}
-{% set msgTurnOn = "Turn On" %}
-{% set msgTurnOff = "Turn Off" %}
-
-{% block meta %}
-
-<title>Binary page</title>
-<script>
-    const BITS = '{{ BITS }}'; let max = '{{ MAX }}'; let MAX = parseInt(max, 10);
-    // return string with current value of each bit
-    function getBits() {
-        let bits = "";
-        for(let i = 0; i < BITS; i++) {
-            bits = bits + document.getElementById('digit' + i).value;
-        }
-        return bits;
-    }
-    // setter for DOM values
-    function setConversions(binary) {
-        document.getElementById('binary').innerHTML = binary;
-        // DOM assignment to Octal conversion
-        document.getElementById('octal').innerHTML = parseInt(binary, 2).toString(8);
-        // DOM assignment to Hexadecimal conversion
-        document.getElementById('hexadecimal').innerHTML = parseInt(binary, 2).toString(16);
-        // DOM assignment to Decimal conversion
-        document.getElementById('decimal').innerHTML = parseInt(binary, 2).toString(10);
-        document.getElementById('UNICODE').innerHTML =  String.fromCharCode(parseInt(binary, 2).toString(10));
-        if (parseInt(binary, 2).toString(10) < 128) {
-            document.getElementById('ASCII/UNICODE').innerText = "ASCII"
-        } else {
-            document.getElementById('ASCII/UNICODE').innerText = "UNICODE"
-        }
-
-
-        /* Hack: show ASCII printable character(s) for each 8 bits
-         DOM assignment by converting decimal https:///www.w3schools.com/jsref/jsref_fromcharcode.asp
-         below ASCII for more ideas of where to make changes
-         */
-    }
-
-    // algorithm to convert decimal to base using division and remainder
-    function decimal_2_base(decimal, base) {
-        let conversion = "";
-        // loop to convert to base
-        do {
-            let digit = decimal % base;
-            conversion = "" + digit + conversion; // what does this do?
-            decimal = ~~(decimal / base);         // what does this do?  what is ~~?
-        } while (decimal > 0);                  // why while at the end?
-        // loop to pad with zeros
-        if (base === 2) {                        // only pad for binary conversions
-            for (let i = 0; conversion.length < BITS; i++) {
-                conversion = "0" + conversion;
-            }
-        }
-        return conversion;
-    }
-
-    // toggle selected bit and recalculate
-    function toggleBit(i) {
-        //alert("Digit action: " + i );
-        const dig = document.getElementById('digit' + i);
-        const image = document.getElementById('bulb' + i);
-        const butt = document.getElementById('butt' + i);
-        // Change digit and visual
-        if (image.src.match("{{ imgBulbOn }}")) {
-            dig.value = 0;
-            image.src = "{{ imgBulbOff }}";
-            butt.innerHTML = "{{ msgTurnOn }}";
-        } else {
-            dig.value = 1;
-            image.src = "{{ imgBulbOn }}";
-            butt.innerHTML = "{{ msgTurnOff }}";
-        }
-        // Binary numbers
-        const binary = getBits();
-        setConversions(binary);
-    }
-    // add is positive integer, subtract is negative integer
-    function add(n) {
-        let binary = getBits();
-        // convert to decimal and do math
-        let decimal = parseInt(binary, 2);
-        if (n==1) {  // PLUS
-            decimal = MAX === decimal ? 0 : decimal += n; // OVERFLOW or PLUS
-        } else if (n==2) {
-            decimal = MAX === decimal ? 0 : decimal *= n;
-        }else if (n==0.5) {
-            decimal = MAX === decimal ? 0 : decimal *= n;
-        }else  {     // MINUS
-            decimal = 0 === decimal ? MAX : decimal += n; // OVERFLOW or MINUS
-        }
-        // convert the result back to binary
-        binary = decimal_2_base(decimal, 2);
-        // update conversions
-        setConversions(binary);
-        // update bits
-        for (let i = 0; i < binary.length; i++) {
-            let digit = binary.substr(i, 1);
-            document.getElementById('digit' + i).value = digit;
-            if (digit === "1") {
-                document.getElementById('bulb' + i).src = "{{ imgBulbOn }}";
-                document.getElementById('butt' + i).innerHTML = "{{ msgTurnOff }}";
-            } else {
-                document.getElementById('bulb' + i).src = "{{ imgBulbOff }}";
-                document.getElementById('butt' + i).innerHTML = "{{ msgTurnOn }}";
-            }
-        }
-    }
-</script>
-{% endblock %}
-
-{% block content %}
-<div class="container">
-    <div class="row justify-content-md-center">
-
-        <div class="col-8">
-            <table class="table">
-                <tr id="table">
-                    <th>Multiply</th>
-                    <th>Plus</th>
-                    <th>Binary</th>
-                    <th>Octal</th>
-                    <th>Hexadecimal</th>
-                    <th>Decimal</th>
-                    <!-- Hack: display ASCII label for printable character(s)  -->
-                    <th id="ASCII/UNICODE">UNICODE</th>
-                    <th>Minus</th>
-                    <th>Divide</th>
-                </tr>
-                <tr>
-                    <td><button type="button" id="multiply2" onclick="add(2)">x2</button></td>
-                    <td><button type="button" id="add1" onclick="add(1)">+1</button></td>
-                    <td id="binary">00000000</td>
-                    <td id="octal">0</td>
-                    <td id="hexadecimal">0</td>
-                    <td id="decimal">0</td>
-                    <td id="UNICODE">""</td>
-                    <!-- Hack: display ASCII printable character(s)  -->
-                    <td><button type="button" id="sub1" onclick="add(-1)">-1</button></td>
-                    <td><button type="button" id="divide2" onclick="add(0.5)">&#x00F7&nbsp;2</button></td>
-                </tr>
-            </table>
-        </div>
-
-        <div class="col-12">
-            <table class="table">
-                <tr>
-                    {% for i in range(BITS) %}
-                    <td><img class="img-responsive py-3" id="bulb{{i}}" src="{{ imgBulbOff }}" alt="" width="40" height="Auto">
-                        <button type="button" id="butt{{i}}" onclick="toggleBit('{{i}}')">{{ msgTurnOn }}</button>
-                    </td>
-                    {% endfor %}
-                </tr>
-                <tr>
-                    {% for i in range(BITS) %}
-                    <td><input type='text' id='digit{{i}}' Value="0" size="1" readonly></td>
-                    {% endfor %}
-                </tr>
-            </table>
-        </div>
-
-
-    </div>
-</div>
-<style>
-    h1 {
-        text-align: center;
-    }
-    table, th, td {
-        border: 1px solid black;
-    }
-    table {
-        margin: 15px auto;
-    }
-    body {
-        background-image: radial-gradient(#fffb00, #d0bd01);
-    }
-    #form {
-        border: 2px red solid;
-        width: 80%;
-        margin: 0 auto;
-
-    }
-    * {
-        margin: 0;
-        padding: 0;
-    }
-    nav {
-        background-image: linear-gradient(to right, #27B2E4, #01445C);
-        padding: 1.5em;
-    }
-    nav ul {
-        list-style-type: none;
-        display: flex;
-        justify-content: start;
-        flex-wrap: wrap
-    }
-    nav a {
-        color:white;
-        margin-right: 10px;
-        padding: 0.5em;
-        text-decoration: none;
-    }
-    nav a:hover {
-        background-color: #e8a833
-    }
-    .dropbtn {
-        background-color: transparent;
-        color: white;
-        font-size: 16px;
-        border: none;
-        cursor: pointer;
-    }
-
-    /* The container <div> - needed to position the dropdown content */
-    .dropdown {
-        position: relative;
-        display: inline-block;
-    }
-
-    /* Dropdown Content (Hidden by Default) */
-    .dropdown-content {
-        display: none;
-        position: absolute;
-        background-color: #f9f9f9;
-        min-width: 160px;
-        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-        z-index: 1;
-    }
-
-    /* Links inside the dropdown */
-    .dropdown-content a {
-        color: black;
-        padding: 12px 16px;
-        text-decoration: none;
-        display: block;
-    }
-
-    /* Change color of dropdown links on hover */
-    .dropdown-content a:hover {background-color: #f1f1f1}
-
-    /* Show the dropdown menu on hover */
-    .dropdown:hover .dropdown-content {
-        display: block;
-    }
-
-    /* Change the background color of the dropdown button when the dropdown content is shown */
-    .dropdown:hover .dropbtn {
-        background-color: #e8a833;
-    }
-
-</style>
-
-{% endblock %}
-
+<!-- Setting up a block replacement to customize background to RINGS -->
 {% block background %}
+<style>
+    body {
+        background-image: url('https://cdn.wallpapersafari.com/33/7/ZmRcgk.jpg');
+    }
+</style>
 {% endblock %}
+
+<!-- <script src="{{ url_for('static', filename='three.r119.min.js') }}"></script>
+<script src="{{ url_for('static', filename='vanta.halo.min.js') }}"></script>
+<script>
+    VANTA.HALO({
+        el: "body",
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        minHeight: 200.00,
+        minWidth: 200.00
+    })
+</script>
+
+<style>
+        body {
+            background-image: url('https://images.hdqwalls.com/download/astronaut-science-fiction-4k-kq-1920x1080.jpg');
+        }
+    </style>
