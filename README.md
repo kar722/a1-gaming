@@ -23,10 +23,10 @@
 
 | Name | Score | Role | Work Done |
 | - | - | - | - |
-| Daniel | 4/4 | Scrum Master | [Tasks]() [Commits](https://github.com/kar722/a1-gaming/commits?author=danaylevy2004) |
-| Karthik | 4/4 | Designer | [Tasks]() [Commits](https://github.com/kar722/a1-gaming/commits?author=kar722) |
-| William | 4/4 | Technical Lead | [Tasks]() [Commits](https://github.com/kar722/a1-gaming/commits?author=WilliamDu22) | 
-| Dylan | 4/4 | Developer | [Tasks]() [Commits](https://github.com/kar722/a1-gaming/commits?author=DylanLuo05) |
+| Daniel | 4/4 | Scrum Master | [Tasks]() and [Commits](https://github.com/kar722/a1-gaming/commits?author=danaylevy2004) |
+| Karthik | 4/4 | Designer | [Tasks]() and [Commits](https://github.com/kar722/a1-gaming/commits?author=kar722) |
+| William | 4/4 | Technical Lead | [Tasks]() and [Commits](https://github.com/kar722/a1-gaming/commits?author=WilliamDu22) | 
+| Dylan | 4/4 | Developer | [Tasks]() and [Commits](https://github.com/kar722/a1-gaming/commits?author=DylanLuo05) |
 
 ### Repository:
 https://github.com/kar722/a1-gaming/edit/main/README.md
