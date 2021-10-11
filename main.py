@@ -168,6 +168,10 @@ def ListHackathon():
 def unsigned_addition():
     return render_template("Unsigned Addition Binary.html", BITS=8, imageOn="/static/assets/on.PNG", imageOff="/static/assets/off.PNG")
 
+@app.route('/Signed Addition/')
+def SignedAddition():
+    return render_template("Signed Addition.html")
+
 # runs the application on the development server
 if __name__ == "__main__":
     app.run(debug=True)
