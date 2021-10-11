@@ -19,14 +19,14 @@
 5. (Logic Gates)[]
 6. (Signed Addition)[]
 
-Review Ticket October 6
+
 
 | Name | Score | Role | Work Done |
 | - | - | - | - |
-| Daniel | 4/4 | Scrum Master | [Ticket](https://github.com/kar722/a1-gaming/issues/45) |
-| Karthik | 4/4 | Designer | [Ticket](https://github.com/kar722/a1-gaming/issues/45) |
-| William | 4/4 | Technical Lead | [Ticket](https://github.com/kar722/a1-gaming/blob/main/templates/LogicGateLab.html) | 
-| Dylan | 4/4 | Developer | [Ticket](https://github.com/kar722/a1-gaming/issues/43) |
+| Daniel | 4/4 | Scrum Master | [Tasks]() [Commits](https://github.com/kar722/a1-gaming/commits?author=danaylevy2004) |
+| Karthik | 4/4 | Designer | [Tasks]() [Commits](https://github.com/kar722/a1-gaming/commits?author=kar722) |
+| William | 4/4 | Technical Lead | [Tasks]() [Commits](https://github.com/kar722/a1-gaming/commits?author=WilliamDu22) | 
+| Dylan | 4/4 | Developer | [Tasks]() [Commits](https://github.com/kar722/a1-gaming/commits?author=DylanLuo05) |
 
 ### Repository:
 https://github.com/kar722/a1-gaming/edit/main/README.md
