@@ -162,12 +162,12 @@
 
     function divide(n) {
         let binary = getBits();
-        // convert to decimal and do math
         let decimal = parseInt(binary, 2);
-        if (n > 0 ) {  // PLUS
-            decimal = MAX === decimal ? 0 : decimal /= n; // OVERFLOW or PLUS
-        } else  {     // MINUS
-            decimal = 0 === decimal ? MAX : decimal *= n; // OVERFLOW or MINUS
+        if (decimal%2==0) {
+            decimal = decimal/2;
+        } else{
+            decimal = decimal/2;
+            decimal=Math.floor(decimal);
         }
 
         // convert the result back to binary
