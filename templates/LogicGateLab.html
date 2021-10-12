@@ -1,6 +1,6 @@
-{% set imageList = ["And-gate.png", "nand.png", "or.png"]  %}
-{% set textList = ["And Gate", "Nand Gate", "Or Gate"] %}
-{% set result = ["0", "1", "0", "1", "0", "1"]  %}
+{% set imageList = ["And.png", "nand.png", "Or.png"]  %}
+{% set textList = ["And.png", "Nand.png", "Or.png"] %}
+{% set result = ["0", "1", "0"]  %}
 {% set gate = ["and1", "nand1", "or1"] %}
 {% set textGate = ["and", "nand", "or"] %}
 
@@ -15,22 +15,22 @@
         const x = document.getElementById("checkbox1")
         const y = document.getElementById("checkbox2")
         if (x.checked && y.checked){
-            document.getElementById("and").innerHTML = "1";
+            document.getElementById("and").innerHTML = "0";
         }
-        else { // if none or one are checked
+        else {
             document.getElementById("and").innerHTML = "0";
         }
         if (!(x.checked && y.checked)){
             document.getElementById("nand").innerHTML = "1";
         }
-        else { // if and
-            document.getElementById("nand").innerHTML = "0";
+        else {
+            document.getElementById("nand").innerHTML = "1";
         }
         if (x.checked || y.checked){
             document.getElementById("or").innerHTML = "1";
         }
         else {
-            document.getElementById("or").innerHTML = "0";
+            document.getElementById("or").innerHTML = "1";
         }
     }
 </script>
