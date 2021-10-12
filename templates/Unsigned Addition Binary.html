@@ -1,5 +1,15 @@
 <!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
 {% include "layouts/navbar.html" %}
+</body>
+</html>
 {% block background %}
 {% endblock %}
 
@@ -182,6 +192,7 @@
 </script>
 {% endblock %}
 
+
 {% block body %}
 <h1 style="text-align: center; color: navajowhite; font-family: Mytupi";>Unsigned Addition Binary</h1>
 <div class="container">
@@ -199,10 +210,12 @@
         <div class = "row" style="padding-top: 10px; padding-bottom: 20px;">
             <div class ="col-3"></div>
             <div class ="col-3"></div>
-            <div class ="col-3">
-                <button type="button" id="button" onclick="addBits()">+</button>
-            </div>
         </div>
+
+        <div>
+            <button type="button" id="button" onclick="addBits()" style="padding-right: 550px; padding-left: 517px">+</button>
+        </div>
+
         <table class="table">
             <tr>
                 {% for i in range(BITS) %} {# we just want 8 bits per row #}
@@ -215,17 +228,17 @@
         </table>
         <table class="table">
             <tr>
-                <div style="color: whitesmoke; text-align: center; font-size: 100px" <p> == </p> </div>
-            </tr>
-            <tr>
-                {% for i in range(BITS) %} {# we just want 8 bits per row #}
-                <td><img class="img-responsive py-3" id="bulb3{{i}}" src="{{ imgBulbOff }}" alt="" width="40" height="Auto"> {# this sets the default image to off and creates the id for the image #}
-                    <input type='text' id='digit3{{i}}' Value="0" size="1" readonly></td>{# this sets the default message to off and calls the function "toggleBit" on the click of the button which is found in the javascript #}
-                </td>
-                {% endfor %}
-            </tr>
-        </table>
-    </div>
+                <div style="color: whitesmoke; text-align: center; font-size: 100px" <p> = </p> </div>
+    </tr>
+    <tr>
+        {% for i in range(BITS) %} {# we just want 8 bits per row #}
+        <td><img class="img-responsive py-3" id="bulb3{{i}}" src="{{ imgBulbOff }}" alt="" width="40" height="Auto"> {# this sets the default image to off and creates the id for the image #}
+            <input type='text' id='digit3{{i}}' Value="0" size="1" readonly></td>{# this sets the default message to off and calls the function "toggleBit" on the click of the button which is found in the javascript #}
+        </td>
+        {% endfor %}
+    </tr>
+    </table>
+</div>
 </div>
 
 <style>
