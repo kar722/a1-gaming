@@ -12,12 +12,12 @@
 # Team Repository: A1 Gaming (Daniel, William, Karthik, Dylan)
 
 ### Timeboxes (Sprint 7 and 8 From Oct. 4 - Oct. 15):
-1. (Multiply and Divide By 2)[]
-2. (Extend/Switch ASCII to Unicode)[]
-3. (Color Codes)[]
-4. (Unsigned Addition)[]
-5. (Logic Gates)[]
-6. (Signed Addition)[]
+1. [Multiply and Divide By 2](https://github.com/kar722/a1-gaming/blob/main/templates/binary.html)
+2. [Extend/Switch ASCII to Unicode](https://github.com/kar722/a1-gaming/blob/main/templates/binary.html)
+3. [Color Codes](https://github.com/kar722/a1-gaming/blob/main/templates/binary%20RGB%202.html)
+4. [Unsigned Addition](https://github.com/kar722/a1-gaming/blob/main/templates/Unsigned%20Addition%20Binary.html)
+5. [Logic Gates](https://github.com/kar722/a1-gaming/blob/main/templates/LogicGateLab.html)
+6. [Signed Addition](https://github.com/kar722/a1-gaming/blob/main/templates/Signed%20Addition.html)
 
 
 
