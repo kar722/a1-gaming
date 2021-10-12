@@ -19,7 +19,7 @@
 5. [Logic Gates](https://github.com/kar722/a1-gaming/blob/main/templates/LogicGateLab.html)
 6. [Signed Addition](https://github.com/kar722/a1-gaming/blob/main/templates/Signed%20Addition.html)
 
-[TPT Video 10/12](https://www.youtube.com/watch?v=srVOzBFTBEs)
+[TPT Video 10/12](https://youtu.be/srVOzBFTBEs)
 
 | Name | Score | Role | Work Done |
 | - | - | - | - |
