@@ -10,6 +10,9 @@
 ### Overall Scrum Board: https://github.com/kar722/a1-gaming/projects/1
 ### Overall Contributers' Tab: https://github.com/kar722/a1-gaming/graphs/contributors
 
+## Objective: 
+We want our website to model an e-commerce website with the purpose of reselling gaming equipment, like computers, PC parts, and peripherals. We are planning on changing the code within the pages that we changed from Hawkers, Kangaroos, and Walruses into PCs, Console, and Mice respectively. We are also including about me pages that will be done in a dropdown as well as a greet function. Our final goal is to create something where someone can view different items and possibly buy something.
+
 # Team Repository: A1 Gaming (Daniel, William, Karthik, Dylan)
 
 ### Timeboxes (Sprint 7 and 8 From Oct. 4 - Oct. 15):
@@ -82,5 +85,3 @@
 | William | 4/4 | Scrum Master | Displayed in video/scrum board | 
 | Dylan | 4/4 | Developer | Displayed in video/scrum board |
 
-### Objective: 
-We want our website to model an e-commerce website with the purpose of reselling gaming equipment, like computers, PC parts, and peripherals. We are planning on changing the code within the pages that we changed from Hawkers, Kangaroos, and Walruses into PCs, Console, and Mice respectively. We are also including about me pages that will be done in a dropdown as well as a greet function. Our final goal is to create something where someone can view different items and possibly buy something.
