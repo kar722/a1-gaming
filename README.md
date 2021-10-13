@@ -27,9 +27,6 @@
 | William | 4/4 | Technical Lead | [Tasks](https://github.com/kar722/a1-gaming/issues?q=is%3Aopen+is%3Aissue+label%3A%22William%27s+Job%22+) and [Commits](https://github.com/kar722/a1-gaming/commits?author=WilliamDu22) | 
 | Dylan | 4/4 | Developer | [Tasks](https://github.com/kar722/a1-gaming/issues?q=is%3Aopen+is%3Aissue+label%3A%22Dylan%27s+Job%22) and [Commits](https://github.com/kar722/a1-gaming/commits?author=DylanLuo05) |
 
-### Repository:
-https://github.com/kar722/a1-gaming/edit/main/README.md
-
 ### Timeboxes (Sprint 5 and 6 From Sept. 20 - Oct. 1):
 1. [9/20 Student Review](https://github.com/kar722/a1-gaming/issues/30)
 2. [RGB Values Within an Image](https://github.com/kar722/a1-gaming/blob/main/templates/rgb.html)
