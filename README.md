@@ -1,4 +1,5 @@
 # Team Name: A1 From Day 0
+## Pop Quiz
 
 | Name | Github Profile | Issues | Scrum Board | Commit History | Pair Share |
 |------|----------------|--------|-------------|----------------|------------|
@@ -9,6 +10,9 @@
 ### Overall Scrum Board: https://github.com/kar722/a1-gaming/projects/1
 ### Overall Contributers' Tab: https://github.com/kar722/a1-gaming/graphs/contributors
 
+## Objective: 
+We want our website to model an e-commerce website with the purpose of reselling gaming equipment, like computers, PC parts, and peripherals. We are planning on changing the code within the pages that we changed from Hawkers, Kangaroos, and Walruses into PCs, Console, and Mice respectively. We are also including about me pages that will be done in a dropdown as well as a greet function. Our final goal is to create something where someone can view different items and possibly buy something.
+
 # Team Repository: A1 Gaming (Daniel, William, Karthik, Dylan)
 
 ### Timeboxes (Sprint 7 and 8 From Oct. 4 - Oct. 15):
@@ -18,8 +22,8 @@
 4. [Unsigned Addition](https://github.com/kar722/a1-gaming/blob/main/templates/Unsigned%20Addition%20Binary.html)
 5. [Logic Gates](https://github.com/kar722/a1-gaming/blob/main/templates/LogicGateLab.html)
 6. [Signed Addition](https://github.com/kar722/a1-gaming/blob/main/templates/Signed%20Addition.html)
-
-[TPT Video 10/12](https://youtu.be/srVOzBFTBEs)
+7. [TPT Video 10/12](https://youtu.be/srVOzBFTBEs)
+8. [https://github.com/kar722/a1-gaming/issues/49](Review Ticket For Week 7)
 
 | Name | Score | Role | Work Done |
 | - | - | - | - |
@@ -27,9 +31,6 @@
 | Karthik | 4/4 | Designer | [Tasks](https://github.com/kar722/a1-gaming/issues?q=is%3Aopen+is%3Aissue+label%3A%22Karthik%27s+Job%22+) and [Commits](https://github.com/kar722/a1-gaming/commits?author=kar722) |
 | William | 4/4 | Technical Lead | [Tasks](https://github.com/kar722/a1-gaming/issues?q=is%3Aopen+is%3Aissue+label%3A%22William%27s+Job%22+) and [Commits](https://github.com/kar722/a1-gaming/commits?author=WilliamDu22) | 
 | Dylan | 4/4 | Developer | [Tasks](https://github.com/kar722/a1-gaming/issues?q=is%3Aopen+is%3Aissue+label%3A%22Dylan%27s+Job%22) and [Commits](https://github.com/kar722/a1-gaming/commits?author=DylanLuo05) |
-
-### Repository:
-https://github.com/kar722/a1-gaming/edit/main/README.md
 
 ### Timeboxes (Sprint 5 and 6 From Sept. 20 - Oct. 1):
 1. [9/20 Student Review](https://github.com/kar722/a1-gaming/issues/30)
@@ -85,5 +86,3 @@ https://github.com/kar722/a1-gaming/edit/main/README.md
 | William | 4/4 | Scrum Master | Displayed in video/scrum board | 
 | Dylan | 4/4 | Developer | Displayed in video/scrum board |
 
-### Objective: 
-We want our website to model an e-commerce website with the purpose of reselling gaming equipment, like computers, PC parts, and peripherals. We are planning on changing the code within the pages that we changed from Hawkers, Kangaroos, and Walruses into PCs, Console, and Mice respectively. We are also including about me pages that will be done in a dropdown as well as a greet function. Our final goal is to create something where someone can view different items and possibly buy something.
