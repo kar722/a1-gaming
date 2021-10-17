@@ -23,7 +23,7 @@ We want our website to model an e-commerce website with the purpose of reselling
 5. [Logic Gates](https://github.com/kar722/a1-gaming/blob/main/templates/LogicGateLab.html)
 6. [Signed Addition](https://github.com/kar722/a1-gaming/blob/main/templates/Signed%20Addition.html)
 7. [TPT Video 10/12](https://youtu.be/srVOzBFTBEs)
-8. [https://github.com/kar722/a1-gaming/issues/49](Review Ticket For Week 7)
+8. [Review Ticket For Week 7](https://github.com/kar722/a1-gaming/issues/49)
 
 | Name | Score | Role | Work Done |
 | - | - | - | - |

@@ -5,7 +5,7 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
  ... code reuse
 -->
 <!DOCTYPE HTML>
-<html lang="en">
+<html lang="en" xmlns:white-space="http://www.w3.org/1999/xhtml">
 
 <head>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -66,11 +66,11 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
 
         .btn:link,
         .btn:visited {
-            text-transform: uppercase;
+            text-transform: none;
             text-decoration: none;
-            padding: 15px 40px;
+            padding: 3px 8px;
             display: inline-block;
-            border-radius: 100px;
+            border-radius: 50px;
             transition: all .2s;
             position: absolute;
             color: white;
@@ -107,8 +107,43 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
         #background3 {
             border: 1px solid black;
             background-repeat: no-repeat;
-            background: url("https://cdn3.vox-cdn.com/thumbor/AMsd7zeGYTqdueUE6deJj1zcskM=/0x1080/volume-assets.voxmedia.com/production/3dace8cb65ad621ca3e821a4fef6fdec/Tfin_sans_vpavic_190102_3149_0023_Edit.jpg");
-            padding: 450px;
+            background: url("http://cdn.mos.cms.futurecdn.net/Ea3JY2MRshgUNHzcUAEftD.jpg");
+            padding: 420px;
+        }
+
+        #background4 {
+            border: 1px solid black;
+            background-repeat: no-repeat;
+            background: url("https://9to5mac.com/wp-content/uploads/sites/6/2021/06/Dark-Purple-iPhone-Pro-concept.jpg?quality=82&strip=all");
+            padding: 420px;
+        }
+
+        #background5 {
+            border: 1px solid black;
+            background-repeat: no-repeat;
+            background: url("https://cdn.mos.cms.futurecdn.net/DaLSjKvHzboe3dJ44u8pmD.jpg");
+            padding: 420px;
+        }
+
+        #background6 {
+            border: 1px solid black;
+            background-repeat: no-repeat;
+            background: url("https://assets.hardwarezone.com/img/2021/05/ipad-pro-intro3.jpg");
+            padding: 480px;
+        }
+
+        #background7 {
+            border: 1px solid black;
+            background-repeat: no-repeat;
+            background: url("https://www.intego.com/mac-security-blog/wp-content/uploads/2021/04/imac-sides-hero-600.jpg");
+            padding: 360px;
+        }
+
+        #background8 {
+            border: 1px solid black;
+            background-repeat: no-repeat;
+            background: url("https://cdn.wallpapersafari.com/24/68/lWeOGK.gif");
+            padding: 360px;
         }
 
         .container {
@@ -206,25 +241,78 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
     </style>
 
     <title> Apple | A1 from Day 0 </title>
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@500&family=Rubik:ital,wght@0,500;1,400&display=swap" rel="stylesheet">
 </head>
 
 <body>
 {% include "layouts/navbar.html" %}
 
-<div id = "background1">
-    <div class="col-3">
-        <a href="/Mice/" class="btn" style = "color:white; font-size:25px; position:relative; left: 185px; top: -400px"></a>
+<div id = "background1";>
+    <h style = "color:black; font-size:50px; position:relative; left:300px; top:-350px; font-family: 'Fira Sans', sans-serif;">iPhone 13</h>
+    <div class="inline">
+        <a href="/Mice/" class="btn"  style = "color:dodgerblue; font-size:20px; position:relative; left: 300px; top: -362px">About ></a>
+    </div>
+    <div class="inline">
+        <a href="/Mice/" class="btn"  style = "color:dodgerblue; font-size:20px; position:relative; left: 400px; top: -400px">Buy ></a>
     </div>
 </div>
 
 <div id = "background2">
+    <h style = "color:white; font-size:50px; position:relative; left:300px; top:-350px; font-family: 'Fira Sans', sans-serif;">iPhone 13</h>
+    <div class="inline">
+        <a href="/Mice/" class="btn"  style = "color:dodgerblue; font-size:20px; position:relative; left: 300px; top: -362px">About ></a>
+    </div>
+    <div class="inline">
+        <a href="/Mice/" class="btn"  style = "color:dodgerblue; font-size:20px; position:relative; left: 400px; top: -400px">Buy ></a>
+    </div>
+</div>
+
+<div id = "background3">
+    <h style = "color:black; font-size:50px; position:relative; left:250px; top:-400px; font-family: 'Fira Sans', sans-serif;">iPhone 13</h>
+    <div class="inline">
+        <a href="/Mice/" class="btn"  style = "color:dodgerblue; font-size:20px; position:relative; left: 250px; top: -415px">About ></a>
+    </div>
+    <div class="inline">
+        <a href="/Mice/" class="btn"  style = "color:dodgerblue; font-size:20px; position:relative; left: 350px; top: -453px">Buy ></a>
+    </div>
+</div>
+
+
+<div id = "background4">
+    <h style = "color:white; font-size:50px; position:relative; left:250px; top:-400px; font-family: 'Fira Sans', sans-serif;">iPhone 13</h>
+    <div class="inline">
+        <a href="/Mice/" class="btn"  style = "color:dodgerblue; font-size:20px; position:relative; left: 250px; top: -415px">About ></a>
+    </div>
+    <div class="inline">
+        <a href="/Mice/" class="btn"  style = "color:dodgerblue; font-size:20px; position:relative; left: 350px; top: -453px">Buy ></a>
+    </div>
+</div>
+
+<div id = "background5">
     <div class="col-3">
         <a href="/Mice/" class="btn" style = "color:white; font-size:25px; position:relative; left: 185px; top: -400px"></a>
     </div>
 </div>
 
+<div id = "background6">
+    <div class="col-3">
+        <a href="/Mice/" class="btn" style = "color:white; font-size:25px; position:relative; left: 185px; top: -400px"></a>
+    </div>
+</div>
 
+<div id = "background7">
+    <div class="col-3">
+        <a href="/Mice/" class="btn" style = "color:white; font-size:25px; position:relative; left: 185px; top: -400px"></a>
+    </div>
+</div>
+
+<div id = "background8">
+    <div class="col-3">
+        <a href="/Mice/" class="btn" style = "color:white; font-size:25px; position:relative; left: 185px; top: -400px"></a>
+    </div>
+</div>
 <!--<div class="row">
 
     <div class="card" style="width: 200px; margin-right: 5px; margin-top: 40px; margin-left: 65px;">
