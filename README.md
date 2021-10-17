@@ -24,6 +24,11 @@ We want our website to model an e-commerce website with the purpose of reselling
 6. [Signed Addition](https://github.com/kar722/a1-gaming/blob/main/templates/Signed%20Addition.html)
 7. [TPT Video 10/12](https://youtu.be/srVOzBFTBEs)
 8. [Review Ticket For Week 7](https://github.com/kar722/a1-gaming/issues/49)
+9. [Laptop Page]()
+10. [Playstation Page]()
+11. [XBox Page]()
+12. [Apple Page]()
+13. [Samsung Page]()
 
 | Name | Score | Role | Work Done |
 | - | - | - | - |
