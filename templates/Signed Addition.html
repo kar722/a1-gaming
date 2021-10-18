@@ -11,13 +11,8 @@
 </html>
 
 
-<!-- Search for all the Hack: below for hack-a-thon and mini-lab requirements -->
-<!-- need to adjust Templates to start -->
 
-<!-- Hack: Build form to drive bit size dynamic updates
-           use HTML Input Form in Frontend, ie toward top of Page
-           send initial value and updated values to form via Python render_template -->
-<!-- Hack: use 8 as default -->
+<!-- use 8 as default -->
 
 {% set project = "Color Codes" %}
 {% set subheading = "Color Code Binary" %}
@@ -25,11 +20,7 @@
 {% set BITS = 24 %}
 {% set MAX = ((2 ** BITS) - 1) %}
 
-{% set imageurl = "/static/assets/backgrounds/patrick-schneider-mountains-unsplash.jpg" %}
 
-<!-- Hack: Set bulbs and pass as variables via Python render_template
-           add new images (ie PNGs) to project -->
-<!-- use your PNGs as default -->
 
 {% set imgBulbOn = "/static/assets/on.png" %}
 {% set imgBulbOff = "/static/assets/off.png" %}
@@ -45,48 +36,19 @@
         height: 100%;
     }
 
-    .parallax {
-        /* The image used */
-        background-image: url({{ imageurl }});
-
-        /* Full height */
-        height: 100%;
-
-        /* Create the parallax scrolling effect */
-        background-attachment: fixed;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-
-    input.checkboxBig {
-        width: 20px;
-        height: 20px;
-    }
-
-    .square {
-        height: 100px;
-        width: 300px;
-        margin: 1%;
-        border: 1px;
-        border-color: white;
-    }
 </style>
 
 <body>
 
 <script>
 
-    const BITS = {{ BITS }}; let max = '{{ MAX }}'; let MAX = parseInt(max, 10);
-    // return string with current value of each bit
-    function getBits() {
+    const BITS = {{ BITS }}; let max = '{{ MAX }}'; let MAX = parseInt(max, 10);function getBits() {
         let bits = "";
         for(let i = 0; i < BITS; i++) {
             bits = bits + document.getElementById('digit' + i).value;
         }
         return bits;
     }
-    // setter for DOM values
     function setConversions(binary) {
         const stringDec = parseInt(binary, 2).toString(10);
         const stringBin = String(binary)
@@ -98,21 +60,14 @@
         document.getElementById('hexadecimal').innerHTML = parseInt(binary, 2).toString(16);
         // DOM assignment to Decimal conversion
         document.getElementById('decimal').innerHTML = parseInt(binary, 2).toString(10);
-        /* Hack: show ASCII printable character(s) for each 8 bits
-         DOM assignment by converting decimal https://www.w3schools.com/jsref/jsref_fromcharcode.asp
-         below ASCII for more ideas of where to make changes
-         */
 
 
-        // Takes substrings of binary values for each row
         var binaryR1 = parseInt(stringBin.substring(0, 8));
         var binaryR2 = parseInt(stringBin.substring(8, 15));
         var operator = parseInt(stringBin.substring(15, 16));
         document.getElementById('operator').innerHTML = operator;
 
-        // var binaryR3 = parseInt(stringBin.substring(16, 24));
 
-        // Converts each substring to the decimal values for each color
         document.getElementById('decimalR1').innerHTML = parseInt(binaryR1, 2).toString(10);
         document.getElementById('decimalR2').innerHTML = parseInt(binaryR2, 2).toString(10);
         // document.getElementById('decimalB').innerHTML = parseInt(binaryB, 2).toString(10);
@@ -131,32 +86,8 @@
         var binaryR3 = parseInt(decimalR3).toString(2);
         document.getElementById('outputR3').innerHTML = "Bin: " + binaryR3;
         document.getElementById('decimalR3').innerHTML = "Dec: " + decimalR3;
-
-        /*
-        for (let j = 0; j < binaryR3.length; j++) {
-            lightFunction(j)
-        }
-        function lightFunction(n) {
-            var lightValue = parseInt(binaryR3.substring(n));
-            var h = n + 16
-            const dig = document.getElementById('digit' + h);
-            const image = document.getElementById('bulb' + h);
-            const butt = document.getElementById('butt' + h);
-            if (lightValue == 0) {
-                dig.value = 0;
-                image.src = "{{ imgBulbOff }}";
-                butt.innerHTML = "{{ msgTurnOn }}";
-            }
-            else {
-                dig.value = 1;
-                image.src = "{{ imgBulbOn }}";
-                butt.innerHTML = "{{ msgTurnOff }}";
-            }
-        }
-        */
     }
 
-    // algorithm to convert decimal to base using division and remainder
     function decimal_2_base(decimal, base) {
         let conversion = "";
         // loop to convert to base
@@ -174,13 +105,10 @@
         return conversion;
     }
 
-    // toggle selected bit and recalculate
     function toggleBit(i) {
-        //alert("Digit action: " + i );
         const dig = document.getElementById('digit' + i);
         const image = document.getElementById('bulb' + i);
         const butt = document.getElementById('butt' + i);
-        // Change digit and visual
         if (image.src.match("{{ imgBulbOn }}")) {
             dig.value = 0;
             image.src = "{{ imgBulbOff }}";
@@ -190,25 +118,19 @@
             image.src = "{{ imgBulbOn }}";
             butt.innerHTML = "{{ msgTurnOff }}";
         }
-        // Binary numbers
         const binary = getBits();
         setConversions(binary);
     }
-    // add is positive integer, subtract is negative integer
     function add(n) {
         let binary = getBits();
-        // convert to decimal and do math
         let decimal = parseInt(binary, 2);
         if (n > 0) {  // PLUS
             decimal = MAX === decimal ? 0 : decimal += n; // OVERFLOW or PLUS
         } else  {     // MINUS
             decimal = 0 === decimal ? MAX : decimal += n; // OVERFLOW or MINUS
         }
-        // convert the result back to binary
         binary = decimal_2_base(decimal, 2);
-        // update conversions
         setConversions(binary);
-        // update bits
         for (let i = 0; i < binary.length; i++) {
             let digit = binary.substr(i, 1);
             document.getElementById('digit' + i).value = digit;
@@ -224,14 +146,12 @@
     function multiply(m) {
         let binary = getBits();
         let decimal = parseInt(binary, 2);
-        if (m > 0) {  // multiply
+        if (m > 0) {
             decimal = MAX === decimal ? 0 : decimal << m; // OVERFLOW or MULTIPLY
-        } else  {     // divide
+        } else  {
             decimal = decimal
         }
-        // convert the result back to binary
         binary = decimal_2_base(decimal, 2);
-        // update conversions
         setConversions(binary);
         // update bits
         for (let i = 0; i < binary.length; i++) {
@@ -255,9 +175,8 @@
         } else  {     // divide
             decimal = decimal
         }
-        // convert the result back to binary
+
         binary = decimal_2_base(decimal, 2);
-        // update conversions
         setConversions(binary);
         // update bits
         for (let i = 0; i < binary.length; i++) {
@@ -277,8 +196,8 @@
 
 </script>
 
-<div class="parallax" style="height: max-content">
-    <div class="frame" style="padding: 5%; width: 100%; margin: auto; height: max-content">
+<div style="height: max-content">
+    <div style="padding: 5%; width: 100%; margin: auto; height: max-content">
         <div>
             <div class="d-flex justify-content-center" style="background-color: blue">
 
@@ -302,7 +221,6 @@
                                     <th>Octal</th>
                                     <th>Hexadecimal</th>
                                     <th>Decimal</th>
-                                    <!-- Hack: display ASCII label for printable character(s) - DONE -->
                                     <th>Ascii</th>
                                     <th>Minus</th>
                                     <th>Shift Right</th>
@@ -314,7 +232,6 @@
                                     <td id="octal">0</td>
                                     <td id="hexadecimal">0</td>
                                     <td id="decimal">0</td>
-                                    <!-- Hack: display ASCII printable character(s) - DONE -->
                                     <td id="ascii">0</td>
                                     <td><button type="button" id="sub1" onclick="add(-1)">-1</button></td>
                                     <td><button type="button" id="divide2" onclick="divide(1)">/2</button></td>
@@ -326,7 +243,6 @@
                             <div class="container-fluid" >
                                 <div class="row">
                                     <div class="col-sm">
-                                        <!-- On/off toggles for bulbs-->
                                         <table class="table">
                                             <tr>
                                                 <td>    </td>
@@ -353,7 +269,6 @@
                             <div class="container-fluid" >
                                 <div class="row">
                                     <div class="col-sm">
-                                        <!-- On/off toggles for bulbs-->
                                         <table class="table">
                                             <tr>
                                                 <td>    </td>
@@ -389,7 +304,6 @@
                             <div class="container-fluid" >
                                 <div class="row">
                                     <div class="col-sm">
-                                        <!-- On/off toggles for bulbs-->
                                         <table class="table">
                                             <tr>
                                                 <td style="background-color: orangered; color: white">
@@ -421,7 +335,6 @@
         </div>
     </div>
 </div>
-<div class="parallax" style="height: 20%"></div>
 </body>
 
 {% block background %}
