@@ -10,8 +10,6 @@
 </body>
 </html>
 
-{% block background %}
-{% endblock %}
 
 <!-- Search for all the Hack: below for hack-a-thon and mini-lab requirements -->
 <!-- need to adjust Templates to start -->
@@ -38,6 +36,8 @@
 {% set msgTurnOn = "Turn On" %}
 {% set msgTurnOff = "Turn On" %}
 
+<h1 style="text-align: center; color: navajowhite;";>Signed Addition Binary</h1>
+
 {% block body %}
 
 <style>
@@ -47,7 +47,7 @@
 
     .parallax {
         /* The image used */
-        background-image: url({{ imageurl }}); background-color: #f2cac4;
+        background-image: url({{ imageurl }});
 
         /* Full height */
         height: 100%;
@@ -67,7 +67,6 @@
     .square {
         height: 100px;
         width: 300px;
-        background-color: blue;
         margin: 1%;
         border: 1px;
         border-color: white;
@@ -279,7 +278,7 @@
 </script>
 
 <div class="parallax" style="height: max-content">
-    <div class="frame" style="background-color: blue; padding: 5%; width: 100%; margin: auto; height: max-content">
+    <div class="frame" style="padding: 5%; width: 100%; margin: auto; height: max-content">
         <div>
             <div class="d-flex justify-content-center" style="background-color: blue">
 
@@ -291,7 +290,7 @@
         <div class="table">
             <tr>
                 <td>
-                    <div class="row justify-content-md-center" style="background-color: blue">
+                    <div class="row justify-content-md-center" style="">
 
 
                         <div class="col-10" style="display: none">
@@ -365,7 +364,7 @@
                                                 </td>
                                                 {% endfor %}
                                                 {% for i in range(15,16) %}
-                                                <td style="background-color: yellow"><img class="img-responsive py-3" id="bulb{{i}}" src="{{ imgBulbOff }}" alt="" width="40" height="Auto">
+                                                <td style="background-color: greenyellow"><img class="img-responsive py-3" id="bulb{{i}}" src="{{ imgBulbOff }}" alt="" width="40" height="Auto">
                                                     <br>
                                                     <button type="button" id="butt{{i}}" onclick="toggleBit('{{i}}')">{{ msgTurnOn }}</button>
                                                 </td>
@@ -377,7 +376,7 @@
                                                 <td><input type='text' id='digit{{i}}' Value="0" size="1" readonly></td>
                                                 {% endfor %}
                                                 {% for i in range(15,16) %}
-                                                <td style="background-color: yellow"><input type='text' id='digit{{i}}' Value="0" size="1" readonly></td>
+                                                <td style="background-color: greenyellow"><input type='text' id='digit{{i}}' Value="0" size="1" readonly></td>
                                                 {% endfor %}
                                             </tr>
                                         </table>
@@ -386,14 +385,14 @@
                             </div>
                         </div>
 
-                        <div class="col-12" style="background-color: blue">
+                        <div class="col-12">
                             <div class="container-fluid" >
                                 <div class="row">
                                     <div class="col-sm">
                                         <!-- On/off toggles for bulbs-->
                                         <table class="table">
                                             <tr>
-                                                <td style="background-color: black; color: white">
+                                                <td style="background-color: orangered; color: white">
                                                     <div id="operator" style="visibility: hidden">0</div>
                                                     <div id="decimalR3">Dec: 0</div>
                                                 </td>
@@ -405,7 +404,7 @@
                                                 {% endfor %}
                                             </tr>
                                             <tr>
-                                                <td style="background-color: black; color: white" id="outputR3">Bin: 000000000</td>
+                                                <td style="background-color: orangered; color: white" id="outputR3">Bin: 000000000</td>
                                                 {% for i in range(16, 25) %}
                                                 <td style="display: none"><input type='text' id='digit{{i}}' Value="0" size="1" readonly></td>
                                                 {% endfor %}
@@ -424,4 +423,13 @@
 </div>
 <div class="parallax" style="height: 20%"></div>
 </body>
+
+{% block background %}
+<style>
+    body {
+        background-image: url('https://wallpaperaccess.com/full/2637581.jpg')
+    }
+</style>
 {% endblock %}
+{% endblock %}
+
