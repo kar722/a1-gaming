@@ -127,10 +127,19 @@ def howitsmade():
 def Apple():
     return render_template("Apple.html")
 
-@app.route('/Samsung/')
-def Samsung():
-    return render_template("Samsung.html")
+@app.route('/samsung/', methods=['GET', 'POST'])
+def greetsamsung():
+    # submit button has been pushed
+    if request.form:
+        name = request.form.get("name")
+        if len(name) != 0:  # input field has content
+            return render_template("samsung.html", name1=name)
+    # starting and empty input default
+    return render_template("samsung.html", name1="World")
 
+@app.route('/Samsung/')
+def samsung():
+    return render_template("Samsung.html")
 
 @app.route('/xbox/')
 def xbox():

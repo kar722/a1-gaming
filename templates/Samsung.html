@@ -22,7 +22,6 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
 
     <title>Samsung</title>
 
-
 <body>
 {% include "layouts/navbar.html" %}
 
@@ -131,6 +130,8 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
             </div>
         </div>
 
+
+
     <style>
         body {
             background-image: url('https://images.hdqwalls.com/download/minimalist-landscape-to-1920x1080.jpg');
@@ -138,4 +139,23 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
 
         }
     </style>
+
+<div class="center-block" style="margin: 2% 5% 5%; text-align:center; font-family: 'Merriweather Black';">
+    <div class="col-12">
+        <p style="color: white">{{name1}} is available!</p>
+    </div>
+    <div class="col-12">
+        <form action="/samsung/" id="samsung" method="POST" >
+            <label for="name" style="color: white">What phone are you looking for today?</label>
+            <input name="name" id="name">
+            <input type="submit" value="Greetings!">
+        </form>
+               <p>
+
+               </p>
+    </div>
+    <div class="col-12">
+    </div>
+</div>
+
 {% endblock %}
