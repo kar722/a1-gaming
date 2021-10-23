@@ -15,6 +15,10 @@ We want our website to model an e-commerce website with the purpose of reselling
 
 # Team Repository: A1 Gaming (Daniel, William, Karthik, Dylan)
 
+### Timeboxes (Week 9 10/18-10/22)
+1. [Individual Final Videos Review Ticket](https://github.com/kar722/a1-gaming/issues/62)
+2. [Updated Slideshow Ticket](https://github.com/kar722/a1-gaming/issues/51)
+
 ### Timeboxes (Sprint 7 and 8 From Oct. 4 - Oct. 15):
 1. [Multiply and Divide By 2](https://github.com/kar722/a1-gaming/blob/main/templates/binary.html)
 2. [Extend/Switch ASCII to Unicode](https://github.com/kar722/a1-gaming/blob/main/templates/binary.html)
