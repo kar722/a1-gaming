@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request
 from pathlib import Path  # https://medium.com/@ageitgey/python-3-quick-tip-the-easy-way-to-deal-with-file-paths-on-windows-mac-and-linux-11a072b58d5f
-
+import requests
+import json
 
 # create a Flask instance
 app = Flask(__name__)
@@ -48,6 +49,23 @@ def greet5():
     # starting and empty input default
     return render_template("dylangreet.html", name1="World")
 
+@app.route('/random stuff generator/')
+def randomstuffgenerator():
+    url = "https://random-stuff-api.p.rapidapi.com/ai"
+
+    querystring = {"message":"Message","server":"main"}
+
+    headers = {
+        'authorization': "DTSoN8LF6HuI",
+        'x-rapidapi-host': "random-stuff-api.p.rapidapi.com",
+        'x-rapidapi-key': "9fb1283360mshedc514375b603d6p156a26jsna7cd4ca5744a"
+    }
+
+    response = requests.request("GET", url, headers=headers, params=querystring)
+    output=json.loads(response.text)
+    return render_template("api.html",output=output)
+
+
 @app.route('/williamgreet/')
 def greet6():
     return render_template("williamgreet.html")
@@ -78,10 +96,13 @@ def greet9():
 
 
 # connects default URL to render index.html
+@app.route('/Video Games Database API/')
+def databasesapi():
+    return render_template("Video Games Database API.html")
+
 @app.route('/')
 def index():
     return render_template("index.html")
-
 
 # connects /kangaroos path to render kangaroos.html
 @app.route('/PCs/')
@@ -174,7 +195,7 @@ def ListHackathon():
 
 @app.route('/Unsigned Addition Binary/', methods=['GET', 'POST'])
 def unsigned_addition():
-    return render_template("Unsigned Addition Binary.html", BITS=8, imageOn="/static/assets/on.PNG", imageOff="/static/assets/off.PNG")
+    return render_template("Unsigned Addition Binary.html")
 
 @app.route('/Signed Addition/')
 def SignedAddition():

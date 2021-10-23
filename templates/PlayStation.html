@@ -97,7 +97,7 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
             background-repeat: no-repeat;
             background: url("/static/assets/ps5.png");
             background-size: 100%;
-            padding: 420px;
+            padding: 235px;
         }
 
         #background2 {
@@ -112,7 +112,7 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
             background-repeat: no-repeat;
             background: url("/static/assets/playstation-5-accessories-video-hero-thumbnail-01-en-18aug20.jfif");
             background-size: 100%;
-            padding: 230px;
+            padding: 150px;
         }
 
         #background4 {
@@ -307,14 +307,16 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
             video.pause();
             btn.innerHTML = "Play";
         }
-    function func22() {
-        if (video.paused) {
-            video.play();
-            btn.innerHTML = "Pause";
-        } else {
-            video.pause();
-            btn.innerHTML = "Play";
+
+        function func22() {
+            if (video.paused) {
+                video.play();
+                btn.innerHTML = "Pause";
+            } else {
+                video.pause();
+                btn.innerHTML = "Play";
             }
+        }
     }
 </script>
 
@@ -336,8 +338,8 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
     <h1 style="color: black; text-align: center">DualSense™ Wireless Controllers</h1>
     <h1>----------------------------------</h1>
     <div>
-            <div class="centerimage">
-                <img width="1217" height="350" src="/static/assets/dualsense-group-shot-image.png" alt="PS5 Controllers">
+            <div class="centerimage"; style="padding-right: 35px">
+                <img width="1043" height="300" src="/static/assets/dualsense-group-shot-image.png" alt="PS5 Controllers">
             </div>
     </div>
     <p style="color: black; text-align: center">Discover a deeper, highly immersive gaming experience1 with the innovative new PS5™ controller, featuring haptic feedback and dynamic trigger effects. The DualSense wireless controller also includes a built-in microphone and create button, all integrated into an iconic, comfortable design.</p>
@@ -358,3 +360,4 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
 
 
 </body>
+

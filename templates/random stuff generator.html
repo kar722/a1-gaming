@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<style>
+    /* randomstuff */
+    .jokeContainer {
+        display: flex;
+        align-items: center;
+    }
+
+    .jokeTitle {
+        margin-left: 10px;
+    }
+
+    #joke {
+        margin-left: 10px;
+        margin-top: 5px;
+    }
+
+    #buttonGetJoke {
+        margin-left: auto;
+    }
+
+    body {
+        margin-top: 100px;
+        margin-bottom: 100px;
+    }
+
+    .APIContainer {
+        margin: 50px auto 150px auto;
+        padding: 10px 20px 10px 20px;
+        border: 1px solid darkgray;
+        border-radius: 5px;
+        width: 40%;
+        min-width: 500px;
+        height: 20%;
+    }
+
+    .marginTopBottom {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+</style>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Random Stuff Gen</title>
+</head>
+<body>
+<!-- Random Stuff Gen -->
+<div class="display-4 text-center">Random Stuff Generator</div>
+<div class="APIContainer">
+    <div class="jokeContainer">
+        <div>
+            <a class="h2 jokeTitle">Want to hear something random?</a>
+            <p id="output">{{output[0]["response"]}}</p>
+            <p id="joke"></p>
+        </div>
+        <button class="btn btn-primary" id="buttonGetJoke">Sure</button>
+    </div>
+</div>
+</body>
+</html>
