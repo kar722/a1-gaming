@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% extends "layouts/navbar.html" %}
 <html>
 
 <head>
@@ -11,7 +12,6 @@
 <style>
   /* general */
   body {
-    margin-top: 100px;
     margin-bottom: 100px;
   }
 
@@ -30,7 +30,7 @@
     margin-bottom: 10px;
   }
 
-  /* randomstuff */
+  /* Chuck Norris */
   .jokeContainer {
     display: flex;
     align-items: center;
@@ -87,15 +87,15 @@
 </style>
 
 <body>
-<!-- Random Stuff Gen -->
-<div class="display-4 text-center">Random Stuff Generator</div>
+<!-- Chuck Norris jokes -->
+<div class="display-4 text-center">Chuck Norris jokes</div>
 <div class="APIContainer">
   <div class="jokeContainer">
     <div>
-      <a class="h2 jokeTitle">Want to hear something random?</a>
+      <a class="h2 jokeTitle" href="#">Want to hear a joke?</a>
       <p id="joke"></p>
     </div>
-    <button onclick="randomstuff()">Sure</button>
+    <button class="btn btn-primary" id="buttonGetJoke">Yes!</button>
   </div>
 </div>
 
@@ -137,22 +137,25 @@
     <p class="marginTopBottom" id="covidLastUpdate">Last updated: /</p>
   </div>
 </div>
+</body>
 
 <script>
+  let covid19data;
+
   (function onLoad()
   {
-    // function for each button
+    // set a function for each button
     setButtonFunctions();
 
     // fetch from each API when the page loads
-    randomstuff();
+    getJoke();
     getCurrencyExchangeRates();
     getLatestCOVID19Data();
   })();
 
   function setButtonFunctions()
   {
-    document.getElementById('buttonGetJoke').onclick = randomstuff;
+    document.getElementById('buttonGetJoke').onclick = getJoke;
     document.getElementById('buttonCurrency').onclick = getCurrencyExchangeRates;
     document.getElementById('countries').onchange = function() {
       const selectedValue = document.getElementById('countries').value;
@@ -173,24 +176,31 @@
     };
   }
 
-  // random-stuff-api
-  async function randomstuff()
+  // Chuck Norris jokes
+  async function getJoke()
   {
-  await fetch("https://random-stuff-api.p.rapidapi.com/ai?message=Message&server=main", {
-    "method": "GET",
-    "headers": {
-      "authorization": "DTSoN8LF6HuI",
-      "x-rapidapi-host": "random-stuff-api.p.rapidapi.com",
-      "x-rapidapi-key": "9fb1283360mshedc514375b603d6p156a26jsna7cd4ca5744a"
-    }
-  })
-          .then(response => {
-            console.log(response);
-          })
-          .catch(err => {
-            console.error(err);
-          });
+    await fetch("https://matchilling-chuck-norris-jokes-v1.p.rapidapi.com/jokes/random", {
+      "method": "GET",
+      "headers": {
+        "x-rapidapi-host": "matchilling-chuck-norris-jokes-v1.p.rapidapi.com",
+        "x-rapidapi-key": "9fb1283360mshedc514375b603d6p156a26jsna7cd4ca5744a",
+        "accept": "application/json"
+      }
+    })
+            .then(response => response.json())
+            .then(response => {
+              console.log("Chuck Norris API object:");
+              console.log(response);
+              console.log("\n");
+
+              // display data
+              document.getElementById('joke').innerHTML = response.value;
+            })
+            .catch(err => {
+              console.log(err);
+            });
   }
+
   // Currency Exchange rates
   async function getCurrencyExchangeRates()
   {
@@ -248,6 +258,5 @@
             });
   }
 </script>
-</body>
 
 </html>

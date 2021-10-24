@@ -51,19 +51,19 @@ def greet5():
 
 @app.route('/random stuff generator/')
 def randomstuffgenerator():
-    url = "https://random-stuff-api.p.rapidapi.com/ai"
-
-    querystring = {"message":"Message","server":"main"}
+    url = "https://jokes-by-api-ninjas.p.rapidapi.com/v1/jokes"
 
     headers = {
-        'authorization': "DTSoN8LF6HuI",
-        'x-rapidapi-host': "random-stuff-api.p.rapidapi.com",
+        'x-rapidapi-host': "jokes-by-api-ninjas.p.rapidapi.com",
         'x-rapidapi-key': "9fb1283360mshedc514375b603d6p156a26jsna7cd4ca5744a"
     }
 
-    response = requests.request("GET", url, headers=headers, params=querystring)
-    output=json.loads(response.text)
-    return render_template("api.html",output=output)
+    response = requests.request("GET", url, headers=headers)
+
+    print(response.text)
+    output = json.loads(response.text)
+    return render_template("random stuff generator.html", yeet=output)
+
 
 
 @app.route('/williamgreet/')
