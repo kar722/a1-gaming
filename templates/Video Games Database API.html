@@ -1,23 +1,26 @@
 <!DOCTYPE html>
-{% extends "layouts/navbar.html" %}
+{% include "layouts/navbar.html" %}
+{% block background %}
 <html>
 
 <head>
   <meta charset="utf-8">
   <title>APIs</title>
   <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <style>
   /* general */
   body {
     margin-bottom: 100px;
+    background-image: url('https://wallpaperaccess.com/full/1567831.jpg')
   }
 
   .APIContainer {
     margin: 50px auto 150px auto;
-    padding: 10px 20px 10px 20px;
+    padding: 20px 100px 20px 100px;
     border: 1px solid darkgray;
     border-radius: 5px;
     width: 40%;
@@ -28,25 +31,6 @@
   .marginTopBottom {
     margin-top: 10px;
     margin-bottom: 10px;
-  }
-
-  /* Chuck Norris */
-  .jokeContainer {
-    display: flex;
-    align-items: center;
-  }
-
-  .jokeTitle {
-    margin-left: 10px;
-  }
-
-  #joke {
-    margin-left: 10px;
-    margin-top: 5px;
-  }
-
-  #buttonGetJoke {
-    margin-left: auto;
   }
 
   /* Currency */
@@ -66,41 +50,11 @@
   #buttonCurrency {
     width: 100%;
   }
-
-  /* COVID19 */
-  .covidInput {
-    display: flex;
-    justify-content: center;
-    line-height: 2;
-  }
-
-  #countries {
-    margin-left: 20px;
-    width: 30%;
-  }
-
-  .mySeparator {
-    height: 0.5px;
-    width: 80%;
-    background-color: whitesmoke;
-  }
 </style>
 
 <body>
-<!-- Chuck Norris jokes -->
-<div class="display-4 text-center">Chuck Norris jokes</div>
-<div class="APIContainer">
-  <div class="jokeContainer">
-    <div>
-      <a class="h2 jokeTitle" href="#">Want to hear a joke?</a>
-      <p id="joke"></p>
-    </div>
-    <button class="btn btn-primary" id="buttonGetJoke">Yes!</button>
-  </div>
-</div>
-
 <!-- Currency exchange rates -->
-<div class="display-4 text-center">Currency exchange rates</div>
+<div class="display-4 text-center">Currency Exchange Rates</div>
 <div class="APIContainer">
   <h4>Find out current currency exchange rates</h4>
   <div class="currencyContainer">
@@ -116,31 +70,11 @@
     <div class="currencyResult">
       <h4 id="currencyResult">Result: 0</h4>
     </div>
+    <ul><li><b>“SGD”</b><span style="font-weight: 400;"> – Singapore Dollar</span></li><li><b>“MYR” </b><span style="font-weight: 400;">– Malaysian Ringgit</span></li><li><b>“EUR” </b><span style="font-weight: 400;">– Euro [E.U.]</span></li><li><b>“USD” </b><span style="font-weight: 400;">– U.S. Dollar</span></li><li><b>“AUD”</b><span style="font-weight: 400;"> – Australian Dollar</span></li><li><b>“JPY” </b><span style="font-weight: 400;">– Japanese Yen</span></li><li><b>“CNH” </b><span style="font-weight: 400;">– Chinese Yuan</span></li><li><b>“HKD” </b><span style="font-weight: 400;">– Hong Kong Dollar</span></li><li><b>“CAD” </b><span style="font-weight: 400;">– Canadian Dollar</span></li><li><b>“INR” </b><span style="font-weight: 400;">– Indian Rupee</span></li><li><b>“DKK”</b><span style="font-weight: 400;"> – Danish Krone</span></li><li><b>“GBP”</b><span style="font-weight: 400;"> – Great Britain Pound [Sterling]</span></li><li><b>“RUB” </b><span style="font-weight: 400;">– Russian Ruble</span></li><li><b>“NZD” </b><span style="font-weight: 400;">– New Zealand Dollar</span></li><li><b>“MXN” </b><span style="font-weight: 400;">– Mexican Peso</span></li><li><b>“IDR” </b><span style="font-weight: 400;">– Indonesian Rupiah</span></li><li><b>“TWD”</b><span style="font-weight: 400;"> – Taiwanese Dollar</span></li><li><b>“THB” </b><span style="font-weight: 400;">– Thai Baht</span></li><li><b>“VND” </b><span style="font-weight: 400;">– Vietnamese Dong</span></li></ul>
   </div>
 </div>
-
-<!-- COVID 19 data -->
-<div class="display-4 text-center">Latest COVID 19 statistics</div>
-<div class="APIContainer">
-  <div class="covidInput">
-    <p>Select a country:</p>
-    <select class="form-control" id="countries">
-      <option>Select a country</option>
-    </select>
-  </div>
-  <hr class="mySeparator">
-  <div class="text-center">
-    <p class="marginTopBottom" id="covidNewConfirmed">New confirmed cases: /</p>
-    <p class="marginTopBottom" id="covidTotalConfirmed">Total confirmed cases: /</p>
-    <p class="marginTopBottom" id="covidNewDeaths">New deaths: /</p>
-    <p class="marginTopBottom" id="covidTotalDeaths">Total deaths: /</p>
-    <p class="marginTopBottom" id="covidLastUpdate">Last updated: /</p>
-  </div>
-</div>
-</body>
 
 <script>
-  let covid19data;
 
   (function onLoad()
   {
@@ -148,58 +82,13 @@
     setButtonFunctions();
 
     // fetch from each API when the page loads
-    getJoke();
     getCurrencyExchangeRates();
-    getLatestCOVID19Data();
   })();
 
   function setButtonFunctions()
   {
-    document.getElementById('buttonGetJoke').onclick = getJoke;
     document.getElementById('buttonCurrency').onclick = getCurrencyExchangeRates;
-    document.getElementById('countries').onchange = function() {
-      const selectedValue = document.getElementById('countries').value;
-      const countryData = covid19data.filter(c => c.country == selectedValue)[0];
-
-      // display data
-      const newConfirmed = document.getElementById('covidNewConfirmed');
-      const totalConfirmed = document.getElementById('covidTotalConfirmed');
-      const covidNewDeaths = document.getElementById('covidNewDeaths');
-      const covidTotalDeaths = document.getElementById('covidTotalDeaths');
-      const lastUpdated = document.getElementById('covidLastUpdate');
-
-      (countryData.cases.new) ? newConfirmed.innerHTML = 'New confirmed cases: ' + countryData.cases.new : newConfirmed.innerHTML = 'New confirmed cases: 0';
-      (countryData.cases.total) ? totalConfirmed.innerHTML = 'Total confirmed cases: ' + countryData.cases.total : totalConfirmed.innerHTML = 'Total confirmed cases: 0';
-      (countryData.deaths.new) ? covidNewDeaths.innerHTML = 'New deaths: ' + countryData.deaths.new : covidNewDeaths.innerHTML = 'New deaths: 0';
-      (countryData.deaths.total) ? covidTotalDeaths.innerHTML = 'Total deaths: ' + countryData.deaths.total : covidTotalDeaths.innerHTML = 'Total deaths: 0';
-      lastUpdated.innerHTML = 'Last updated: ' + countryData.day;
-    };
-  }
-
-  // Chuck Norris jokes
-  async function getJoke()
-  {
-    await fetch("https://matchilling-chuck-norris-jokes-v1.p.rapidapi.com/jokes/random", {
-      "method": "GET",
-      "headers": {
-        "x-rapidapi-host": "matchilling-chuck-norris-jokes-v1.p.rapidapi.com",
-        "x-rapidapi-key": "9fb1283360mshedc514375b603d6p156a26jsna7cd4ca5744a",
-        "accept": "application/json"
-      }
-    })
-            .then(response => response.json())
-            .then(response => {
-              console.log("Chuck Norris API object:");
-              console.log(response);
-              console.log("\n");
-
-              // display data
-              document.getElementById('joke').innerHTML = response.value;
-            })
-            .catch(err => {
-              console.log(err);
-            });
-  }
+    }
 
   // Currency Exchange rates
   async function getCurrencyExchangeRates()
@@ -226,37 +115,7 @@
               console.log(err);
             });
   }
-
-  // COVID 19 Data
-  async function getLatestCOVID19Data()
-  {
-    await fetch("https://covid-193.p.rapidapi.com/statistics", {
-      "method": "GET",
-      "headers": {
-        "x-rapidapi-host": "covid-193.p.rapidapi.com",
-        "x-rapidapi-key": "9fb1283360mshedc514375b603d6p156a26jsna7cd4ca5744a"
-      }
-    })
-            .then(response => response.json())
-            .then(response => {
-              console.log("COVID 19 API object:");
-              console.log(response);
-              console.log("\n");
-
-              // add all countries to select element
-              response.response.forEach(c => {
-                const option = document.createElement('option');
-                option.innerHTML = c.country;
-                document.getElementById('countries').appendChild(option);
-              })
-
-              // save covid data to global variable
-              covid19data = response.response;
-            })
-            .catch(err => {
-              console.log(err);
-            });
-  }
 </script>
 
+{% endblock %}
 </html>

@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-
-
+{% include "layouts/navbar.html" %}
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Gen</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Brain Pain</title>
     <style>
         body {
             text-align: center;
+            background-image: url('https://i.pinimg.com/originals/8a/65/07/8a65072466aca71ff99a3da3105733b5.jpg');
+            background-size: 100%;
         }
         .apicontainer {
             margin: 50px auto 150px auto;
@@ -45,17 +45,17 @@
         }
 
         body {
-            margin-top: 100px;
             margin-bottom: 100px;
         }
+
     </style>
 </head>
 <body>
-<h1 style="margin-top:25px; font-size: 50px; font-family: 'Merriweather Black'">Long Jokes That Will Fry Your Brain</h1>
+<h1 style="color: red; margin-top: 25px">Long Jokes That Will Fry Your Brain</h1>
 <div class="apicontainer">
     <div class="factcontainer">
-        <h3 style="margin-bottom: 50px;font-size: 15px; font-family: 'Arial Black'">{{ yeet[0]['joke']}}?</h3>
-        <a class = "button" href="/random stuff generator/" style="text-align: center">New Paragraph</a>
+        <h3 style="margin-bottom: 50px; color: white">{{ yeet[0]['joke']}}?</h3>
+        <a class = "button" href="/random stuff generator/" style="text-align: center">New Joke</a>
     </div>
 </div>
 

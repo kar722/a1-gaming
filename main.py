@@ -64,7 +64,13 @@ def randomstuffgenerator():
     output = json.loads(response.text)
     return render_template("random stuff generator.html", yeet=output)
 
+@app.route('/Chuck Jokes/')
+def ChuckJokes():
+    return render_template("Chuck Jokes.html")
 
+@app.route('/covidstats/')
+def covid():
+    return render_template("covidstats.html")
 
 @app.route('/williamgreet/')
 def greet6():
