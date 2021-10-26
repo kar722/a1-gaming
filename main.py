@@ -59,7 +59,6 @@ def randomstuffgenerator():
     }
 
     response = requests.request("GET", url, headers=headers)
-
     print(response.text)
     output = json.loads(response.text)
     return render_template("random stuff generator.html", yeet=output)
