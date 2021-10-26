@@ -17,6 +17,18 @@ We want our website to model an e-commerce website with the purpose of reselling
 
 ### Timeboxes (Week 9 10/18-10/22)
 1. [Individual Final Videos Review Ticket](https://github.com/kar722/a1-gaming/issues/62)
+
+
+| |Daniel Levy's Video | William Du's Video | Karthik Valluri's Video | Dylan Luo's Video |
+|-|----------------------|---------------------|----------------------------|--------------------|
+| Link to Vid | [Daniel Levy](https://github.com/kar722/a1-gaming/issues/63) | [William Du](https://github.com/kar722/a1-gaming/issues/65) | [Karthik Valluri](https://github.com/kar722/a1-gaming/issues/64) | [Dylan Luo](https://github.com/kar722/a1-gaming/issues/66) |
+| Daniel's Score | No Score | 5.75/6 | 5.5/6 | 5.75/6 | 
+| William's Score | 5.75 | No Score | 5.5 | 5.25/6 |
+| Karthik's Score | 5.5/6 | 5.75/6 | No Score | 5.75/6 |
+| Dylan's Score | 5.5/6 | 5.5/6 | 5.75/6 | No Score |
+|Average Score | 5.66 | 5.5 | 5.66 | 5.58 |
+
+
 2. [Updated Slideshow Ticket](https://github.com/kar722/a1-gaming/issues/51)
 
 ### Timeboxes (Sprint 7 and 8 From Oct. 4 - Oct. 15):
