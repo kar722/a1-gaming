@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request
+from image import image_data
 from pathlib import Path  # https://medium.com/@ageitgey/python-3-quick-tip-the-easy-way-to-deal-with-file-paths-on-windows-mac-and-linux-11a072b58d5f
 import json
 
@@ -161,6 +162,10 @@ def greetsamsung():
 def samsung():
     return render_template("Samsung.html")
 
+app.route('/Mice/')
+def mice():
+    return render_template("Mice.html")
+
 @app.route('/xbox/')
 def xbox():
     return render_template("xbox.html")
@@ -200,6 +205,9 @@ def unsigned_addition():
 def SignedAddition():
     return render_template("Signed Addition.html")
 
-# runs the application on the development server
+@app.route('/test/')
+def test():
+    return render_template("test.html")
+
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True, port=2023)

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+{% include "layouts/navbar.html" %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script>
+        const button = document.querySelector('.container button');
+        const jokeText = document.querySelector('container p');
+        document.addEventListener('DOMCContentLoaded', getJoke)
+
+        button.addEventListener('click', getJoke);
+
+        async function getJoke() {
+            const jokeData = fetch('https://icanhazdadjoke.com/', {
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
+            console.jokeObj = await jokeData.json();
+            jokeText.innerHTML = jokeObj.joke;
+        }
+    </script>
+    <style>
+        {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        }
+        html{
+            font-size: 10px;
+            font-family: "Agency FB"
+        }
+        body{
+            background-color: rgb(37, 38, 39);
+            color: white;
+        }
+        section{
+            min-height: 100%;
+            width: 100%;
+            padding: 100px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .container{
+            width: 90%;
+            max-width: 500px;
+            margin: 0 auto;
+            background-color: rgb(51, 55, 59);
+            border-radius: 8px;
+            padding: 3rem;
+            display: flex;
+            flex-direction: column;
+        }
+        container p{
+            font-size: 2rem;
+            font-weight: 300;
+            line-height: 3rem;
+            text-align: justify;
+        }
+        button{
+            margin-top: 4rem;
+            width: fit-content;
+            padding: 2rem;
+            font-size: 2rem;
+            background-color: rgb(25, 28, 29);
+            color: white;border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            align-self: flex-end;
+        }
+
+    </style>
+
+</head>
+</head>
+<body>
+<section>
+  <div class="container">
+    <div class="joke">
+        <h1>Press The Button For A Dad Joke</h1>
+      <button>Get a Dad Joke</button>
+    </div>
+  </div>
+
+</section>
+</body>
+</html>
