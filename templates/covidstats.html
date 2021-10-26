@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+{% include "layouts/navbar.html" %}
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Covid-19 Stats</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<style>
+    /* general */
+    body {
+        margin-bottom: 100px;
+        background-image: url('https://wallpaper.dog/large/20459156.jpg');
+        background-size: 100%;
+        color: white;
+    }
+
+    .APIContainer {
+        margin: 50px auto 150px auto;
+        padding: 10px 20px 10px 20px;
+        border: 1px solid darkgray;
+        border-radius: 5px;
+        width: 40%;
+        min-width: 500px;
+        height: 20%;
+    }
+
+    .marginTopBottom {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    /* COVID19 */
+    .covidInput {
+        display: flex;
+        justify-content: center;
+        line-height: 2;
+    }
+
+    #countries {
+        margin-left: 20px;
+        width: 30%;
+    }
+
+    .mySeparator {
+        height: 0.5px;
+        width: 80%;
+        background-color: whitesmoke;
+    }
+</style>
+
+<body>
+<!-- COVID 19 data -->
+<div class="display-4 text-center">Latest COVID 19 statistics</div>
+<div class="APIContainer">
+    <div class="covidInput">
+        <p>Select a country:</p>
+        <select class="form-control" id="countries">
+            <option>Select a country</option>
+        </select>
+    </div>
+    <hr class="mySeparator">
+    <div class="text-center">
+        <p class="marginTopBottom" id="covidNewConfirmed">New confirmed cases: -</p>
+        <p class="marginTopBottom" id="covidTotalConfirmed">Total confirmed cases: -</p>
+        <p class="marginTopBottom" id="covidNewDeaths">New deaths: -</p>
+        <p class="marginTopBottom" id="covidTotalDeaths">Total deaths: -</p>
+        <p class="marginTopBottom" id="covidLastUpdate">Last updated: -</p>
+    </div>
+</div>
+</body>
+
+<script>
+    let covid19data;
+
+    (function onLoad()
+    {
+        // set a function for each button
+        setButtonFunctions();
+
+        // fetch from each API when the page loads
+        getLatestCOVID19Data();
+    })();
+
+    function setButtonFunctions()
+    {
+        document.getElementById('countries').onchange = function() {
+            const selectedValue = document.getElementById('countries').value;
+            const countryData = covid19data.filter(c => c.country == selectedValue)[0];
+
+            // display data
+            const newConfirmed = document.getElementById('covidNewConfirmed');
+            const totalConfirmed = document.getElementById('covidTotalConfirmed');
+            const covidNewDeaths = document.getElementById('covidNewDeaths');
+            const covidTotalDeaths = document.getElementById('covidTotalDeaths');
+            const lastUpdated = document.getElementById('covidLastUpdate');
+
+            (countryData.cases.new) ? newConfirmed.innerHTML = 'New confirmed cases: ' + countryData.cases.new : newConfirmed.innerHTML = 'New confirmed cases: 0';
+            (countryData.cases.total) ? totalConfirmed.innerHTML = 'Total confirmed cases: ' + countryData.cases.total : totalConfirmed.innerHTML = 'Total confirmed cases: 0';
+            (countryData.deaths.new) ? covidNewDeaths.innerHTML = 'New deaths: ' + countryData.deaths.new : covidNewDeaths.innerHTML = 'New deaths: 0';
+            (countryData.deaths.total) ? covidTotalDeaths.innerHTML = 'Total deaths: ' + countryData.deaths.total : covidTotalDeaths.innerHTML = 'Total deaths: 0';
+            lastUpdated.innerHTML = 'Last updated: ' + countryData.day;
+        };
+    }
+
+    // COVID 19 Data
+    async function getLatestCOVID19Data()
+    {
+        await fetch("https://covid-193.p.rapidapi.com/statistics", {
+            "method": "GET",
+            "headers": {
+                "x-rapidapi-host": "covid-193.p.rapidapi.com",
+                "x-rapidapi-key": "9fb1283360mshedc514375b603d6p156a26jsna7cd4ca5744a"
+            }
+        })
+            .then(response => response.json())
+            .then(response => {
+                console.log("COVID 19 API object:");
+                console.log(response);
+                console.log("\n");
+
+                // add all countries to select element
+                response.response.forEach(c => {
+                    const option = document.createElement('option');
+                    option.innerHTML = c.country;
+                    document.getElementById('countries').appendChild(option);
+                })
+
+                // save covid data to global variable
+                covid19data = response.response;
+            })
+            .catch(err => {
+                console.log(err);
+            });
+    }
+</script>
+{% include "layouts/footer.html" %}
+
+</html>

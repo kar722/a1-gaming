@@ -1,63 +1,63 @@
 <!DOCTYPE html>
+{% include "layouts/navbar.html" %}
 <html lang="en">
-
-<style>
-    /* randomstuff */
-    .jokeContainer {
-        display: flex;
-        align-items: center;
-    }
-
-    .jokeTitle {
-        margin-left: 10px;
-    }
-
-    #joke {
-        margin-left: 10px;
-        margin-top: 5px;
-    }
-
-    #buttonGetJoke {
-        margin-left: auto;
-    }
-
-    body {
-        margin-top: 100px;
-        margin-bottom: 100px;
-    }
-
-    .APIContainer {
-        margin: 50px auto 150px auto;
-        padding: 10px 20px 10px 20px;
-        border: 1px solid darkgray;
-        border-radius: 5px;
-        width: 40%;
-        min-width: 500px;
-        height: 20%;
-    }
-
-    .marginTopBottom {
-        margin-top: 10px;
-        margin-bottom: 10px;
-    }
-</style>
 
 <head>
     <meta charset="UTF-8">
-    <title>Random Stuff Gen</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Brain Pain</title>
+    <style>
+        body {
+            text-align: center;
+            background-image: url('https://www.teahub.io/photos/full/8-82501_background-hd-wallpaper-background-image-1080-x-1920.jpg');
+            background-size: 100%;
+        }
+        .apicontainer {
+            margin: 50px auto 150px auto;
+            padding: 10px 20px 10px 20px;
+            border: 1px solid darkgray;
+            border-radius: 5px;
+            width: 40%;
+            min-width: 500px;
+            height: 20%;
+        }
+        .factcontainer{
+            display: flex;
+            align-items: center;
+        }
+        a {
+            text-decoration: none;
+        }
+        .button {
+            border: 1px solid black;
+            border-radius: 40px;
+            background-color: dodgerblue;
+            padding: 1em 1.5em;
+            transition: background-color .5s;
+            color: black;
+            display: inline-block;
+            margin-left: auto;
+            bottom: 100px;
+        }
+        .button:hover {
+            background-color: red;
+        }
+
+        body {
+            margin-bottom: 100px;
+        }
+
+    </style>
 </head>
 <body>
-<!-- Random Stuff Gen -->
-<div class="display-4 text-center">Random Stuff Generator</div>
-<div class="APIContainer">
-    <div class="jokeContainer">
-        <div>
-            <a class="h2 jokeTitle">Want to hear something random?</a>
-            <p id="output">{{output[0]["response"]}}</p>
-            <p id="joke"></p>
-        </div>
-        <button class="btn btn-primary" id="buttonGetJoke">Sure</button>
+<h1 style="color: red; margin-top: 25px">Long Jokes That Will Fry Your Brain</h1>
+<div class="apicontainer">
+    <div class="factcontainer">
+        <h3 style="margin-bottom: 50px; color: white">{{ yeet[0]['joke']}}?</h3>
+        <a class = "button" href="/random stuff generator/" style="text-align: center">New Joke</a>
     </div>
 </div>
+
 </body>
 </html>

@@ -1,3 +1,4 @@
+import requests
 from flask import Flask, render_template, request
 from image import image_data
 from pathlib import Path  # https://medium.com/@ageitgey/python-3-quick-tip-the-easy-way-to-deal-with-file-paths-on-windows-mac-and-linux-11a072b58d5f
@@ -51,20 +52,26 @@ def greet5():
 
 @app.route('/random stuff generator/')
 def randomstuffgenerator():
-    url = "https://random-stuff-api.p.rapidapi.com/ai"
-
-    querystring = {"message":"Message","server":"main"}
+    url = "https://jokes-by-api-ninjas.p.rapidapi.com/v1/jokes"
 
     headers = {
-        'authorization': "DTSoN8LF6HuI",
-        'x-rapidapi-host': "random-stuff-api.p.rapidapi.com",
+        'x-rapidapi-host': "jokes-by-api-ninjas.p.rapidapi.com",
         'x-rapidapi-key': "9fb1283360mshedc514375b603d6p156a26jsna7cd4ca5744a"
     }
 
-    response = requests.request("GET", url, headers=headers, params=querystring)
-    output=json.loads(response.text)
-    return render_template("api.html",output=output)
+    response = requests.request("GET", url, headers=headers)
 
+    print(response.text)
+    output = json.loads(response.text)
+    return render_template("random stuff generator.html", yeet=output)
+
+@app.route('/Chuck Jokes/')
+def ChuckJokes():
+    return render_template("Chuck Jokes.html")
+
+@app.route('/covidstats/')
+def covid():
+    return render_template("covidstats.html")
 
 @app.route('/williamgreet/')
 def greet6():
