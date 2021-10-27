@@ -101,7 +101,7 @@
                 console.log(response);
 
                 // display data
-                document.getElementById('joke').innerHTML = (response.value.replace('Chuck Norris', 'Karthik Valluri'));
+                document.getElementById('joke').innerHTML = (response.value.replaceAll('Chuck Norris', 'Karthik Valluri'));
 
             })
             .catch(err => {
