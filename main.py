@@ -2,6 +2,7 @@ from flask import Flask, render_template, request
 from image import image_data
 from pathlib import Path  # https://medium.com/@ageitgey/python-3-quick-tip-the-easy-way-to-deal-with-file-paths-on-windows-mac-and-linux-11a072b58d5f
 import json
+import requests
 
 # create a Flask instance
 app = Flask(__name__)
@@ -166,9 +167,23 @@ def greetsamsung():
 def samsung():
     return render_template("Samsung.html")
 
-app.route('/Mice/')
+@app.route('/Mice/')
 def mice():
     return render_template("Mice.html")
+
+@app.route('/Insipirational Quotes/')
+def quotes():
+    url = "https://quotes15.p.rapidapi.com/quotes/random/"
+
+    headers = {
+        'x-rapidapi-host': "quotes15.p.rapidapi.com",
+        'x-rapidapi-key': "9fb1283360mshedc514375b603d6p156a26jsna7cd4ca5744a"
+    }
+
+    response = requests.request("GET", url, headers=headers)
+    print(response.text)
+    putty = json.loads(response.text)
+    return render_template("Insipirational Quotes.html", jonjo=putty)
 
 @app.route('/xbox/')
 def xbox():
