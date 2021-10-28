@@ -88,12 +88,11 @@
     // Chuck Norris jokes
     async function getJoke()
     {
-        await fetch("https://matchilling-chuck-norris-jokes-v1.p.rapidapi.com/jokes/random", {
+        await fetch("https://geek-jokes.p.rapidapi.com/api?format=json", {
             "method": "GET",
             "headers": {
-                "x-rapidapi-host": "matchilling-chuck-norris-jokes-v1.p.rapidapi.com",
-                "x-rapidapi-key": "9fb1283360mshedc514375b603d6p156a26jsna7cd4ca5744a",
-                "accept": "application/json"
+                "x-rapidapi-host": "geek-jokes.p.rapidapi.com",
+                "x-rapidapi-key": "9fb1283360mshedc514375b603d6p156a26jsna7cd4ca5744a"
             }
         })
             .then(response => response.json())
@@ -101,7 +100,7 @@
                 console.log(response);
 
                 // display data
-                document.getElementById('joke').innerHTML = (response.value.replaceAll('Chuck Norris', 'Karthik Valluri'));
+                document.getElementById('joke').innerHTML = (response.joke.replaceAll('Chuck Norris', 'Karthik Valluri'));
 
             })
             .catch(err => {

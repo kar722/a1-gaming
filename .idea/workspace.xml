@@ -5,11 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0e4a484e-366a-4d0e-848b-24cd03e3ffdf" name="Changes" comment="images">
-      <change afterPath="$PROJECT_DIR$/templates/Insipirational Quotes.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/covidstats.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/covidstats.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/layouts/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/layouts/navbar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Chuck Jokes.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Chuck Jokes.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Video Games Database API.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Video Games Database API.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,6 +120,9 @@
       <workItem from="1635216050912" duration="1281000" />
       <workItem from="1635280795975" duration="297000" />
       <workItem from="1635361890032" duration="3936000" />
+      <workItem from="1635386883795" duration="421000" />
+      <workItem from="1635387911145" duration="579000" />
+      <workItem from="1635390576051" duration="2656000" />
     </task>
     <task id="LOCAL-00001" summary="daniel sucks at coding">
       <created>1634163766066</created>
@@ -220,6 +221,6 @@
     <SUITE FILE_PATH="coverage/a1_gaming$a1_gaming.coverage" NAME="a1-gaming Coverage Results" MODIFIED="1633968885567" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/a1_gaming$activities.coverage" NAME="activities Coverage Results" MODIFIED="1633713867648" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/templates/layouts" />
     <SUITE FILE_PATH="coverage/a1_gaming$Flask__main_py_.coverage" NAME="Flask (main.py) Coverage Results" MODIFIED="1633628398475" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/a1_gaming$main.coverage" NAME="main Coverage Results" MODIFIED="1635364821234" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/a1_gaming$main.coverage" NAME="main Coverage Results" MODIFIED="1635398498395" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
