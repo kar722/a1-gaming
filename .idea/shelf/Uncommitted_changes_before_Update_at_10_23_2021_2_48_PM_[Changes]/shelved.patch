@@ -1,0 +1,761 @@
+Index: templates/layouts/project.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>{% extends \"layouts/base.html\" %}\r\n<!-- Custom block for standardizing Project Data-->\r\n{% block links %}\r\n    <div class=\"col-3\">\r\n        <a href=\"/Laptops/\" class=\"btn\">Laptops</a>\r\n    </div>\r\n\r\n    <div class=\"col-3\">\r\n        <a href=\"{{ desktops }}\" class=\"btn\">Desktops</a>\r\n    </div>\r\n\r\n    <div class=\"col-3\">\r\n        <a href=\"{{ monitors }}\" class=\"btn\">Monitors</a>\r\n    </div>\r\n\r\n    <div class=\"col-3\">\r\n        <a href=\"{{ mice }}\" class=\"btn\">Mice</a>\r\n    </div>\r\n{% endblock %}\r\n\r\n</html>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/templates/layouts/project.html b/templates/layouts/project.html
+--- a/templates/layouts/project.html	(revision cf864c8b4fbfc713bad8b9ce042c22004c30b526)
++++ b/templates/layouts/project.html	(date 1634761215950)
+@@ -14,7 +14,7 @@
+     </div>
+ 
+     <div class="col-3">
+-        <a href="{{ mice }}" class="btn">Mice</a>
++        <a href="/Mice/" class="btn">Mice</a>
+     </div>
+ {% endblock %}
+ 
+Index: templates/danielgreet.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><!-- Custom file for standardizing Project Data\r\nThis HTML is setup as as a Jinja2 layout, coders use layouts for:\r\n ... standardization of style\r\n ... setting expectations for data\r\n ... code reuse\r\n-->\r\n<!DOCTYPE HTML>\r\n<html lang=\"en\">\r\n\r\n\r\n\r\n<head>\r\n    <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css\" integrity=\"sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T\" crossorigin=\"anonymous\">\r\n    <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\">\r\n    <style>\r\n        :root{\r\n            --white: whitesmoke;\r\n            --black: black;\r\n            --grey: grey;\r\n        }\r\n\r\n        html, body{\r\n            margin: 0;\r\n            height: 100%;\r\n            animation: fadein 2s;\r\n            -moz-animation: fadein 2s; /* Firefox */\r\n            -webkit-animation: fadein 2s; /* Safari and Chrome */\r\n            -o-animation: fadein 2s; /* Opera */\r\n            background-color: var(--grey);\r\n            color: var(--white);\r\n        }\r\n\r\n        .dark-mode {\r\n            background-color: var(--white);\r\n            color: var(--black);\r\n        }\r\n\r\n        h1{\r\n            font-size: 5em;\r\n        }\r\n\r\n        a {\r\n            color: midnightblue;\r\n        }\r\n\r\n        .fa{\r\n            font-size: 3em;\r\n            letter-spacing: 1em;\r\n            transition: all .2s;\r\n            color: white;\r\n        }\r\n\r\n        .fa:hover{\r\n            transform: translateY(10px);\r\n        }\r\n\r\n        .fa-youtube-play:hover{\r\n            color: #cc0000;\r\n        }\r\n\r\n        .fa-twitter:hover{\r\n            color: #1da1f2;\r\n        }\r\n\r\n        .fa-github:hover{\r\n            color: #000000;\r\n        }\r\n\r\n        .btn:link,\r\n        .btn:visited {\r\n            text-transform: uppercase;\r\n            text-decoration: none;\r\n            padding: 15px 40px;\r\n            display: inline-block;\r\n            border-radius: 100px;\r\n            transition: all .2s;\r\n            position: absolute;\r\n            color: white;\r\n            font-size: 2.5em;\r\n        }\r\n\r\n        .btn:hover {\r\n            transform: translateY(-3px);\r\n            box-shadow: 0 20px 40px rgba(255, 255, 255, 0.2);\r\n        }\r\n\r\n        .btn:active {\r\n            transform: translateY(-1px);\r\n            box-shadow: 0 5px 10px rgba(255, 255, 255, 0.2);\r\n        }\r\n\r\n        .row{\r\n            margin: auto;\r\n        }\r\n\r\n    </style>\r\n\r\n    <title>About Daniel | A1 from Day 0 </title>\r\n\r\n</head>\r\n\r\n<body>\r\n{% include \"layouts/navbar.html\" %}\r\n\r\n<!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n    <meta charset=\"UTF-8\">\r\n    <title> Who is Daniel?</title>\r\n</head>\r\n<body>\r\n<div class=\"center-block\" style=\"margin: 2% 5% 5%; text-align:center; font-family: 'MADE Soulmaze';\">\r\n    <div class=\"col-12\">\r\n        <p style=\"color: white\">Hello, {{name1}}!</p>\r\n    </div>\r\n    <div class=\"col-12\">\r\n        <form action=\"/danielgreet/\" id=\"danielgreet\" method=\"POST\" >\r\n            <label for=\"name\" style=\"color: white\">Type a greeting name?</label>\r\n            <input name=\"name\" id=\"name\">\r\n            <input type=\"submit\" value=\"Greetings!\">\r\n        </form>\r\n        <p>\r\n\r\n        </p>\r\n    </div>\r\n    <div class=\"col-12\">\r\n    </div>\r\n</div>\r\n\r\n\r\n\r\n<h1 style=\"text-align: center; color: aqua; font-family: Mytupi\";> About Me</h1>\r\n\r\n<p style=\"text-align: center; color: blanchedalmond; font-family: Mytupi\"> Hi, my name is Daniel Levy. I am 17 years old and I am a junior at Del Norte High School. My favorite subjects are math and computer science. I enjoy hiking, biking, swimming, and spending time with friends.\r\n<p style=\"text-align: center; color: blanchedalmond; font-family: Mytupi\">\r\n\r\n    <img src=\"/static/assets/DanielPhotograph.PNG\" alt=\"Greeting\" width=\"250\" height=\"330\">\r\n    <!-- karthik is goated honestly -->\r\n\r\n</body>\r\n\r\n</html>\r\n\r\n{% block background %}\r\n\r\n    <style>\r\n        body {\r\n            background-image: url('https://images.hdqwalls.com/download/minimalist-landscape-to-1920x1080.jpg');\r\n        }\r\n    </style>\r\n\r\n{% endblock %}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/templates/danielgreet.html b/templates/danielgreet.html
+--- a/templates/danielgreet.html	(revision cf864c8b4fbfc713bad8b9ce042c22004c30b526)
++++ b/templates/danielgreet.html	(date 1634761215965)
+@@ -7,8 +7,6 @@
+ <!DOCTYPE HTML>
+ <html lang="en">
+ 
+-
+-
+ <head>
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+@@ -99,6 +97,7 @@
+ 
+ </head>
+ 
++
+ <body>
+ {% include "layouts/navbar.html" %}
+ 
+Index: templates/binary RGB 2.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><html>\r\n\r\n<!--<made by daniel and karthik> -->\r\n{% include \"layouts/navbar.html\" %}\r\n\r\n<link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css\" rel=\"stylesheet\" >\r\n<script src=\"https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js\" ></script>\r\n<script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js\" integrity=\"sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT\" crossorigin=\"anonymous\"></script>\r\n\r\n<title>Color Codes RGB</title>\r\n\r\n\r\n\r\n</nav>\r\n<div class=\"container-fluid content\">\r\n\r\n\r\n    <h1 style=\"text-align: center; font-family: 'Times New Roman'; color: #000000\">Color Codes RGB Lab</h1>\r\n    <p style=\"text-align: center; font-family: 'Times New Roman'; color: white\">Click the buttons in order to generate different color combinations</p>\r\n\r\n    <br />\r\n\r\n    <div class=\"row\">\r\n\r\n        <div class=\"col-sm-1\"></div> <!-- This is to create the buttons -->\r\n\r\n        <button class=\"col-sm-1\" id=\"r1\" onclick=\"toggleSwitch('r1')\">0</button>\r\n\r\n        <button class=\"col-sm-1\" id=\"r2\" onclick=\"toggleSwitch('r2')\">0</button>\r\n\r\n        <button class=\"col-sm-1\" id=\"r3\" onclick=\"toggleSwitch('r3')\">0</button>\r\n\r\n        <button class=\"col-sm-1\" id=\"r4\" onclick=\"toggleSwitch('r4')\">0</button>\r\n\r\n        <button class=\"col-sm-1\" id=\"r5\" onclick=\"toggleSwitch('r5')\">0</button>\r\n\r\n        <button class=\"col-sm-1\" id=\"r6\" onclick=\"toggleSwitch('r6')\">0</button>\r\n\r\n        <button class=\"col-sm-1\" id=\"r7\" onclick=\"toggleSwitch('r7')\">0</button>\r\n\r\n        <button class=\"col-sm-1\" id=\"r8\" onclick=\"toggleSwitch('r8')\">0</button>\r\n\r\n\r\n        <div class=\"offset-sm-1 col-sm-2\">\r\n            <p id=\"r\">Decimal value: 0</p>\r\n        </div>\r\n\r\n        <div class=\"offset-sm-1 col-sm-3\">\r\n            <p style=\"padding-left: 475px; color: #fb3958; font-size: 25px\">Red</p>\r\n        </div>\r\n    </div>\r\n\r\n    <br />\r\n\r\n    <div class=\"row\">\r\n        <div class=\"col-sm-1\"></div>\r\n\r\n        <button class=\"col-sm-1\" id=\"g1\" onclick=\"toggleSwitch('g1')\">0</button>\r\n\r\n        <button class=\"col-sm-1\" id=\"g2\" onclick=\"toggleSwitch('g2')\">0</button>\r\n\r\n        <button class=\"col-sm-1\" id=\"g3\" onclick=\"toggleSwitch('g3')\">0</button>\r\n\r\n        <button class=\"col-sm-1\" id=\"g4\" onclick=\"toggleSwitch('g4')\">0</button>\r\n\r\n        <button class=\"col-sm-1\" id=\"g5\" onclick=\"toggleSwitch('g5')\">0</button>\r\n\r\n        <button class=\"col-sm-1\" id=\"g6\" onclick=\"toggleSwitch('g6')\">0</button>\r\n\r\n        <button class=\"col-sm-1\" id=\"g7\" onclick=\"toggleSwitch('g7')\">0</button>\r\n\r\n        <button class=\"col-sm-1\" id=\"g8\" onclick=\"toggleSwitch('g8')\">0</button>\r\n\r\n\r\n        <div class=\"offset-sm-1 col-sm-2\">\r\n            <p id=\"g\">Decimal value: 0</p>\r\n        </div>\r\n\r\n        <div class=\"offset-sm-1 col-sm-3\">\r\n            <p style=\"padding-left: 475px; color: mediumseagreen; font-size: 25px\">Green</p>\r\n        </div>\r\n\r\n    </div>\r\n\r\n    <br />\r\n\r\n    <div class=\"row\">\r\n        <div class=\"col-sm-1\"></div>\r\n\r\n        <button class=\"col-sm-1\" id=\"b1\" onclick=\"toggleSwitch('b1')\">0</button>\r\n\r\n        <button class=\"col-sm-1\" id=\"b2\" onclick=\"toggleSwitch('b2')\">0</button>\r\n\r\n        <button class=\"col-sm-1\" id=\"b3\" onclick=\"toggleSwitch('b3')\">0</button>\r\n\r\n        <button class=\"col-sm-1\" id=\"b4\" onclick=\"toggleSwitch('b4')\">0</button>\r\n\r\n        <button class=\"col-sm-1\" id=\"b5\" onclick=\"toggleSwitch('b5')\">0</button>\r\n\r\n        <button class=\"col-sm-1\" id=\"b6\" onclick=\"toggleSwitch('b6')\">0</button>\r\n\r\n        <button class=\"col-sm-1\" id=\"b7\" onclick=\"toggleSwitch('b7')\">0</button>\r\n\r\n        <button class=\"col-sm-1\" id=\"b8\" onclick=\"toggleSwitch('b8')\">0</button>\r\n\r\n\r\n        <div class=\"offset-sm-1 col-sm-2\">\r\n            <p id=\"b\">Decimal value: 0</p>\r\n        </div>\r\n\r\n        <div class=\"offset-sm-1 col-sm-3\">\r\n            <p style=\"padding-left: 475px; color: dodgerblue; font-size: 25px\">Blue</p>\r\n        </div>\r\n\r\n    </div>\r\n\r\n    <br />\r\n\r\n    <div class=\"offset-sm-1 col-sm-10\" id=\"color\" style=\"background-color: #000000; height: 20vh;\">  <!-- Div that shows off color -->\r\n    </div>\r\n    <p style=\"text-align: center; color: white\" id=\"code\">#000000</p>\r\n\r\n    <br />\r\n    <button style=\"justify-content: center;\" onclick=\"select()\">Select</button>\r\n\r\n    <script>\r\n\r\n        var red = 0;\r\n        var green = 0;\r\n        var blue = 0;\r\n\r\n        function toggleSwitch (id) {     // toggles button between on and off\r\n            const element = document.getElementById(id);\r\n            if (element.innerHTML == \"1\") {\r\n                element.innerHTML = \"0\";\r\n            } else {\r\n                element.innerHTML = \"1\";\r\n            }\r\n            element.classList.toggle(\"buttonOn\");\r\n            element.classList.toggle(\"buttonOff\");\r\n\r\n            calculateRow(id.charAt(0));\r\n        }\r\n\r\n        function calculateRow (color) {    // function that calculates the decimal value for a certain row after one of its buttons is toggled\r\n            let sum = 0;\r\n            for (var i = 1; i <= 8; i++) {\r\n                let element = document.getElementById(color + i);\r\n                sum += Math.pow(2, 8 - i) * parseInt(element.innerHTML);\r\n            }\r\n            document.getElementById(color).innerHTML = \"Decimal value: \" + sum;\r\n            switch (color) {\r\n                case 'r':\r\n                    red = sum;\r\n                    break;\r\n                case 'g':\r\n                    green = sum;\r\n                    break;\r\n                case 'b':\r\n                    blue = sum;\r\n                    break;\r\n                default:\r\n                    break;\r\n            }\r\n            setColorCode();\r\n        }\r\n\r\n        function setColorCode () {    // uses values from each row to create a color\r\n            let r = red.toString(16);\r\n            let g = green.toString(16);\r\n            let b = blue.toString(16);\r\n\r\n            if (r.length == 1) {\r\n                r = \"0\" + r;\r\n            }\r\n            if (g.length == 1) {\r\n                g = \"0\" + g;\r\n            }\r\n            if (b.length == 1) {\r\n                b = \"0\" + b;\r\n            }\r\n\r\n            let code = \"#\" + r + g + b;\r\n            document.getElementById(\"color\").style.backgroundColor = code;\r\n            document.getElementById(\"code\").innerHTML = \"Hexcode: \" + code;\r\n        }\r\n\r\n\r\n\r\n        function select () {   // function to select all buttons to on\r\n            for (var i = 0; i >= 8; i++) {\r\n                document.getElementById('r' + i).innerHTML = \"0\";\r\n                document.getElementById('g' + i).innerHTML = \"0\";\r\n                document.getElementById('b' + i).innerHTML = \"0\";\r\n\r\n                calculateRow('r');\r\n                calculateRow('b');\r\n                calculateRow('g');\r\n\r\n                document.getElementById('r' + i).classList.remove(\"buttonOff\");\r\n                document.getElementById('g' + i).classList.remove(\"buttonOff\");\r\n                document.getElementById('b' + i).classList.remove(\"buttonOff\");\r\n\r\n                document.getElementById('r' + i).classList.add(\"buttonOn\");\r\n                document.getElementById('g' + i).classList.add(\"buttonOn\");\r\n                document.getElementById('b' + i).classList.add(\"buttonOn\");\r\n            }\r\n        }\r\n\r\n        window.onload = select();  // init buttons\r\n\r\n    </script>\r\n\r\n    <!-- css -->\r\n    <style>\r\n\r\n        .buttonOff {\r\n            background-color: antiquewhite;\r\n            color: black;\r\n        }\r\n\r\n        .buttonOn {\r\n            background-color: deepskyblue;\r\n            color: white;\r\n        }\r\n\r\n    </style>\r\n    {% block background %}\r\n\r\n    <style>\r\n        body {\r\n            background-image: url('https://images5.alphacoders.com/411/thumb-1920-411177.jpg');\r\n        }\r\n    </style>\r\n\r\n    {% endblock %}\r\n\r\n</div>\r\n</body>\r\n</html>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/templates/binary RGB 2.html b/templates/binary RGB 2.html
+--- a/templates/binary RGB 2.html	(revision cf864c8b4fbfc713bad8b9ce042c22004c30b526)
++++ b/templates/binary RGB 2.html	(date 1634761226828)
+@@ -46,7 +46,8 @@
+         </div>
+ 
+         <div class="offset-sm-1 col-sm-3">
+-            <p style="padding-left: 475px; color: #fb3958; font-size: 25px">Red</p>
++            <p style="
++            padding-left: 475px; color: #fb3958; font-size: 25px">Red</p>
+         </div>
+     </div>
+ 
+Index: main.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>from flask import Flask, render_template, request\r\nfrom pathlib import Path  # https://medium.com/@ageitgey/python-3-quick-tip-the-easy-way-to-deal-with-file-paths-on-windows-mac-and-linux-11a072b58d5f\r\n\r\n\r\n# create a Flask instance\r\napp = Flask(__name__)\r\n\r\n\r\n@app.route('/karthikgreet/')\r\ndef greet0():\r\n    return render_template(\"karthikgreet.html\")\r\n\r\n@app.route('/karthikgreet/', methods=['GET', 'POST'])\r\ndef greet1():\r\n    # submit button has been pushed\r\n    if request.form:\r\n        name = request.form.get(\"name\")\r\n        if len(name) != 0:  # input field has content\r\n            return render_template(\"karthikgreet.html\", name=name)\r\n    # starting and empty input default\r\n    return render_template(\"karthikgreet.html\", name=\"World\")\r\n\r\n@app.route('/danielgreet/')\r\ndef greet2():\r\n    return render_template(\"danielgreet.html\")\r\n\r\n@app.route('/danielgreet/', methods=['GET', 'POST'])\r\ndef greet3():\r\n    # submit button has been pushed\r\n    if request.form:\r\n        name = request.form.get(\"name\")\r\n        if len(name) != 0:  # input field has content\r\n            return render_template(\"danielgreet.html\", name1=name)\r\n    # starting and empty input default\r\n    return render_template(\"danielgreet.html\", name1=\"World\")\r\n\r\n@app.route('/dylangreet/')\r\ndef greet4():\r\n    return render_template(\"dylangreet.html\")\r\n\r\n@app.route('/dylangreet/', methods=['GET', 'POST'])\r\ndef greet5():\r\n    # submit button has been pushed\r\n    if request.form:\r\n        name = request.form.get(\"name\")\r\n        if len(name) != 0:  # input field has content\r\n            return render_template(\"dylangreet.html\", name1=name)\r\n    # starting and empty input default\r\n    return render_template(\"dylangreet.html\", name1=\"World\")\r\n\r\n@app.route('/williamgreet/')\r\ndef greet6():\r\n    return render_template(\"williamgreet.html\")\r\n\r\n@app.route('/williamgreet/', methods=['GET', 'POST'])\r\ndef greet7():\r\n    # submit button has been pushed\r\n    if request.form:\r\n        name = request.form.get(\"name\")\r\n        if len(name) != 0:  # input field has content\r\n            return render_template(\"williamgreet.html\", name1=name)\r\n    # starting and empty input default\r\n    return render_template(\"williamgreet.html\", name1=\"World\")\r\n\r\n@app.route('/greet/')\r\ndef greet8():\r\n    return render_template(\"greet.html\")\r\n\r\n@app.route('/greet/', methods=['GET', 'POST'])\r\ndef greet9():\r\n    # submit button has been pushed\r\n    if request.form:\r\n        name = request.form.get(\"name\")\r\n        if len(name) != 0:  # input field has content\r\n            return render_template(\"greet.html\", name1=name)\r\n    # starting and empty input default\r\n    return render_template(\"greet.html\", name1=\"World\")\r\n\r\n\r\n# connects default URL to render index.html\r\n@app.route('/')\r\ndef index():\r\n    return render_template(\"index.html\")\r\n\r\n\r\n# connects /kangaroos path to render kangaroos.html\r\n@app.route('/PCs/')\r\ndef PCs():\r\n    return render_template(\"kangaroos.html\")\r\n\r\n\r\n@app.route('/Console/')\r\ndef Console():\r\n    return render_template(\"walruses.html\")\r\n\r\n@app.route('/PlayStation/')\r\ndef PlayStation():\r\n    return render_template(\"PlayStation.html\")\r\n\r\n@app.route('/Mobile/')\r\ndef Mobile():\r\n    return render_template(\"hawkers.html\")\r\n\r\n@app.route('/Video Journals/')\r\ndef mini():\r\n    return render_template(\"Video Journals.html\")\r\n\r\n@app.route('/binary RGB 2/')\r\ndef colorcodes():\r\n    return render_template(\"binary RGB 2.html\")\r\n\r\n@app.route(\"/binary/\", methods = ['GET', 'POST'])\r\ndef binary():\r\n    BITS = 4\r\n    imgBulbOn = \"/static/assets/bulb_on.gif\"\r\n    # second time you call it, its a post action\r\n    if request.method == 'POST':\r\n        BITS = int(request.form['BITS'])\r\n        imgBulbOn = request.form['lightOn']\r\n    return render_template(\"binary.html\", imgBulbOn=imgBulbOn, BITS=BITS)\r\n\r\n@app.route('/howitsmade/')\r\ndef howitsmade():\r\n    return render_template(\"howitsmade.html\")\r\n\r\n@app.route('/Apple/')\r\ndef Apple():\r\n    return render_template(\"Apple.html\")\r\n\r\n@app.route('/samsung/', methods=['GET', 'POST'])\r\ndef greetsamsung():\r\n    # submit button has been pushed\r\n    if request.form:\r\n        name = request.form.get(\"name\")\r\n        if len(name) != 0:  # input field has content\r\n            return render_template(\"samsung.html\", name1=name)\r\n    # starting and empty input default\r\n    return render_template(\"samsung.html\", name1=\"World\")\r\n\r\n@app.route('/Samsung/')\r\ndef samsung():\r\n    return render_template(\"Samsung.html\")\r\n\r\n@app.route('/xbox/')\r\ndef xbox():\r\n    return render_template(\"xbox.html\")\r\n\r\n@app.route('/Laptops/')\r\ndef Laptops():\r\n    return render_template(\"Laptops.html\")\r\n\r\n@app.route('/LogicGateLab/')\r\ndef LogicGateLab():\r\n    return render_template(\"LogicGateLab.html\")\r\n\r\n@app.route('/howitsmade/', methods=['GET', 'POST'])\r\ndef greet1288():\r\n    # submit button has been pushed\r\n    if request.form:\r\n        name = request.form.get(\"name\")\r\n        if len(name) != 0:  # input field has content\r\n            return render_template(\"howitsmade.html\", name1=name)\r\n    # starting and empty input default\r\n    return render_template(\"howitsmade.html\", name1=\"World\")\r\n\r\n@app.route('/rgb/', methods=['GET', 'POST'])\r\ndef rgb():\r\n    path = Path(app.root_path) / \"static\" / \"img\"\r\n    return render_template('rgb.html', images=image_data(path))\r\n\r\n@app.route('/ListHackathon/')\r\ndef ListHackathon():\r\n    return render_template(\"ListHackathon.html\")\r\n\r\n@app.route('/Unsigned Addition Binary/', methods=['GET', 'POST'])\r\ndef unsigned_addition():\r\n    return render_template(\"Unsigned Addition Binary.html\", BITS=8, imageOn=\"/static/assets/on.PNG\", imageOff=\"/static/assets/off.PNG\")\r\n\r\n@app.route('/Signed Addition/')\r\ndef SignedAddition():\r\n    return render_template(\"Signed Addition.html\")\r\n\r\n# runs the application on the development server\r\nif __name__ == \"__main__\":\r\n    app.run(debug=True)
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/main.py b/main.py
+--- a/main.py	(revision cf864c8b4fbfc713bad8b9ce042c22004c30b526)
++++ b/main.py	(date 1634761215981)
+@@ -1,4 +1,5 @@
+ from flask import Flask, render_template, request
++from image import image_data
+ from pathlib import Path  # https://medium.com/@ageitgey/python-3-quick-tip-the-easy-way-to-deal-with-file-paths-on-windows-mac-and-linux-11a072b58d5f
+ 
+ 
+@@ -141,6 +142,10 @@
+ def samsung():
+     return render_template("Samsung.html")
+ 
++app.route('/Mice/')
++def mice():
++    return render_template("Mice.html")
++
+ @app.route('/xbox/')
+ def xbox():
+     return render_template("xbox.html")
+@@ -180,6 +185,9 @@
+ def SignedAddition():
+     return render_template("Signed Addition.html")
+ 
+-# runs the application on the development server
++@app.route('/test/')
++def test():
++    return render_template("test.html")
++
+ if __name__ == "__main__":
+-    app.run(debug=True)
+\ No newline at end of file
++    app.run(debug=True, port=2023)
+\ No newline at end of file
+Index: templates/layouts/dadjokeapi.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/templates/layouts/dadjokeapi.html b/templates/layouts/dadjokeapi.html
+new file mode 100644
+--- /dev/null	(date 1634850131312)
++++ b/templates/layouts/dadjokeapi.html	(date 1634850131312)
+@@ -0,0 +1,10 @@
++<!DOCTYPE html>
++<html lang="en">
++<head>
++    <meta charset="UTF-8">
++    <title>Title</title>
++</head>
++<body>
++
++</body>
++</html>
+\ No newline at end of file
+Index: image.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import numpy\r\nimport base64\r\nfrom io import BytesIO\r\nfrom pathlib import Path  # https://medium.com/@ageitgey/python-3-quick-tip-the-easy\r\n\r\n# image (PNG, JPG) to base64 conversion (string), learn about base64 on wikipedia https://en.wikipedia.org/wiki/Base64\r\ndef image_base64(img, img_type):\r\n    with BytesIO() as buffer:\r\n        img.save(buffer, img_type)\r\n        return base64.b64encode(buffer.getvalue()).decode()\r\n\r\ndef image_data(path=Path(\"static/assets/\"), img_list=None):  # path of static images is defaulted\r\n    for img_dict in img_list:\r\n        file = path / img_dict['file']\r\n\r\n\r\n# formatter preps base64 string for inclusion, ie <img src=[this return value] ... />\r\ndef image_formatter(img, img_type):\r\n    return \"data:image/\" + img_type + \";base64,\" + image_base64(img, img_type)\r\n\r\n# color_data prepares a series of images for data analysis\r\ndef image_data(path=Path(\"static/assets/\"), img_list=None):  # path of static images is defaulted\r\n    if img_list is None:  # color_dict is defined with defaults\r\n        img_list = [\r\n                {'source': \"danielscomputer\", 'label': \"Daniel is the Best Scrum Master\", 'file': \"DanielPhotograph.PNG\"},\r\n                {'source': \"danielscomputer\", 'label': \"Dylan Is the Best Designer\", 'file': \"dylan.JPG\"},\r\n                {'source': \"danielscomputer\", 'label': \"Karthik Is the Best Developer\", 'file': \"karthik.PNG\"},\r\n                {'source': \"danielscomputer\", 'label': \"William Is the Best Tech Lead\", 'file': \"william.JPG\"},\r\n        ]\r\n\r\n    # gather analysis data and meta data for each image, adding attributes to each row in table\r\n    for img_dict in img_list:\r\n        # File to open\r\n        file = path / img_dict['file']  # file with path for local access (backend)\r\n        print(file)\r\n        # Python Image Library operations\r\n        img_reference = Image.open(file)  # PIL\r\n        img_data = img_reference.getdata()  # Reference https://www.geeksforgeeks.org/python-pil-image-getdata/\r\n        img_dict['format'] = img_reference.format\r\n        img_dict['mode'] = img_reference.mode\r\n        img_dict['size'] = img_reference.size\r\n        # Conversion of original Image to Base64, a string format that serves HTML nicely\r\n        img_dict['base64'] = image_formatter(img_reference, img_dict['format'])\r\n        # Numpy is used to allow easy access to data of image, python list\r\n        img_dict['data'] = numpy.array(img_data)\r\n        img_dict['hex_array'] = []\r\n        img_dict['binary_array'] = []\r\n        # 'data' is a list of RGB data, the list is traversed and hex and binary lists are calculated and formatted\r\n        for pixel in img_dict['data']:\r\n            # hexadecimal conversions\r\n            hex_value = hex(pixel[0])[-2:] + hex(pixel[1])[-2:] + hex(pixel[2])[-2:]\r\n            hex_value = hex_value.replace(\"x\", \"0\")\r\n            img_dict['hex_array'].append(\"#\" + hex_value)\r\n            # binary conversions\r\n            bin_value = bin(pixel[0])[2:].zfill(8) + \" \" + bin(pixel[1])[2:].zfill(8) + \" \" + bin(pixel[2])[2:].zfill(8)\r\n            img_dict['binary_array'].append(bin_value)\r\n        # create gray scale of image, ref: https://www.geeksforgeeks.org/convert-a-numpy-array-to-an-image/\r\n        img_dict['gray_data'] = []\r\n        for pixel in img_dict['data']:\r\n            average = (int(pixel[0]) + pixel[1] + pixel[2]) // 3  # integer division\r\n            if len(pixel) > 3:\r\n                img_dict['gray_data'].append((average, average, average, pixel[3]))\r\n            else:\r\n                img_dict['gray_data'].append((average, average, average))\r\n        img_reference.putdata(img_dict['gray_data'])\r\n        img_dict['base64_GRAY'] = image_formatter(img_reference, img_dict['format'])\r\n    return img_list  # list is returned with all the attributes for each image dictionary\r\n\r\n\r\n# run this as standalone tester to see data printed in terminal\r\nif __name__ == \"__main__\":\r\n#   local_path = Path(\"../starter/static/img/\")\r\n    local_path = Path(\"static/img/\")\r\n    img_test = [\r\n        {'source': \"Peter Carolin\", 'label': \"Lassen Volcano\", 'file': \"lassen-volcano-256.jpg\"},\r\n    ]\r\n    items = image_data(local_path, img_test)  # path of local run\r\n    for row in items:\r\n        # print some details about the image so you can validate that it looks like it is working\r\n        # meta data\r\n        print(\"---- meta data -----\")\r\n        print(row['label'])\r\n        print(row['format'])\r\n        print(row['mode'])\r\n        print(row['size'])\r\n        # data\r\n        print(\"----  data  -----\")\r\n        print(row['data'])\r\n        print(\"----  gray data  -----\")\r\n        print(row['gray_data'])\r\n        print(\"----  hex of data  -----\")\r\n        print(row['hex_array'])\r\n        print(\"----  bin of data  -----\")\r\n        print(row['binary_array'])\r\n        # base65\r\n        print(\"----  base64  -----\")\r\n        print(row['base64'])\r\n        # display image\r\n        print(\"----  render and write in image  -----\")\r\n        filename = local_path / row['file']\r\n        image_ref = Image.open(filename)\r\n        draw = ImageDraw.Draw(image_ref)\r\n        draw.text((0, 0), \"Size is {0} X {1}\".format(*row['size']))  # draw in image\r\n        image_ref.show()\r\nprint()
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/image.py b/image.py
+--- a/image.py	(revision cf864c8b4fbfc713bad8b9ce042c22004c30b526)
++++ b/image.py	(date 1634761215997)
+@@ -1,3 +1,4 @@
++from PIL import Image, ImageDraw
+ import numpy
+ import base64
+ from io import BytesIO
+Index: templates/test.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/templates/test.html b/templates/test.html
+new file mode 100644
+--- /dev/null	(date 1634761215981)
++++ b/templates/test.html	(date 1634761215981)
+@@ -0,0 +1,93 @@
++<!DOCTYPE html>
++{% include "layouts/navbar.html" %}
++
++<html lang="en">
++<head>
++    <meta charset="UTF-8">
++    <meta name="viewport" content="width=device-width, initial-scale=1.0">
++    <title>Test</title>
++    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
++    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
++    <script>
++        const button = document.querySelector('.container button');
++        const jokeText = document.querySelector('container p');
++        document.addEventListener('DOMCContentLoaded', getJoke)
++
++        button.addEventListener('click', getJoke);
++
++        async function getJoke() {
++            const jokeData = fetch('https://icanhazdadjoke.com/', {
++                headers: {
++                    'Accept': 'application/json'
++                }
++            });
++            console.jokeObj = await jokeData.json();
++            jokeText.innerHTML = jokeObj.joke;
++        }
++    </script>
++    <style>
++        {
++        margin: 0;
++        padding: 0;
++        box-sizing: border-box;
++        }
++        html{
++            font-size: 10px;
++            font-family: "Agency FB"
++        }
++        body{
++            background-color: rgb(37, 38, 39);
++            color: white;
++        }
++        section{
++            min-height: 100%;
++            width: 100%;
++            padding: 100px 0;
++            display: flex;
++            align-items: center;
++            justify-content: center;
++        }
++        .container{
++            width: 90%;
++            max-width: 500px;
++            margin: 0 auto;
++            background-color: rgb(51, 55, 59);
++            border-radius: 8px;
++            padding: 3rem;
++            display: flex;
++            flex-direction: column;
++        }
++        container p{
++            font-size: 2rem;
++            font-weight: 300;
++            line-height: 3rem;
++            text-align: justify;
++        }
++        button{
++            margin-top: 4rem;
++            width: fit-content;
++            padding: 2rem;
++            font-size: 2rem;
++            background-color: rgb(25, 28, 29);
++            color: white;border: none;
++            border-radius: 4px;
++            cursor: pointer;
++            align-self: flex-end;
++        }
++
++    </style>
++
++</head>
++</head>
++<body>
++<section>
++  <div class="container">
++    <div class="joke">
++        <h1>Press The Button For A Dad Joke</h1>
++      <button>Get a Dad Joke</button>
++    </div>
++  </div>
++
++</section>
++</body>
++</html>
+\ No newline at end of file
+Index: templates/Mice.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/templates/Mice.html b/templates/Mice.html
+new file mode 100644
+--- /dev/null	(date 1634761215997)
++++ b/templates/Mice.html	(date 1634761215997)
+@@ -0,0 +1,317 @@
++<!DOCTYPE HTML>
++<html lang="en">
++
++<head>
++    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
++    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
++    <style>
++        :root{
++            --white: whitesmoke;
++            --black: black;
++            --grey: grey;
++        }
++
++        html, body{
++            margin: 0;
++            height: 100%;
++            animation: fadein 2s;
++            -moz-animation: fadein 2s; /* Firefox */
++            -webkit-animation: fadein 2s; /* Safari and Chrome */
++            -o-animation: fadein 2s; /* Opera */
++            background-color: #282828;
++            color: var(--white);
++        }
++
++        .dark-mode {
++            background-color: var(--white);
++            color: var(--black);
++        }
++
++        h1{
++            font-size: 5em;
++        }
++
++        a {
++            color: midnightblue;
++        }
++
++        .fa{
++            font-size: 3em;
++            letter-spacing: 1em;
++            transition: all .2s;
++            color: white;
++        }
++
++        .fa:hover{
++            transform: translateY(10px);
++        }
++
++        .fa-youtube-play:hover{
++            color: #cc0000;
++        }
++
++        .fa-twitter:hover{
++            color: #1da1f2;
++        }
++
++        .fa-github:hover{
++            color: #000000;
++        }
++
++        .btn:link,
++        .btn:visited {
++            text-transform: uppercase;
++            text-decoration: none;
++            padding: 15px 40px;
++            display: inline-block;
++            border-radius: 100px;
++            transition: all .2s;
++            position: absolute;
++            color: white;
++            font-size: 2.5em;
++        }
++
++        .btn:hover {
++            transform: translateY(-3px);
++            box-shadow: 0 20px 40px rgba(255, 255, 255, 0.2);
++        }
++
++        .btn:active {
++            transform: translateY(-1px);
++            box-shadow: 0 5px 10px rgba(255, 255, 255, 0.2);
++        }
++
++        .row{
++            margin: auto;
++        }
++
++        #example1 {
++            border: 1px solid black;
++            background-repeat: no-repeat;
++            background: url("https://altarofgaming.com/wp-content/uploads/2019/05/best-gaming-laptops-2019-affordable-trusted-efficient.jpg");
++            padding: 370px;
++        }
++
++        #example2 {
++            border: 1px solid black;
++            background-repeat: no-repeat;
++            background-color: #282828;
++            padding: 5px;
++        }
++
++        #example3 {
++            border: 1px solid black;
++            background-repeat: no-repeat;
++            background: url("https://cdn3.vox-cdn.com/thumbor/AMsd7zeGYTqdueUE6deJj1zcskM=/0x1080/volume-assets.voxmedia.com/production/3dace8cb65ad621ca3e821a4fef6fdec/Tfin_sans_vpavic_190102_3149_0023_Edit.jpg");
++            padding: 450px;
++        }
++
++        .container {
++            position: relative; left: 150px;
++            height: 50vh;
++            width: 50vh;
++            margin: 0rem;
++            display: grid;
++            grid-template-columns: 1fr 1fr;
++            grid-template-rows: 1fr 1fr;
++            grid-gap: 10px 10px;
++        }
++
++        .container2{
++            height: 30vh;
++            width: 1520px;
++            background-color: #282828;
++            margin: 0rem;
++            display: block;
++        }
++
++        .cell {
++            color: white;
++            font-size: 40px;
++            text-align: center;
++            padding: 5px;
++        }
++        .cell-1 {
++            background: #101010;
++        }
++        .Alienware {
++            position: absolute;
++            font-size: 30px;
++            top: 25px;
++            left: 225px;
++        }
++
++        .Razer {
++            position: absolute;
++            font-size: 30px;
++            top: 25px;
++            left: 825px;
++        }
++        .cell-2 {
++            background: #101010;
++        }
++        .cell-3 {
++            background: #101010;
++        }
++        .cell-4 {
++            background: #101010;
++        }
++        .card-body {
++            background: #101010;
++        }
++        .card {
++            background: #101010;
++        }
++        .collapsible {
++            background-color: black;
++            color: white;
++            cursor: pointer;
++            padding: 18px;
++            width: 100%;
++            border: none;
++            text-align: left;
++            outline: none;
++            font-size: 15px;
++        }
++
++        .active, .collapsible:hover {
++            background-color: black;
++        }
++
++        .collapsible:after {
++            content: '\002B';
++            color: darkblue;
++            font-weight: bold;
++            float: right;
++            margin-left: 5px;
++        }
++
++        .active:after {
++            content: "\2212";
++            color: darkblue;
++        }
++
++        .content {
++            padding: 0 18px;
++            max-height: 0;
++            overflow: hidden;
++            transition: max-height 0.3s ease-out;
++            background-color: black;
++        }
++    </style>
++
++    <title> Laptops | A1 from Day 0 </title>
++
++</head>
++
++<body>
++{% include "layouts/navbar.html" %}
++<div id="example1">
++
++    <div class="inline">
++        <a href="/Laptops/" class="btn" style = "color: white; font-size:25px; position:relative; left: 250px; top: -350px">Republic of Gamers</a>
++    </div>
++
++</div>
++<div id = "example2">
++</div>
++<div id = "example3">
++    <div class="col-3">
++        <a href="/Laptops/" class="btn" style = "color:white; font-size:25px; position:relative; left: 185px; top: -400px">Alienware</a>
++    </div>
++</div>
++
++<div class="container">
++    <div class="card" style="border: white; width: 35rem;"><div class="cell cell-1"><img src="/static/assets/Alienware_2D00_17_2D00_Front_2D00_Reflection_2D00_1200_5F00_74014EC9.jpg" alt="Greeting" width="550" height="400"></div>
++        <div class="card-body">
++            <h5 class="card-title">Alienware 17 3D Laptop</h5>
++            <button class="collapsible">Hardware</button>
++            <div class="content">
++                <p>Processor: Intel Core i7-4800MQ, 2.7 GHz (Haswell, hyper threaded quad-core)</p>
++                <p>RAM: 12 GB 1600 MHz (2 slots used out of 4)</p>
++                <p>Screen: 17.3” 120 Hz WLED FHD 1920×1080 TrueLife with 3D bundle</p>
++                <p>Graphics: NVIDIA GeForce GTX 770M</p>
++                <p>Cores: 960</p>
++                <p>Clock Frequency: 811 + Boost</p>
++                <p>Memory clock: 2000 MHz</p>
++                <p>Memory configuration: 3GB GDDR5</p>
++                <p>Memory interface width: 192 bit</p>
++                <p>Price: $1379.99</p>
++            </div>
++        </div>
++    </div>
++    <div class="card" style="border: white; width: 35rem;"><div class="cell cell-2"><img src="/static/assets/razer.jpeg" alt="Greeting" width="550" height="400"></div>
++        <div class="card-body">
++            <h5 class="card-title">Razer Blade 15 Gaming Laptop</h5>
++            <button class="collapsible">Hardware</button>
++            <div class="content">
++                <p>Processor: Intel Core i7-9750H</p>
++                <p>RAM: 16GB RAM, 512GB SSD</p>
++                <p>Screen: 15.6" FHD 1080p 144Hz</p>
++                <p>Graphics: NVIDIA GeForce RTX 2060</p>
++                <p>Cores: 6</p>
++                <p>CNC Aluminum</p>
++                <p>Chroma RGB Lighting</p>
++                <p>Thunderbolt 3</p>
++                <p>Price: $1,799.66</p>
++            </div>
++        </div>
++    </div>
++    <div class="card" style="border: white; width: 35rem;"><div class="cell cell-3"><img src="/static/assets/1622470414596.jpg" alt="Greeting" width="550" height="400"></div>
++        <div class="card-body">
++            <h5 class="card-title">Asus ROG Gaming Laptop</h5>
++            <button class="collapsible">Hardware</button>
++            <div class="content">
++                <p>Processor: Intel Core i7-4800MQ, 2.7 GHz (Haswell, hyper threaded quad-core)</p>
++                <p>RAM: 12 GB 1600 MHz (2 slots used out of 4)</p>
++                <p>Screen: 17.3” 120 Hz WLED FHD 1920×1080 TrueLife with 3D bundle</p>
++                <p>Graphics: NVIDIA GeForce GTX 770M</p>
++                <p>Cores: 960</p>
++                <p>Clock Frequency: 811 + Boost</p>
++                <p>Memory clock: 2000 MHz</p>
++                <p>Memory configuration: 3GB GDDR5</p>
++                <p>Memory interface width: 192 bit</p>
++            </div>
++        </div>
++    </div>
++    <div class="card" style="border: white; width: 35rem;"><div class="cell cell-4"><img src="/static/assets/Falcon-Northwest-FB-share-1200x628.jpg" alt="Greeting" width="550" height="400"></div>
++        <div class="card-body">
++            <h5 class="card-title">Falcon Northwest DRX and TLX Gaming Laptops Bundle</h5>
++            <button class="collapsible">Hardware</button>
++            <div class="content">
++                <p>Processor: Intel Core i7-4800MQ, 2.7 GHz (Haswell, hyper threaded quad-core)</p>
++                <p>RAM: 12 GB 1600 MHz (2 slots used out of 4)</p>
++                <p>Screen: 17.3” 120 Hz WLED FHD 1920×1080 TrueLife with 3D bundle</p>
++                <p>Graphics: NVIDIA GeForce GTX 770M</p>
++                <p>Cores: 960</p>
++                <p>Clock Frequency: 811 + Boost</p>
++                <p>Memory clock: 2000 MHz</p>
++                <p>Memory configuration: 3GB GDDR5</p>
++                <p>Memory interface width: 192 bit</p>
++            </div>
++        </div>
++    </div>
++</div>
++<script>
++    var coll = document.getElementsByClassName("collapsible");
++    var i;
++
++    for (i = 0; i < coll.length; i++) {
++        coll[i].addEventListener("click", function() {
++            this.classList.toggle("active");
++            var content = this.nextElementSibling;
++            if (content.style.maxHeight){
++                content.style.maxHeight = null;
++            } else {
++                content.style.maxHeight = content.scrollHeight + "px";
++            }
++        });
++    }
++</script>
++</body>
++</html>
++
++<!--Alienware 17 3D Laptop
++Razer Blade 15 Gaming Laptop
++Asus ROG Gaming Laptop
++Falcon Northwest DRX and TLX Gaming Laptops Bundle-->
+\ No newline at end of file
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"0e4a484e-366a-4d0e-848b-24cd03e3ffdf\" name=\"Changes\" comment=\"karthik used my computer\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_10_6_2021_12_12_PM_[Changes]/shelved.patch\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/templates/Samsung.html\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/templates/Samsung.html\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/templates/layouts/base.html\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/templates/layouts/base.html\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FlaskConsoleOptions\" custom-start-script=\"import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\\nApp: %s [%s]\\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))\">\r\n    <envs>\r\n      <env key=\"FLASK_APP\" value=\"app\" />\r\n    </envs>\r\n    <option name=\"myCustomStartScript\" value=\"import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\\nApp: %s [%s]\\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))\" />\r\n    <option name=\"myEnvs\">\r\n      <map>\r\n        <entry key=\"FLASK_APP\" value=\"app\" />\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"GitSEFilterConfiguration\">\r\n    <file-type-list>\r\n      <filtered-out-file-type name=\"LOCAL_BRANCH\" />\r\n      <filtered-out-file-type name=\"REMOTE_BRANCH\" />\r\n      <filtered-out-file-type name=\"TAG\" />\r\n      <filtered-out-file-type name=\"COMMIT_BY_MESSAGE\" />\r\n    </file-type-list>\r\n  </component>\r\n  <component name=\"HighlightingSettingsPerFile\">\r\n    <setting file=\"file://$PROJECT_DIR$/templates/Samsung.html\" root0=\"FORCE_HIGHLIGHTING\" />\r\n    <setting file=\"file://$PROJECT_DIR$/templates/williamgreet.html\" root0=\"FORCE_HIGHLIGHTING\" />\r\n    <setting file=\"file://$PROJECT_DIR$/main.py\" root0=\"FORCE_HIGHLIGHTING\" />\r\n    <setting file=\"file://$PROJECT_DIR$/templates/Signed Addition.html\" root0=\"FORCE_HIGHLIGHTING\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"1zSvMYTTgv5E5cGCF7SuFSufNCc\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">\r\n    <property name=\"RunOnceActivity.OpenProjectViewOnStart\" value=\"true\" />\r\n    <property name=\"RunOnceActivity.ShowReadmeOnStart\" value=\"true\" />\r\n    <property name=\"WebServerToolWindowFactoryState\" value=\"false\" />\r\n    <property name=\"last_opened_file_path\" value=\"$PROJECT_DIR$\" />\r\n    <property name=\"node.js.detected.package.eslint\" value=\"true\" />\r\n    <property name=\"node.js.detected.package.tslint\" value=\"true\" />\r\n    <property name=\"node.js.selected.package.eslint\" value=\"(autodetect)\" />\r\n    <property name=\"node.js.selected.package.tslint\" value=\"(autodetect)\" />\r\n    <property name=\"restartRequiresConfirmation\" value=\"false\" />\r\n    <property name=\"settings.editor.selected.configurable\" value=\"discord-project\" />\r\n  </component>\r\n  <component name=\"ReadonlyStatusHandler\">\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n  </component>\r\n  <component name=\"RunManager\">\r\n    <configuration name=\"main\" type=\"PythonConfigurationType\" factoryName=\"Python\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"INTERPRETER_OPTIONS\" value=\"\" />\r\n      <option name=\"PARENT_ENVS\" value=\"true\" />\r\n      <envs>\r\n        <env name=\"PYTHONUNBUFFERED\" value=\"1\" />\r\n      </envs>\r\n      <option name=\"SDK_HOME\" value=\"C:\\Users\\cloud\\AppData\\Local\\Programs\\Python\\Python39\\python.exe\" />\r\n      <option name=\"WORKING_DIRECTORY\" value=\"$PROJECT_DIR$\" />\r\n      <option name=\"IS_MODULE_SDK\" value=\"false\" />\r\n      <option name=\"ADD_CONTENT_ROOTS\" value=\"true\" />\r\n      <option name=\"ADD_SOURCE_ROOTS\" value=\"true\" />\r\n      <module name=\"\" />\r\n      <EXTENSION ID=\"PythonCoverageRunConfigurationExtension\" runner=\"coverage.py\" />\r\n      <option name=\"SCRIPT_NAME\" value=\"$PROJECT_DIR$/main.py\" />\r\n      <option name=\"PARAMETERS\" value=\"\" />\r\n      <option name=\"SHOW_COMMAND_LINE\" value=\"false\" />\r\n      <option name=\"EMULATE_TERMINAL\" value=\"false\" />\r\n      <option name=\"MODULE_MODE\" value=\"false\" />\r\n      <option name=\"REDIRECT_INPUT\" value=\"false\" />\r\n      <option name=\"INPUT_FILE\" value=\"\" />\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"Python.main\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"0e4a484e-366a-4d0e-848b-24cd03e3ffdf\" name=\"Changes\" comment=\"karthik used my computer\" />\r\n      <created>1634154266548</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1634154266548</updated>\r\n      <workItem from=\"1634154275451\" duration=\"2998000\" />\r\n      <workItem from=\"1634240749988\" duration=\"65000\" />\r\n      <workItem from=\"1634240828868\" duration=\"64000\" />\r\n      <workItem from=\"1634520736407\" duration=\"2715000\" />\r\n      <workItem from=\"1634529578419\" duration=\"6085000\" />\r\n      <workItem from=\"1634536002259\" duration=\"1919000\" />\r\n      <workItem from=\"1634757183502\" duration=\"3070000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"daniel sucks at coding\">\r\n      <created>1634163766066</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1634163766066</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"marquee\">\r\n      <created>1634520133620</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1634520133620</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"william is so bad at life\">\r\n      <created>1634523676178</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1634523676178</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"technicals\">\r\n      <created>1634534674173</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1634534674173</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"cleaning up code\">\r\n      <created>1634537008535</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1634537008535</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"6\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n    <option name=\"oldMeFiltersMigrated\" value=\"true\" />\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"daniel sucks at coding\" />\r\n    <MESSAGE value=\"marquee\" />\r\n    <MESSAGE value=\"william is so bad at life\" />\r\n    <MESSAGE value=\"technicals\" />\r\n    <MESSAGE value=\"cleaning up code\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"cleaning up code\" />\r\n  </component>\r\n  <component name=\"com.intellij.coverage.CoverageDataManagerImpl\">\r\n    <SUITE FILE_PATH=\"coverage/a1_gaming$a1_gaming.coverage\" NAME=\"a1-gaming Coverage Results\" MODIFIED=\"1633968885567\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"coverage.py\" COVERAGE_BY_TEST_ENABLED=\"true\" COVERAGE_TRACING_ENABLED=\"false\" WORKING_DIRECTORY=\"\" />\r\n    <SUITE FILE_PATH=\"coverage/a1_gaming$main.coverage\" NAME=\"main Coverage Results\" MODIFIED=\"1634760287370\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"coverage.py\" COVERAGE_BY_TEST_ENABLED=\"true\" COVERAGE_TRACING_ENABLED=\"false\" WORKING_DIRECTORY=\"$PROJECT_DIR$\" />\r\n    <SUITE FILE_PATH=\"coverage/a1_gaming$Flask__main_py_.coverage\" NAME=\"Flask (main.py) Coverage Results\" MODIFIED=\"1633628398475\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"coverage.py\" COVERAGE_BY_TEST_ENABLED=\"true\" COVERAGE_TRACING_ENABLED=\"false\" WORKING_DIRECTORY=\"$PROJECT_DIR$\" />\r\n    <SUITE FILE_PATH=\"coverage/a1_gaming$activities.coverage\" NAME=\"activities Coverage Results\" MODIFIED=\"1633713867648\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"coverage.py\" COVERAGE_BY_TEST_ENABLED=\"true\" COVERAGE_TRACING_ENABLED=\"false\" WORKING_DIRECTORY=\"$PROJECT_DIR$/templates/layouts\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision cf864c8b4fbfc713bad8b9ce042c22004c30b526)
++++ b/.idea/workspace.xml	(date 1635025716802)
+@@ -4,16 +4,28 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="0e4a484e-366a-4d0e-848b-24cd03e3ffdf" name="Changes" comment="karthik used my computer">
+-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_10_6_2021_12_12_PM_[Changes]/shelved.patch" beforeDir="false" />
++    <list default="true" id="0e4a484e-366a-4d0e-848b-24cd03e3ffdf" name="Changes" comment="finished signed addition">
++      <change afterPath="$PROJECT_DIR$/templates/Mice.html" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/templates/layouts/dadjokeapi.html" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/templates/test.html" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/templates/Samsung.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Samsung.html" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/templates/layouts/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/layouts/base.html" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/image.py" beforeDir="false" afterPath="$PROJECT_DIR$/image.py" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/templates/binary RGB 2.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/binary RGB 2.html" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/templates/danielgreet.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/danielgreet.html" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/templates/layouts/project.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/layouts/project.html" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+     <option name="LAST_RESOLUTION" value="IGNORE" />
++  </component>
++  <component name="FileTemplateManagerImpl">
++    <option name="RECENT_TEMPLATES">
++      <list>
++        <option value="HTML File" />
++      </list>
++    </option>
+   </component>
+   <component name="FlaskConsoleOptions" custom-start-script="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))">
+     <envs>
+@@ -38,10 +50,10 @@
+     </file-type-list>
+   </component>
+   <component name="HighlightingSettingsPerFile">
++    <setting file="file://$PROJECT_DIR$/templates/williamgreet.html" root0="FORCE_HIGHLIGHTING" />
+     <setting file="file://$PROJECT_DIR$/templates/Samsung.html" root0="FORCE_HIGHLIGHTING" />
+-    <setting file="file://$PROJECT_DIR$/templates/williamgreet.html" root0="FORCE_HIGHLIGHTING" />
++    <setting file="file://$PROJECT_DIR$/templates/Signed Addition.html" root0="FORCE_HIGHLIGHTING" />
+     <setting file="file://$PROJECT_DIR$/main.py" root0="FORCE_HIGHLIGHTING" />
+-    <setting file="file://$PROJECT_DIR$/templates/Signed Addition.html" root0="FORCE_HIGHLIGHTING" />
+   </component>
+   <component name="ProjectId" id="1zSvMYTTgv5E5cGCF7SuFSufNCc" />
+   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+@@ -50,6 +62,7 @@
+     <option name="showLibraryContents" value="true" />
+   </component>
+   <component name="PropertiesComponent">
++    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+     <property name="WebServerToolWindowFactoryState" value="false" />
+@@ -58,20 +71,19 @@
+     <property name="node.js.detected.package.tslint" value="true" />
+     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+-    <property name="restartRequiresConfirmation" value="false" />
+     <property name="settings.editor.selected.configurable" value="discord-project" />
+   </component>
+   <component name="ReadonlyStatusHandler">
+     <option name="SHOW_DIALOG" value="false" />
+   </component>
+-  <component name="RunManager">
++  <component name="RunManager" selected="Python.main">
+     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+       <option name="INTERPRETER_OPTIONS" value="" />
+       <option name="PARENT_ENVS" value="true" />
+       <envs>
+         <env name="PYTHONUNBUFFERED" value="1" />
+       </envs>
+-      <option name="SDK_HOME" value="C:\Users\cloud\AppData\Local\Programs\Python\Python39\python.exe" />
++      <option name="SDK_HOME" value="C:\Users\Daniel\AppData\Local\Programs\Python\Python39\python.exe" />
+       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+       <option name="IS_MODULE_SDK" value="false" />
+       <option name="ADD_CONTENT_ROOTS" value="true" />
+@@ -87,6 +99,34 @@
+       <option name="INPUT_FILE" value="" />
+       <method v="2" />
+     </configuration>
++    <configuration default="true" type="Python.FlaskServer">
++      <module name="a1-gaming" />
++      <option name="INTERPRETER_OPTIONS" value="" />
++      <option name="PARENT_ENVS" value="true" />
++      <option name="SDK_HOME" value="" />
++      <option name="WORKING_DIRECTORY" value="" />
++      <option name="IS_MODULE_SDK" value="false" />
++      <option name="ADD_CONTENT_ROOTS" value="true" />
++      <option name="ADD_SOURCE_ROOTS" value="true" />
++      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
++      <option name="launchJavascriptDebuger" value="false" />
++      <method v="2" />
++    </configuration>
++    <configuration name="a1-gaming" type="Python.FlaskServer">
++      <module name="a1-gaming" />
++      <option name="target" value="$PROJECT_DIR$/main.py" />
++      <option name="targetType" value="PATH" />
++      <option name="INTERPRETER_OPTIONS" value="" />
++      <option name="PARENT_ENVS" value="true" />
++      <option name="SDK_HOME" value="" />
++      <option name="WORKING_DIRECTORY" value="" />
++      <option name="IS_MODULE_SDK" value="false" />
++      <option name="ADD_CONTENT_ROOTS" value="true" />
++      <option name="ADD_SOURCE_ROOTS" value="true" />
++      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
++      <option name="launchJavascriptDebuger" value="false" />
++      <method v="2" />
++    </configuration>
+     <recent_temporary>
+       <list>
+         <item itemvalue="Python.main" />
+@@ -108,6 +148,8 @@
+       <workItem from="1634529578419" duration="6085000" />
+       <workItem from="1634536002259" duration="1919000" />
+       <workItem from="1634757183502" duration="3070000" />
++      <workItem from="1634849769909" duration="883000" />
++      <workItem from="1634851124568" duration="82000" />
+     </task>
+     <task id="LOCAL-00001" summary="daniel sucks at coding">
+       <created>1634163766066</created>
+@@ -153,6 +195,31 @@
+   <component name="Vcs.Log.Tabs.Properties">
+     <option name="TAB_STATES">
+       <map>
++        <entry key="9fa10cbd-fff1-4b98-abd4-9788dbb8fba1">
++          <value>
++            <State>
++              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
++              <option name="FILTERS">
++                <map>
++                  <entry key="branch">
++                    <value>
++                      <list>
++                        <option value="HEAD" />
++                      </list>
++                    </value>
++                  </entry>
++                  <entry key="structure">
++                    <value>
++                      <list>
++                        <option value="dir:C:/Users/Daniel/IdeaProjects/a1-gaming/templates" />
++                      </list>
++                    </value>
++                  </entry>
++                </map>
++              </option>
++            </State>
++          </value>
++        </entry>
+         <entry key="MAIN">
+           <value>
+             <State />
+@@ -160,6 +227,11 @@
+         </entry>
+       </map>
+     </option>
++    <option name="OPEN_GENERIC_TABS">
++      <map>
++        <entry key="9fa10cbd-fff1-4b98-abd4-9788dbb8fba1" value="TOOL_WINDOW" />
++      </map>
++    </option>
+     <option name="oldMeFiltersMigrated" value="true" />
+   </component>
+   <component name="VcsManagerConfiguration">
+@@ -172,8 +244,8 @@
+   </component>
+   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+     <SUITE FILE_PATH="coverage/a1_gaming$a1_gaming.coverage" NAME="a1-gaming Coverage Results" MODIFIED="1633968885567" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+-    <SUITE FILE_PATH="coverage/a1_gaming$main.coverage" NAME="main Coverage Results" MODIFIED="1634760287370" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+     <SUITE FILE_PATH="coverage/a1_gaming$Flask__main_py_.coverage" NAME="Flask (main.py) Coverage Results" MODIFIED="1633628398475" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
++    <SUITE FILE_PATH="coverage/a1_gaming$main.coverage" NAME="main Coverage Results" MODIFIED="1634851138776" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+     <SUITE FILE_PATH="coverage/a1_gaming$activities.coverage" NAME="activities Coverage Results" MODIFIED="1633713867648" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/templates/layouts" />
+   </component>
+ </project>
+\ No newline at end of file
