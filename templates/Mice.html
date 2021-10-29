@@ -1,316 +1,168 @@
 <!DOCTYPE HTML>
 <html lang="en">
+{% include "layouts/navbar.html" %}
 
 <head>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <style>
-        :root{
-            --white: whitesmoke;
-            --black: black;
-            --grey: grey;
-        }
-
-        html, body{
-            margin: 0;
-            height: 100%;
-            animation: fadein 2s;
-            -moz-animation: fadein 2s; /* Firefox */
-            -webkit-animation: fadein 2s; /* Safari and Chrome */
-            -o-animation: fadein 2s; /* Opera */
-            background-color: #282828;
-            color: var(--white);
-        }
-
-        .dark-mode {
-            background-color: var(--white);
-            color: var(--black);
-        }
-
-        h1{
-            font-size: 5em;
-        }
-
-        a {
-            color: midnightblue;
-        }
-
-        .fa{
-            font-size: 3em;
-            letter-spacing: 1em;
-            transition: all .2s;
-            color: white;
-        }
-
-        .fa:hover{
-            transform: translateY(10px);
-        }
-
-        .fa-youtube-play:hover{
-            color: #cc0000;
-        }
-
-        .fa-twitter:hover{
-            color: #1da1f2;
-        }
-
-        .fa-github:hover{
-            color: #000000;
-        }
-
-        .btn:link,
-        .btn:visited {
-            text-transform: uppercase;
-            text-decoration: none;
-            padding: 15px 40px;
-            display: inline-block;
-            border-radius: 100px;
-            transition: all .2s;
-            position: absolute;
-            color: white;
-            font-size: 2.5em;
-        }
-        .btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 20px 40px rgba(255, 255, 255, 0.2);
-        }
-
-        .btn:active {
-            transform: translateY(-1px);
-            box-shadow: 0 5px 10px rgba(255, 255, 255, 0.2);
-        }
-
-        .row{
-            margin: auto;
-        }
-
-        #example1 {
-            border: 1px solid black;
-            background-repeat: no-repeat;
-            background: url("https://i.ytimg.com/vi/l0FUCba1dXI/maxresdefault.jpg");
-            padding: 370px;
-        }
-
-        #example2 {
-            border: 1px solid black;
-            background-repeat: no-repeat;
-            background-color: #282828;
-            padding: 5px;
-        }
-
-        #example3 {
-            border: 1px solid black;
-            background-repeat: no-repeat;
-            background: url("https://i.ytimg.com/vi/l0FUCba1dXI/maxresdefault.jpg");
-            padding: 450px;
-        }
-
-        .container {
-            position: relative; left: 150px;
-            height: 50vh;
-            width: 50vh;
-            margin: 0rem;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-template-rows: 1fr 1fr;
-            grid-gap: 10px 10px;
-        }
-
-        .container2{
-            height: 30vh;
-            width: 1520px;
-            background-color: #282828;
-            margin: 0rem;
-            display: block;
-        }
-
-        .cell {
-            color: white;
-            font-size: 40px;
-            text-align: center;
-            padding: 5px;
-        }
-        .cell-1 {
-            background: #101010;
-        }
-        .Alienware {
-            position: absolute;
-            font-size: 30px;
-            top: 25px;
-            left: 225px;
-        }
-
-        .Razer {
-            position: absolute;
-            font-size: 30px;
-            top: 25px;
-            left: 825px;
-        }
-        .cell-2 {
-            background: #101010;
-        }
-        .cell-3 {
-            background: #101010;
-        }
-        .cell-4 {
-            background: #101010;
-        }
-        .card-body {
-            background: #101010;
-        }
-        .card {
-            background: #101010;
-        }
-        .collapsible {
-            background-color: black;
-            color: white;
-            cursor: pointer;
-            padding: 18px;
-            width: 100%;
-            border: none;
-            text-align: left;
-            outline: none;
-            font-size: 15px;
-        }
-
-        .active, .collapsible:hover {
-            background-color: black;
-        }
-
-        .collapsible:after {
-            content: '\002B';
-            color: darkblue;
-            font-weight: bold;
-            float: right;
-            margin-left: 5px;
-        }
-
-        .active:after {
-            content: "\2212";
-            color: darkblue;
-        }
-
-        .content {
-            padding: 0 18px;
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease-out;
-            background-color: black;
-        }
-    </style>
-
-    <title> Laptops | A1 from Day 0 </title>
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous">
+    <title>Mice</title>
 </head>
 
-<body>
-{% include "layouts/navbar.html" %}
-<div id="epxamle1">
-
-    <div class="inline">
-        <a href="/Mice/" class="btn" style = "color: white; font-size:25px; position:relative; left: 250px; top: -350px">Republic of Gamers</a>
-    </div>
-
-</div>
-<div id = "example2">
-</div>
-<div id = "example3">
-    <div class="col-3">
-        <a href="/Mice/" class="btn" style = "color:white; font-size:25px; position:relative; left: 185px; top: -400px">Logitech</a>
-    </div>
-</div>
-
-<div class="container">
-    <div class="card" style="border: white; width: 35rem;"><div class="cell cell-1"><img src="/static/assets/Alienware_2D00_17_2D00_Front_2D00_Reflection_2D00_1200_5F00_74014EC9.jpg" alt="Greeting" width="550" height="400"></div>
-        <div class="card-body">
-            <h5 class="card-title">Logitech</h5>
-            <button class="collapsible">Hardware</button>
-            <div class="content">
-                <p>Processor: Intel Core i7-4800MQ, 2.7 GHz (Haswell, hyper threaded quad-core)</p>
-                <p>RAM: 12 GB 1600 MHz (2 slots used out of 4)</p>
-                <p>Screen: 17.3” 120 Hz WLED FHD 1920×1080 TrueLife with 3D bundle</p>
-                <p>Graphics: NVIDIA GeForce GTX 770M</p>
-                <p>Cores: 960</p>
-                <p>Clock Frequency: 811 + Boost</p>
-                <p>Memory clock: 2000 MHz</p>
-                <p>Memory configuration: 3GB GDDR5</p>
-                <p>Memory interface width: 192 bit</p>
-                <p>Price: $1379.99</p>
-            </div>
-        </div>
-    </div>
-    <div class="card" style="border: white; width: 35rem;"><div class="cell cell-2"><img src="/static/assets/razer.jpeg" alt="Greeting" width="550" height="400"></div>
-        <div class="card-body">
-            <h5 class="card-title">Razer</h5>
-            <button class="collapsible">Hardware</button>
-            <div class="content">
-                <p>Processor: Intel Core i7-9750H</p>
-                <p>RAM: 16GB RAM, 512GB SSD</p>
-                <p>Screen: 15.6" FHD 1080p 144Hz</p>
-                <p>Graphics: NVIDIA GeForce RTX 2060</p>
-                <p>Cores: 6</p>
-                <p>CNC Aluminum</p>
-                <p>Chroma RGB Lighting</p>
-                <p>Thunderbolt 3</p>
-                <p>Price: $1,799.66</p>
-            </div>
-        </div>
-    </div>
-    <div class="card" style="border: white; width: 35rem;"><div class="cell cell-3"><img src="/static/assets/1622470414596.jpg" alt="Greeting" width="550" height="400"></div>
-        <div class="card-body">
-            <h5 class="card-title">SteelSeries</h5>
-            <button class="collapsible">Hardware</button>
-            <div class="content">
-                <p>Processor: Intel Core i7-4800MQ, 2.7 GHz (Haswell, hyper threaded quad-core)</p>
-                <p>https://i.ytimg.com/vi/l0FUCba1dXI/maxresdefault.jpg>RAM: 12 GB 1600 MHz (2 slots used out of 4)</p>
-                <p>Screen: 17.3” 120 Hz WLED FHD 1920×1080 TrueLife with 3D bundle</p>
-                <p>Graphics: NVIDIA GeForce GTX 770M</p>
-                <p>Cores: 960</p>
-                <p>Clock Frequency: 811 + Boost</p>
-                <p>Memory clock: 2000 MHz</p>
-                <p>Memory configuration: 3GB GDDR5</p>
-                <p>Memory interface width: 192 bit</p>
-            </div>
-        </div>
-    </div>
-    <div class="card" style="border: white; width: 35rem;"><div class="cell cell-4"><img src="/static/assets/Falcon-Northwest-FB-share-1200x628.jpg" alt="Greeting" width="550" height="400"></div>
-        <div class="card-body">
-            <h5 class="card-title">ROCCAT</h5>
-            <button class="collapsible">Hardware</button>
-            <div class="content">
-                <p>Processor: Intel Core i7-4800MQ, 2.7 GHz (Haswell, hyper threaded quad-core)</p>
-                <p>RAM: 12 GB 1600 MHz (2 slots used out of 4)</p>
-                <p>Screen: 17.3” 120 Hz WLED FHD 1920×1080 TrueLife with 3D bundle</p>
-                <p>Graphics: NVIDIA GeForce GTX 770M</p>
-                <p>Cores: 960</p>
-                <p>Clock Frequency: 811 + Boost</p>
-                <p>Memory clock: 2000 MHz</p>
-                <p>Memory configuration: 3GB GDDR5</p>
-                <p>Memory interface width: 192 bit</p>
-            </div>
-        </div>
-    </div>
-</div>
-<script>
-    var coll = document.getElementsByClassName("collapsible");
-    var i;
-
-    for (i = 0; i < coll.length; i++) {
-        coll[i].addEventListener("click", function() {
-            this.classList.toggle("active");
-            var content = this.nextElementSibling;
-            if (content.style.maxHeight){
-                content.style.maxHeight = null;
-            } else {
-                content.style.maxHeight = content.scrollHeight + "px";
-            }
-        });
+<style>
+    body {
+        text-align: center;
+        background-color: white;
+        background-size: 200%;
     }
-</script>
-</body>
-</html>
+    .small-container{
+        max-width: 1080px;
+        margin: auto;
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+    .col-4{
+        flex-basis: 25%;
+        padding: 10px;
+        min-width: 200px;
+        margin-bottom: 50px;
+    }
+    .col-4 img{
+        width: 100%;
+        border:2px solid #fff;
+        -moz-box-shadow: 10px 10px 5px #ccc;
+        -webkit-box-shadow: 10px 10px 5px #ccc;
+        box-shadow: 10px 10px 5px #ccc;
+        -moz-border-radius:25px;
+        -webkit-border-radius:25px;
+        border-radius:25px;
+        transition: transform 0.5s;
+    }
+    .rainbow-text {
+        background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);   -webkit-background-clip: text;
+        color: transparent;
+    }
+    h1 {
+        font-family: "blackletter";
+        font-size: 100px;
+    }
+    .title {
+        font-size: 50px;
+        text-align: center;
+        margin: 0 auto 80px;
+        position: relative;
+        line-height: 60px;
+        color: black;
+    }
+    .title::after {
+        content: '';
+        background: #ff523b;
+        width: 80px;
+        height: 5px;
+        border-radius: 5px;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .rating .fa{
+        color: gold;
+    }
+    .col-4:hover{
+        transform: translateY(-5px);
+    }
+</style>
 
-<!--Alienware 17 3D Laptop
-Razer Blade 15 Gaming Laptop
-Asus ROG Gaming Laptop
-Falcon Northwest DRX and TLX Gaming Laptops Bundle-->
+<body>
+<div class="small-container">
+    <h2 class="title">Mice</h2>
+    <div class="row">
+        <div class="col-4">
+            <img src="https://tse3.mm.bing.net/th?id=OIP.WJvm2oKWpTbbAke6j6LzLwHaIO&pid=Api">
+            <h5> ---- </h5>
+            <h4 style="text-align: center">Logitech - G PRO Wireless Optical Gaming Mouse with RGB Lighting - Black</h4>
+            <div class="rating">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i style="color: gold">4.7</i>
+            </div>
+            <p style="color: lightgray">$114.99</p>
+        </div>
+        <div class="col-4">
+            <img src="https://tse2.mm.bing.net/th?id=OIP.hXP_S1V4OQSmQGRdoHwZugHaKB&pid=Api">
+            <h5> ---- </h5>
+            <h4 style="text-align: center">SteelSeries Prime Wireless FPS Gaming Mouse - Black</h4>
+            <div class="rating">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class='fa fa-star-half-o'></i>
+                <i style="color: gold">4.5</i>
+            </div>
+            <p style="color: lightgray">$116.80</p>
+        </div>
+        <div class="col-4">
+            <img src="https://m.media-amazon.com/images/I/61i0CV-tKpL._AC_SL1500_.jpg">
+            <h5> ---- </h5>
+            <h4 style="text-align: center">Amazon Basics 3-Button USB Wired Computer Mouse - Black</h4>
+            <div class="rating">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class='fa fa-star-half-o'></i>
+                <i style="color: gold">4.6</i>
+            </div>
+            <p style="color: lightgray">$9.04</p>
+        </div>
+        <div class="col-4">
+            <img src="https://www.windowscentral.com/sites/wpcentral.com/files/styles/large/public/field/image/2020/12/razer-essential-white.jpg">
+            <h5> ---- </h5>
+            <h4 style="text-align: center">Razer DeathAdder Essential Gaming Mouse - Mercury White</h4>
+            <div class="rating">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class='fa fa-star'></i>
+                <i style="color: gold">4.7</i>
+            </div>
+            <p style="color: lightgray">$22.99</p>
+        </div>
+    </div>
+</div>
+
+<hr>
+
+<section>
+    <h1 class="rainbow-text">RAZER BASILISK V3</h1>
+    <h3></h3>
+    <div>
+        <img src="https://assets2.razerzone.com/pages/basilisk-v3-4D578898E8144Le8da21dde32b7a9f5f/chroma-rgb.jpg">
+    </div>
+</section>
+
+<section>
+    <div style="position: absolute;top: 1000px; right: 800px">
+        <img src="//assets2.razerzone.com/images/pnx.assets/eec436e7748e57df7f70e57047c1d889/second-gen.png" alt="" pnxssr_96="">
+        <p style="color:green">11 PROGRAMMABLE BUTTONS</p></div>
+    <div style="position: absolute;top: 1000px;left: 16px;">
+        <img src="//assets2.razerzone.com/images/pnx.assets/eec436e7748e57df7f70e57047c1d889/dpi.png" alt="" pnxssr_100="">
+        <p style="color:green">RAZER™ FOCUS+ 26K DPI <br>OPTICAL SENSOR</p></div>
+    <div  style="position: absolute;top: 1780px;left: 16px;">
+        <img src="//assets2.razerzone.com/images/pnx.assets/eec436e7748e57df7f70e57047c1d889/ic3.png" alt="" pnxssr_104="">
+        <p style="color:green">ICONIC ERGONOMIC DESIGN WITH THUMB REST</p></div>
+    <div style="position: absolute;top: 1000px;right: 16px;">
+        <img src="//assets2.razerzone.com/images/pnx.assets/eec436e7748e57df7f70e57047c1d889/onboard.png" alt="" pnxssr_108="">
+        <p style="color:green">5 ON-BOARD MEMORY PROFILES</p></div>
+    <div style="position: absolute;top: 1780px;right: 16px;">
+        <img src="//assets2.razerzone.com/images/pnx.assets/eec436e7748e57df7f70e57047c1d889/ptfe.png" alt="" pnxssr_112="">
+        <p style="color:green">100% PTFE MOUSE FEET</p></div>
+</section>
+</body>
+
+</html>
