@@ -85,21 +85,21 @@
       margin: auto;
     }
 
-    #example1 {
+    #LaptopsBackground1 {
       border: 1px solid black;
       background-repeat: no-repeat;
       background: url("https://altarofgaming.com/wp-content/uploads/2019/05/best-gaming-laptops-2019-affordable-trusted-efficient.jpg");
       padding: 370px;
     }
 
-    #example2 {
+    #LaptopsBackground2 {
       border: 1px solid black;
       background-repeat: no-repeat;
       background-color: #282828;
       padding: 5px;
     }
 
-    #example3 {
+    #LaptopsBackground3 {
       border: 1px solid black;
       background-repeat: no-repeat;
       background: url("https://cdn3.vox-cdn.com/thumbor/AMsd7zeGYTqdueUE6deJj1zcskM=/0x1080/volume-assets.voxmedia.com/production/3dace8cb65ad621ca3e821a4fef6fdec/Tfin_sans_vpavic_190102_3149_0023_Edit.jpg");
@@ -198,6 +198,46 @@
       transition: max-height 0.3s ease-out;
       background-color: black;
     }
+
+    .popup {
+      position: relative;
+      display: inline-block;
+      cursor: pointer;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+    .popup .popuptext {
+      visibility: hidden;
+      width: 160px;
+      background-color: #555;
+      color: #fff;
+      text-align: center;
+      border-radius: 6px;
+      padding: 8px 0;
+      position: absolute;
+      z-index: 1;
+      bottom: 125%;
+      left: 50%;
+      margin-left: -80px;
+    }
+
+    .popup .show {
+      visibility: visible;
+      -webkit-animation: fadeIn 1s;
+      animation: fadeIn 1s;
+    }
+
+    @-webkit-keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity:1 ;}
+    }
   </style>
 
   <title> Laptops | A1 from Day 0 </title>
@@ -206,16 +246,14 @@
 
 <body>
 {% include "layouts/navbar.html" %}
-<div id="epxamle1">
-
+<div id="LaptopsBackground1">
   <div class="inline">
     <a href="/Mice/" class="btn" style = "color: white; font-size:25px; position:relative; left: 250px; top: -350px">Republic of Gamers</a>
   </div>
-
 </div>
-<div id = "example2">
+<div id = "LaptopsBackground2">
 </div>
-<div id = "example3">
+<div id = "LaptopsBackground3">
   <div class="col-3">
     <a href="/Mice/" class="btn" style = "color:white; font-size:25px; position:relative; left: 185px; top: -400px">Alienware</a>
   </div>
@@ -306,6 +344,11 @@
         content.style.maxHeight = content.scrollHeight + "px";
       }
     });
+  }
+
+  function myFunction() {
+    var popup = document.getElementById("myPopup");
+    popup.classList.toggle("show");
   }
 </script>
 </body>

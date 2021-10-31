@@ -2,7 +2,7 @@ from flask import Flask, render_template, request
 from image import image_data
 from pathlib import Path  # https://medium.com/@ageitgey/python-3-quick-tip-the-easy-way-to-deal-with-file-paths-on-windows-mac-and-linux-11a072b58d5f
 import json
-import requests
+
 
 # create a Flask instance
 app = Flask(__name__)
@@ -227,6 +227,10 @@ def SignedAddition():
 @app.route('/test/')
 def test():
     return render_template("test.html")
+
+@app.route('/Nintendo/')
+def Nintendo():
+    return render_template("Nintendo.html")
 
 if __name__ == "__main__":
     app.run(debug=True, port=2023)

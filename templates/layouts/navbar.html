@@ -19,10 +19,10 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
             <!-- url_for is a Jinja2 pre-processor that finds route from function name (def) -->
-            <a class="nav-link" href={{ url_for('index') }}>A1 Gaming</a>
-            <a class="nav-link" href={{ url_for('PCs') }}>PCs</a>
-            <a class="nav-link" href={{ url_for('Console') }}>Console</a>
-            <a class="nav-link" href={{ url_for('Mobile') }}>Mobile</a>
+            <a class="nav-link" href= {{ url_for('index') }}> <img src="/static/assets/a1gaing.png" width = "30" height = "30" style = "position:relative; left:-10px"></a>
+            <a class="nav-link" href='/PCs/'>PCs</a>
+            <a class="nav-link" href='/Console/'>Console</a>
+            <a class="nav-link" href='/Mobile/'>Mobile</a>
 
             <!-- stub is shown using the name of the route -->
 

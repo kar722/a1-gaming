@@ -1,0 +1,387 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --white: whitesmoke;
+      --black: black;
+      --grey: grey;
+    }
+
+    html, body{
+      animation: fadein 2s;
+      -moz-animation: fadein 2s; /* Firefox */
+      -webkit-animation: fadein 2s; /* Safari and Chrome */
+      -o-animation: fadein 2s; /* Opera */
+      background-color: #F8F8F8;
+      color: var(--white);
+      width: 100%;
+      height: 100%;
+      margin: 0px;
+      padding: 0px;
+      overflow-x: hidden;
+    }
+
+    .dark-mode {
+      background-color: var(--white);
+      color: var(--black);
+    }
+
+    h1{
+      font-size: 5em;
+      font-family: 'Ubuntu', sans-serif;
+    }
+
+    h2, h3, h4,h5, h6 {
+      font-family: 'Ubuntu', sans-serif;
+    }
+
+
+    a {
+      color: midnightblue;
+    }
+
+    .fa{
+      font-size: 3em;
+      letter-spacing: 1em;
+      transition: all .2s;
+      color: white;
+    }
+
+    .fa:hover{
+      transform: translateY(10px);
+    }
+
+    .fa-youtube-play:hover{
+      color: #cc0000;
+    }
+
+    .fa-twitter:hover{
+      color: #1da1f2;
+    }
+
+    .fa-github:hover{
+      color: #000000;
+    }
+
+    .btn:link,
+    .btn:visited {
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 15px 40px;
+      display: inline-block;
+      border-radius: 100px;
+      transition: all .2s;
+      position: absolute;
+      color: white;
+      font-size: 2.5em;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 20px 40px rgba(255, 255, 255, 0.2);
+    }
+
+    .btn:active {
+      transform: translateY(-1px);
+      box-shadow: 0 5px 10px rgba(255, 255, 255, 0.2);
+    }
+
+    .row{
+      margin: auto;
+    }
+
+    #NintendoBackground1 {
+      border: 1px solid black;
+      background-repeat: no-repeat;
+      background-color:red;
+      padding: 50px;
+      font-family: 'Ubuntu', sans-serif;
+    }
+
+    #NintendoBackground2 {
+      background-repeat: no-repeat;
+      background-color: #F8F8F8;
+      padding: 100px;
+      font-family: 'Ubuntu', sans-serif;
+    }
+
+    #NintendoBackground3 {
+      border: 1px solid black;
+      background-repeat: no-repeat;
+      background-color:red;
+      padding: 50px;
+      font-family: 'Ubuntu', sans-serif;
+    }
+
+    .container {
+      position: relative; left: 150px;
+      height: 50vh;
+      width: 50vh;
+      margin: 0rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      grid-gap: 10px 10px;
+      font-family: 'Ubuntu', sans-serif;
+    }
+
+    .container2{
+      height: 30vh;
+      width: 1520px;
+      background-color: red;
+      margin: 0rem;
+      display: block;
+      font-family: 'Ubuntu', sans-serif;
+    }
+
+    .cell {
+      color: white;
+      font-size: 40px;
+      text-align: center;
+      padding: 5px;
+      font-family: 'Ubuntu', sans-serif;
+    }
+    .cell-1 {
+      background: red;
+      font-family: 'Ubuntu', sans-serif;
+    }
+
+    .cell-2 {
+      background: red;
+      font-family: 'Ubuntu', sans-serif;
+    }
+    .cell-3 {
+      background: red;
+      font-family: 'Ubuntu', sans-serif;
+    }
+    .cell-4 {
+      background: red;
+      font-family: 'Ubuntu', sans-serif;
+    }
+    .card-body {
+      background: red;
+      font-family: 'Ubuntu', sans-serif;
+    }
+    .card {
+      background: red;
+      font-family: 'Ubuntu', sans-serif;
+    }
+    .collapsible {
+      background-color: black;
+      color: white;
+      cursor: pointer;
+      padding: 18px;
+      width: 100%;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 15px;
+      font-family: 'Ubuntu', sans-serif;
+    }
+
+    .active, .collapsible:hover {
+      background-color: #282828;
+      font-family: 'Ubuntu', sans-serif;
+    }
+
+    .collapsible:after {
+      content: '\002B';
+      color: white;
+      font-weight: bold;
+      float: right;
+      margin-left: 5px;
+      font-family: 'Ubuntu', sans-serif;
+    }
+
+    .active:after {
+      content: "\2212";
+      color: white;
+      font-family: 'Ubuntu', sans-serif;
+    }
+
+    .content {
+      padding: 0 18px;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-out;
+      background-color: #282828;
+      font-family: 'Ubuntu', sans-serif;
+    }
+
+    .redbox {
+      background-color: red;
+      position: relative;
+      left: -170px;
+      top: -175px;
+      width: 150%;
+      padding: 50px;
+      margin: 20px;
+      font-family: 'Ubuntu', sans-serif;
+    }
+
+    .popup {
+      position: relative;
+      display: inline-block;
+      cursor: pointer;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      font-family: 'Ubuntu', sans-serif;
+    }
+    .popup .popuptext {
+      visibility: hidden;
+      width: 1000px;
+      height: 600px;
+      background-color: red;
+      color: #fff;
+      text-align: center;
+      border-radius: 6px;
+      padding: 8px 0;
+      position: absolute;
+      z-index: 1;
+      bottom: 25%;
+      left: 20%;
+      margin-left: -80px;
+      opacity: 0.9;
+      font-family: 'Ubuntu', sans-serif;
+    }
+
+    .popup .show {
+      visibility: visible;
+      -webkit-animation: fadeIn 1s;
+      animation: fadeIn 1s;
+      font-family: 'Ubuntu', sans-serif;
+    }
+
+    @-webkit-keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 0.9;}
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity:0.9;}
+    }
+  </style>
+
+  <title> Nintendo | A1 from Day 0 </title>
+
+</head>
+
+<body>
+{% include "layouts/navbar.html" %}
+<div id = "NintendoBackground3">
+  <img src="/static/assets/Nintendo_red_logo.svg.png" alt="Greeting" width="110" height="30">
+  <h4 style = "position:relative; left:150px; top:0px;">Welcome to the Nintendo page</h4>
+  <p style = "position:relative; left:150px;">Here you can find used but high quality Nintendo products. We the older products like the Wiis, and we also have the newer products
+    such as the Nintendo Switch</p>
+</div>
+
+<div id = "NintendoBackground2">
+  <h1 style = "color: black; text-align: center; position:relative; top:20px">Nintendo Switch</h1>
+  <div class="popup" onclick="myFunction()"><img src="/static/assets/Switch_TA.jpg" alt="Greeting" width="1200" height="900" style = "position:relative; left:75px; top:20px;">
+    <span class="popuptext" id="myPopup"><p>Nintendo Switch</p>
+    <p>The Nintendo Switch is one of Nintendo's newest products, and is able to mantain high quality and smooth gameplay</p>
+    <p>What's unique about the Nintendo Switch is that it allows you to seperate the controller into 2, so you and your friend can competitive 2 player games</p>
+      <p>Mario Kart 8 Delxue: A family friendly game that you can play with others</p>
+      <img src="/static/assets/mario-kart-8-deluxe-switch-hero.jpg" alt="Greeting" width="300" height="150">
+       <p>Super Smash Bros Ultimate: Another fun but competitive game that you can play with your friends</p>
+    <img src="/static/assets/super-smash-bros-ultimate-switch-hero.jpg" alt="Greeting" width="300" height="150">
+    </span>
+  </div>
+</div>
+
+<div id = "NintendoBackground1">
+  <h2>Other Available Games for the Nintendo Switch</h2>
+  <br>
+  <img src="/static/assets/Mario-3D_World.jpg" alt="Greeting" width="300" height="200">
+  <img src="/static/assets/super-mario-odyssey-switch-hero.jpg" alt="Greeting" width="350" height="200">
+  <img src="/static/assets/splatoon-2-switch-hero.jpg" alt="Greeting" width="350" height="200">
+  <img src="/static/assets/animalcrossing.jpg" alt="Greeting" width="350" height="200">
+</div>
+
+<br>
+<h2 style="color:black; position: relative; left: 550px">Other Nintendo Products</h2>
+<div class="container">
+  <div class="card" style="border: white; width: 35rem;"><div class="cell cell-1"><img src="/static/assets/wiiu-ss-blk.jpg" alt="Greeting" width="550" height="400"></div>
+    <div class="card-body">
+      <h5 class="card-title">Nintendo Wii U</h5>
+      <button class="collapsible">Info</button>
+      <div class="content">
+        <p>The Nintendo Wii U is the successor of the original Nintendo Wii console</p>
+        <p>The Nintendo Wii U has upgraded graphics and processing power, and will give you the ultimate gaming experience</p>
+        <p>Price: $279.99</p>
+        <p style = "color:red;">Buy ></p>
+      </div>
+    </div>
+  </div>
+  <div class="card" style="border: white; width: 35rem;"><div class="cell cell-2"><img src="/static/assets/Nintendo_Switch_Lite.jpeg" alt="Greeting" width="550" height="400"></div>
+    <div class="card-body">
+      <h5 class="card-title">Nintendo Switch LITE</h5>
+      <button class="collapsible">Info</button>
+      <div class="content">
+        <p>The Nintendo Switch LITE is convenient for handheld play, and is a cheaper version of the orginal Nintendo Switch</p>
+        <p>You can think of the Nintendo Switch LITE as a gaming phone, as it is around the size of a normal phone but has built in control pad.</p>
+        <p>You can take out the Nintendo Switch LITE to play it whenever you want</p>
+        <p>Price: $199.99</p>
+        <p style = "color:red;">Buy ></p>
+      </div>
+    </div>
+  </div>
+  <div class="card" style="border: white; width: 35rem;"><div class="cell cell-3"><img src="/static/assets/Wii.jpg" alt="Greeting" width="550" height="400"></div>
+    <div class="card-body">
+      <h5 class="card-title">Nintendo Wii</h5>
+      <button class="collapsible">Info</button>
+      <div class="content">
+        <p>The original Nintendo Wii console is one of the classics</p>
+        <p>Meant to be played at home, you and your friends and family can play the many family-friendly games this console offers</p>
+        <p>With the Nintendo Wii, you can play the 2 iconic games that we all know and love: Super Mario Bros Wii and Wii Sports</p>
+        <p>Price: $99.99</p>
+        <p style = "color:red;">Buy ></p>
+      </div>
+    </div>
+  </div>
+  <div class="card" style="border: white; width: 35rem;"><div class="cell cell-4"><img src="/static/assets/Nintendo_Switch_OLED.jpg" alt="Greeting" width="550" height="400"></div>
+    <div class="card-body">
+      <h5 class="card-title">Nintendo Switch OLED Model</h5>
+      <button class="collapsible">Info</button>
+      <div class="content">
+        <p>The Nintendo Swith OLED has a bigger, brighter screen with increased storage</p>
+        <p>If you're seeking a good graphical and visual experience, the Nintendo Switch OLED is for you</p>
+        <p>Price: $159.99</p>
+        <p style = "color:red;">Buy ></p>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  var coll = document.getElementsByClassName("collapsible");
+  var i;
+
+  for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var content = this.nextElementSibling;
+      if (content.style.maxHeight){
+        content.style.maxHeight = null;
+      } else {
+        content.style.maxHeight = content.scrollHeight + "px";
+      }
+    });
+  }
+
+  function myFunction() {
+    var popup = document.getElementById("myPopup");
+    popup.classList.toggle("show");
+  }
+</script>
+</body>
+</html>
