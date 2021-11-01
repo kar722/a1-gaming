@@ -4,21 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0e4a484e-366a-4d0e-848b-24cd03e3ffdf" name="Changes" comment="navbar quotes">
-      <change afterPath="$PROJECT_DIR$/templates/Nintendo.html" afterDir="false" />
+    <list default="true" id="0e4a484e-366a-4d0e-848b-24cd03e3ffdf" name="Changes" comment="update">
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_10_11_2021_9_27_AM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_10_11_2021_9_27_AM__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_10_17_2021_10_20_AM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_10_17_2021_10_20_AM__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_10_23_2021_2_48_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_10_23_2021_2_48_PM__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_10_27_2021_12_16_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_10_27_2021_12_16_PM__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_10_27_2021_12_18_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_10_27_2021_12_18_PM__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image.py" beforeDir="false" afterPath="$PROJECT_DIR$/image.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Laptops.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Laptops.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/hawkers.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/hawkers.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/layouts/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/layouts/footer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/layouts/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/layouts/navbar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/layouts/project2.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/layouts/project2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/walruses.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/walruses.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Samsung.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Samsung.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,15 +49,13 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/templates/Samsung.html" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/templates/williamgreet.html" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/main.py" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/templates/Signed Addition.html" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/templates/Samsung.html" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="1zSvMYTTgv5E5cGCF7SuFSufNCc" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -91,7 +83,7 @@
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="C:\Users\weili\AppData\Local\Programs\Python\Python39\python.exe" />
+      <option name="SDK_HOME" value="C:\Users\cloud\AppData\Local\Programs\Python\Python39\python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -136,7 +128,6 @@
       <workItem from="1635386883795" duration="421000" />
       <workItem from="1635387911145" duration="579000" />
       <workItem from="1635390576051" duration="2656000" />
-      <workItem from="1635538652061" duration="918000" />
     </task>
     <task id="LOCAL-00001" summary="daniel sucks at coding">
       <created>1634163766066</created>
@@ -201,21 +192,7 @@
       <option name="project" value="LOCAL" />
       <updated>1635362308560</updated>
     </task>
-    <task id="LOCAL-00010" summary="Finished API">
-      <created>1635450242484</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1635450242484</updated>
-    </task>
-    <task id="LOCAL-00011" summary="navbar quotes">
-      <created>1635450535315</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1635450535315</updated>
-    </task>
-    <option name="localTasksCounter" value="12" />
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -243,14 +220,12 @@
     <MESSAGE value="more api stuff" />
     <MESSAGE value="replaced chuck" />
     <MESSAGE value="images" />
-    <MESSAGE value="Finished API" />
-    <MESSAGE value="navbar quotes" />
-    <option name="LAST_COMMIT_MESSAGE" value="navbar quotes" />
+    <option name="LAST_COMMIT_MESSAGE" value="images" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/a1_gaming$a1_gaming.coverage" NAME="a1-gaming Coverage Results" MODIFIED="1633968885567" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/a1_gaming$activities.coverage" NAME="activities Coverage Results" MODIFIED="1633713867648" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/templates/layouts" />
-    <SUITE FILE_PATH="coverage/a1_gaming$main.coverage" NAME="main Coverage Results" MODIFIED="1635667251885" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/a1_gaming$main.coverage" NAME="main Coverage Results" MODIFIED="1635795877692" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/a1_gaming$Flask__main_py_.coverage" NAME="Flask (main.py) Coverage Results" MODIFIED="1633628398475" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/a1_gaming$activities.coverage" NAME="activities Coverage Results" MODIFIED="1633713867648" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/templates/layouts" />
   </component>
 </project>
