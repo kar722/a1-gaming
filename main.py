@@ -10,6 +10,10 @@ app = Flask(__name__)
 def greet0():
     return render_template("karthikgreet.html")
 
+@app.route('/Terms & Conditions/')
+def terms():
+    return render_template("Terms & Conditions.html")
+
 @app.route('/karthikgreet/', methods=['GET', 'POST'])
 def greet1():
     # submit button has been pushed

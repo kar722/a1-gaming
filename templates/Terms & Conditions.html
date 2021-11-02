@@ -1,205 +1,32 @@
-<!-- Custom file for standardizing Project Data
-This HTML is setup as as a Jinja2 layout, coders use layouts for:
- ... standardization of style
- ... setting expectations for data
- ... code reuse
--->
-<!DOCTYPE HTML>
-<html lang="en">
-
-{% include "layouts/navbar.html" %}
-
 <head>
-
-    <h1 style="text-align: center; color: aqua; font-family: 'Arial Black'"> Xbox </h1>
-
+    <meta charset="utf-8">
+    <title>Terms & Conditions</title>
+    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-
-    <style>
-
-
-        * {
-            margin: 0;
-            padding: 0;
-            border:0;
-        }
-
-        .container{
-            width: 700px;
-            margin: 0 auto;
-        }
-        .logo{
-            text-align: center;
-        }
-        .contant{
-            margin: 0 auto;
-            width: 300px;
-        }
-
-        button{
-            width: 215px;
-            height: 50px;
-            margin: 0 0 10px 35px;
-            font-size: 20px;
-            font-weight: bolder;
-            cursor: pointer;
-        }
-        .bwImg{
-            -webkit-filter: grayscale(100%);
-            -moz-filter: grayscale(100%);
-            -ms-filter: grayscale(100%);
-            -o-filter: grayscale(100%);
-            filter: grayscale(100%);
-        }
-
-        :root{
-            --white: whitesmoke;
-            --black: black;
-            --grey: grey;
-        }
-
-        html, body{
-            margin: 0;
-            height: 100%;
-            animation: fadein 2s;
-            -moz-animation: fadein 2s; /* Firefox */
-            -webkit-animation: fadein 2s; /* Safari and Chrome */
-            -o-animation: fadein 2s; /* Opera */
-            background-color: var(--black);
-            color: var(--white);
-        }
-
-        .dark-mode {
-            background-color: var(--white);
-            color: var(--black);
-        }
-
-        h1{
-            font-size: 5em;
-        }
-
-         .grayscale {
-             -webkit-filter: grayscale(100%);
-             filter: grayscale(100%);
-         }
-
-        a {
-            color: midnightblue;
-        }
-
-        .fa{
-            font-size: 3em;
-            letter-spacing: 1em;
-            transition: all .2s;
-            color: white;
-        }
-
-        .fa:hover{
-            transform: translateY(10px);
-        }
-
-        .fa-youtube-play:hover{
-            color: #cc0000;
-        }
-
-        .fa-twitter:hover{
-            color: #1da1f2;
-        }
-
-        .fa-github:hover{
-            color: #000000;
-        }
-
-        .btn:link,
-        .btn:visited {
-            text-transform: uppercase;
-            text-decoration: none;
-            padding: 15px 40px;
-            display: inline-block;
-            border-radius: 100px;
-            transition: all .2s;
-            position: absolute;
-            color: white;
-            font-size: 2.5em;
-        }
-
-        .btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 20px 40px rgba(255, 255, 255, 0.2);
-        }
-
-        .btn:active {
-            transform: translateY(-1px);
-            box-shadow: 0 5px 10px rgba(255, 255, 255, 0.2);
-        }
-
-        .row{
-            margin: auto;
-        }
-
-    </style>
-
-    <title> Xbox | Consoles </title>
-
 </head>
+{% include "layouts/navbar.html" %}
 
-<body>
+<style>
+    body {
+        background: radial-gradient(blue,black);
+        background-size: 100%;
+    }
 
-
-<div style="padding-left: 200px">
-    <div>
-        <img width="500" height="500" src="/static/assets/xbox.jpg" alt="xbox">
-        <div>
-            <h5>Xbox Series X|S</h5>
-            <p style="color: navajowhite">Discover the fastest, most powerful Xbox ever with the Xbox Series X. Enjoy 4K gaming at up to 120 frames per second on this next generation video game console.</p>
-            <a class="btn btn-primary">RGB</a>
-        </div>
-    </div>
-<h1 style="color: black"> HI </h1>
-    <div>
-        <div>
-            <img width="788" height="444" src="/static/assets/e90f44fa-11f0-456c-9f4b-57bb52b9d00e.jpg" alt="PS5 Controllers">
-            <div>
-                <h5>Xbox Controllers</h5>
-                <p style="color: navajowhite">Experience the modernized design of the Xbox Wireless Controller in Carbon Black, featuring sculpted surfaces and refined geometry for enhanced comfort.</p>
-                <a class="btn btn-primary">RGB</a>
-            </div>
-        <!-- karthik is goated honestly -->
-
-</div>
-        <h1 style="color: white"> B&W </h1>
-
-        <div>
-            <div>
-                <img class ="bwImg" width="788" height="444" src="/static/assets/e90f44fa-11f0-456c-9f4b-57bb52b9d00e.jpg" alt="PS5 Controllers">
-                <div>
-                    <h5>Xbox Controllers</h5>
-                    <p style="color: navajowhite">Experience the modernized design of the Xbox Wireless Controller in Carbon Black, featuring sculpted surfaces and refined geometry for enhanced comfort.</p>
-                    <a class="btn btn-primary">Gray Scale</a>
-                </div>
-
-                <h1 style="color: black"> HI </h1>
-
-            <div style="padding-left: 0px">
-                <div>
-                    <img class ="bwImg" width="500" height="500" src="/static/assets/xbox.jpg" alt="xbox">
-                    <div>
-                        <h5>Xbox Series X|S</h5>
-                        <p style="color: navajowhite">Discover the fastest, most powerful Xbox ever with the Xbox Series X. Enjoy 4K gaming at up to 120 frames per second on this next generation video game console.</p>
-                        <a class="btn btn-primary">Gray Scale</a>
-                    </div>
-                </div>
-            <!-- karthik is goated honestly -->
-
-</body>
+    p {
+        margin-right: 50px;
+        margin-left: 50px;
+        color: white;
+    }
+    div {
+        margin-right: 50px;
+        margin-left: 50px;
+        color: white;
+    }
+</style>
 
 <div class="document">
     <div class="title">
-        <div class="brand">A1D0 Co. US</div>
         <h2>A1 Gaming Terms and Conditions</h2>
         <span class="updated-date">Updated: November 2021 By co-CEO and co-founder Karthik Valluri</span>
     </div>
@@ -515,10 +342,3 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
         </ol>
     </div>
 </div>
-
-
-
-{% block background %}
-
-
-{% endblock %}
