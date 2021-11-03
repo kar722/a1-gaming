@@ -1,7 +1,6 @@
 from flask import Flask, render_template, request
 from pathlib import Path  # https://medium.com/@ageitgey/python-3-quick-tip-the-easy-way-to-deal-with-file-paths-on-windows-mac-and-linux-11a072b58d5f
 import json
-import requests
 
 
 # create a Flask instance
@@ -171,9 +170,10 @@ def greetsamsung():
 def samsung():
     return render_template("Samsung.html")
 
-@app.route('/Monitors/')
+@app.route('/monitors/')
 def monitors():
     return render_template("monitors.html")
+
 
 @app.route('/Mice/')
 def mice():
