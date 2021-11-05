@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0e4a484e-366a-4d0e-848b-24cd03e3ffdf" name="Changes" comment="finished monitors page with blur and 4 cards but this time they are side ways. Also made the image not blured unil hoverd (oppsite of samsung page)">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_10_11_2021_9_27_AM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_10_11_2021_9_27_AM__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_10_17_2021_10_20_AM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_10_17_2021_10_20_AM__Changes_.xml" afterDir="false" />
+    <list default="true" id="0e4a484e-366a-4d0e-848b-24cd03e3ffdf" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/404Error.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/404Error.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Mice.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Mice.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/Samsung.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Samsung.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -150,7 +148,7 @@
       <workItem from="1635966522322" duration="3476000" />
       <workItem from="1636050795629" duration="1515000" />
       <workItem from="1636052917271" duration="759000" />
-      <workItem from="1636090324654" duration="708000" />
+      <workItem from="1636090324654" duration="1322000" />
     </task>
     <task id="LOCAL-00001" summary="daniel sucks at coding">
       <created>1634163766066</created>
@@ -236,7 +234,14 @@
       <option name="project" value="LOCAL" />
       <updated>1635922706475</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="404 home page">
+      <created>1636091141884</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1636091141884</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -267,11 +272,12 @@
     <MESSAGE value="samsung buy button" />
     <MESSAGE value="tried blur thing (move to other pc)" />
     <MESSAGE value="finished monitors page with blur and 4 cards but this time they are side ways. Also made the image not blured unil hoverd (oppsite of samsung page)" />
-    <option name="LAST_COMMIT_MESSAGE" value="finished monitors page with blur and 4 cards but this time they are side ways. Also made the image not blured unil hoverd (oppsite of samsung page)" />
+    <MESSAGE value="404 home page" />
+    <option name="LAST_COMMIT_MESSAGE" value="404 home page" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/a1_gaming$activities.coverage" NAME="activities Coverage Results" MODIFIED="1633713867648" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/templates/layouts" />
-    <SUITE FILE_PATH="coverage/a1gamers_github_io$main.coverage" NAME="main Coverage Results" MODIFIED="1636091021991" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/a1gamers_github_io$main.coverage" NAME="main Coverage Results" MODIFIED="1636091638381" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/a1_gaming$Flask__main_py_.coverage" NAME="Flask (main.py) Coverage Results" MODIFIED="1633628398475" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/a1_gaming$main.coverage" NAME="main Coverage Results" MODIFIED="1636051026135" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/a1_gaming$a1_gaming.coverage" NAME="a1-gaming Coverage Results" MODIFIED="1633968885567" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />

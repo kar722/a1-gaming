@@ -27,6 +27,22 @@
             width:300px;
             margin: 0 auto;
             margin-top:15%;
+
+
+        }
+
+        .buttonlook {
+            background-color: #26a1ff;
+            border: none;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 12px;
         }
     </style>
 </head>
@@ -62,8 +78,7 @@
 </head>
 <body>
 <center>
-<button class="button button4">Home</button>
-
+    <a class="buttonlook" href= {{ url_for('index') }}> home </a>
 </center>
 </body>
 </html>
