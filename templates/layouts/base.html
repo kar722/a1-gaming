@@ -34,6 +34,11 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
             -o-animation: fadein 2s; /* Opera */
             background-color: var(--red);
             color: var(--white);
+            width: 100%;
+            height: 100%;
+            margin: 0px;
+            padding: 0px;
+            overflow-x: hidden;
         }
 
         .dark-mode {
@@ -152,7 +157,7 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
         </div>
     </div>
 {% endblock %}
-{% include "layouts/footer.html" %}
+
 </body>
 
 {% block background %}

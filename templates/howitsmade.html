@@ -11,15 +11,33 @@
             --grey: grey;
         }
 
+
         html, body{
-            margin: 0;
-            height: 100%;
             animation: fadein 2s;
             -moz-animation: fadein 2s; /* Firefox */
             -webkit-animation: fadein 2s; /* Safari and Chrome */
             -o-animation: fadein 2s; /* Opera */
-            background-color: var(--grey);
+            background: url("https://images.wallpapersden.com/image/download/iceberg-minimalist_a2pnaGmUmZqaraWkpJRmbmdlrWZlbWU.jpg");
             color: var(--white);
+            width: 100%;
+            height: 100%;
+            margin: 0px;
+            padding: 0px;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+            font-color: black;
+        }
+
+        .column {
+            float: left;
+            width: 25%;
+        }
+
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
         }
 
         .dark-mode {
@@ -27,8 +45,18 @@
             color: var(--black);
         }
 
-        h1{
-            font-size: 5em;
+
+        h1, h2, h3, h4,h5, h6 {
+            font-family: 'Ubuntu', sans-serif;
+            color: black;
+        }
+
+        p {
+            color:black;
+        }
+
+        label{
+            color:black;
         }
 
         a {
@@ -85,6 +113,37 @@
             margin: auto;
         }
 
+        #HowItsMadeBackground1 {
+            border: 1px solid black;
+            background-repeat: no-repeat;
+            background-color: #6495ED;
+            padding: 20px;
+            font-family: 'Ubuntu', sans-serif;
+        }
+
+        #HowItsMadeBackground2 {
+            border: 1px solid black;
+            background-repeat: no-repeat;
+            background-color: #303030;
+            padding: 50px;
+            font-family: 'Ubuntu', sans-serif;
+        }
+
+        #HowItsMadeBackground3 {
+            border: 1px solid black;
+            background-repeat: no-repeat;
+            background-color: #EE4B2B;
+            padding: 50px;
+            font-family: 'Ubuntu', sans-serif;
+        }
+
+        #HowItsMadeBackground4 {
+            border: 1px solid black;
+            background-repeat: no-repeat;
+            background-color: #50C878;
+            padding: 20px;
+            font-family: 'Ubuntu', sans-serif;
+        }
     </style>
 
 
@@ -96,69 +155,55 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>How its Made | A1 From Day 0</title>
+    <title>How It's Made | A1 From Day 0</title>
 </head>
 
-<style>
-    .column {
-        float: left;
-        width: 25%;
-    }
-
-    /* Clear floats after the columns */
-    .row:after {
-        content: "";
-        display: table;
-        clear: both;
-    }
-</style>
 
 <body>
 
-<div class="container">
-    <div class="row">
-        <div class="column">
+<div id="HowItsMadeBackground1">
             <h2>
                 Greet Function
             </h2>
             <div class="center-block" style="margin: 2% 5% 5%; text-align:left; font-family: gilroy,serif;">
-                <div class="col-12">
-                    <p>Hello, {{name1}}!</p>
-                </div>
+
                 <div class="col-12">
                     <form action="/howitsmade/" id="howitsmade" method="POST" >
-                        <label for="name">Type a greeting name?</label>
-                        <input name = "name" id = "name">
-                        <input type="submit" value="Greetings!">
+                        <label for="name" style = "position:relative; left: -80px;">What's your name?</label>
+                        <input name = "name" id = "name" style = "position:relative; left: -80px;">
+                        <input type='submit' value="Greetings!" style = "position:relative; left: -80px;">
                     </form>
-                    <img src="/static/assets/Capture.PNG" width=200 height=200 alt="Greeting">
+                </div>
+                <div class="col-12">
+                    <p style = "position:relative; left: -80px;">Hello, {{name1}}!</p>
                 </div>
                 <div class="col-12">
                 </div>
             </div>
         </div>
-        <div class="column">
-            <h3>
+    </div>
+
+<div id = HowItsMadeBackground2>
+            <h3 style = "color:white; text-align: left;">
                 Brain Write
             </h3>
-            <iframe width=250 height=300 src="https://docs.google.com/document/d/e/2PACX-1vQeZeORW97-6JQHMGD7y89dJbbJ_7iWR3rnxLI2qnhTvnzsTEY1MBJpbmC0f8Rje0E1sSNyecRtTl_f/pub?embedded=true"></iframe>
-        </div>
-
-        <div class="column">
+            <iframe width=720 height=300 src="https://docs.google.com/document/d/e/2PACX-1vQeZeORW97-6JQHMGD7y89dJbbJ_7iWR3rnxLI2qnhTvnzsTEY1MBJpbmC0f8Rje0E1sSNyecRtTl_f/pub?embedded=true"></iframe>
+</div>
+<div id="HowItsMadeBackground3">
             <h3>
                 Test Prep Tuesday
             </h3>
-            <iframe width=250 height=300 src="https://docs.google.com/document/d/e/2PACX-1vTK42vARxbG0wi8lez4Rec6iRqdD6knC-hin26Eio5ei7VWfHlAHNpbp7MrNdAsDRjfvnUmw969aieR/pub?embedded=true"></iframe>
-        </div>
-
-        <div class="row">
+            <iframe width=720 height=300 src="https://docs.google.com/document/d/e/2PACX-1vTK42vARxbG0wi8lez4Rec6iRqdD6knC-hin26Eio5ei7VWfHlAHNpbp7MrNdAsDRjfvnUmw969aieR/pub?embedded=true"></iframe>
+</div>
+<div id="HowItsMadeBackground4">
             <h3>
                 Wireframe
             </h3>
-            <img src="https://docs.google.com/drawings/d/e/2PACX-1vRShAZTJ41COdJBqnRYKc93VixamsrVGCVLnCOM-gu0XYuEhqtCGF2GK7f-_UBp46CeXj3lHjof4ZEc/pub?w=960&amp;h=720" width=1100 height=975 ></iframe>
-        </div>
+            <img src="https://docs.google.com/drawings/d/e/2PACX-1vRShAZTJ41COdJBqnRYKc93VixamsrVGCVLnCOM-gu0XYuEhqtCGF2GK7f-_UBp46CeXj3lHjof4ZEc/pub?w=960&amp;h=720" width=1100 height=900></iframe>
+</div>
 
     </div>
+</div>
 </div>
 </body>
 </html>
