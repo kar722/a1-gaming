@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request
+import requests
 from pathlib import Path  # https://medium.com/@ageitgey/python-3-quick-tip-the-easy-way-to-deal-with-file-paths-on-windows-mac-and-linux-11a072b58d5f
 import json
 
@@ -243,6 +244,14 @@ def Nintendo():
 @app.route('/Register/')
 def Register():
     return render_template("Register.html")
+
+@app.route('/shoppingcart/')
+def cart():
+    return render_template("shoppingcart.html")
+
+@app.route('/404Error/')
+def error():
+    return render_template("404Error.html")
 
 if __name__ == "__main__":
     app.run(debug=True, port=2023)
