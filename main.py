@@ -252,5 +252,9 @@ def cart():
 def error():
     return render_template("404Error.html")
 
+@app.route('/Calculator/')
+def calculator():
+    return render_template("Calculator.html")
+
 if __name__ == "__main__":
     app.run(debug=True, port=2023)
