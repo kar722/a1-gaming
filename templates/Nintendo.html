@@ -63,31 +63,6 @@
       color: black;
     }
 
-    .button {
-      background-color: red;
-      border: none;
-      color: white;
-      padding: 4px 8px;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 10px;
-      margin: 4px 2px;
-      transition-duration: 0.4s;
-      cursor: pointer;
-    }
-
-    .button1 {
-      background-color: white;
-      color: black;
-      border: 2px solid red;
-    }
-
-    .button1:hover {
-      background-color: red;
-      color: white;
-    }
-
     /* .fa:hover{
       transform: translateY(10px);
     } */
@@ -257,8 +232,11 @@
       font-family: 'Ubuntu', sans-serif;
     }
 
-    .bluebox {
-      background-color: #0096FF;
+    .redbox {
+      background-color: red;
+      position: relative;
+      left: -170px;
+      top: -175px;
       width: 150%;
       padding: 50px;
       margin: 20px;
@@ -316,7 +294,6 @@
       overflow: hidden;
       background-color: #e9e9e9;
       font-family: 'Ubuntu', sans-serif;
-      height:300px;
     }
 
     .topnav a {
@@ -396,47 +373,6 @@
         border: 1px solid #ccc;
       }
     }
-
-    #list{
-      font-size:  1.5em;
-      margin-left: 90px;
-    }
-
-    .animals{
-      display: list-item;
-    }
-
-    .autocomplete-items {
-      position: absolute;
-      border: 1px solid #d4d4d4;
-      border-bottom: none;
-      border-top: none;
-      z-index: 99;
-      /*position the autocomplete items to be the same width as the container:*/
-      top: 100%;
-      left: 0;
-      right: 0;
-    }
-
-    .autocomplete {
-      position: relative;
-      display: inline-block;
-    }
-
-    .autocomplete-items div {
-      padding: 10px;
-      cursor: pointer;
-      background-color: #fff;
-      border-bottom: 1px solid #d4d4d4;
-      position: absolute;
-    }
-    .autocomplete-items div:hover {
-      background-color: #e9e9e9;
-    }
-    .autocomplete-active {
-      background-color: DodgerBlue !important;
-      color: #ffffff;
-    }
   </style>
 
   <title> Nintendo | A1 from Day 0 </title>
@@ -451,25 +387,10 @@
   <a input type="button" onClick="document.getElementById('NintendoBackground1').scrollIntoView();"; style = "color: black";>Nintendo Games</a>
   <a input type="button" onClick="document.getElementById('NintendoBackground4').scrollIntoView();"; style = "color: black";>Other Nintendo Consoles</a>
   <div class="search-container" style = "position:relative; left:25px;">
-    <form autocomplete="off" action="/action_page.php">
-      <div class="autocomplete" style="width:300px; color:black;">
-        <input id="myInput" type="text" name="myNintendoSearch" placeholder="Search">
-      </div>
-      <button type="submit" onClick="document.getElementById('NintendoBackground2').scrollIntoView();"><i class="fa fa-search"></i></button>
+    <form action="/action_page.php">
+      <input type="text" placeholder="Search" name="search">
+      <button type="submit" ><i class="fa fa-search"></i></button>
     </form>
-  </div>
-
-  <img src="/static/assets/MarioGalaxy.jpg" alt="Greeting" width="520" height="250" style ="position:relative; left:-640px; top:7px;">
-  <img src="/static/assets/Splatoon3.jpg" alt="Greeting" width="520" height="250" style ="position:relative; left:495px; top:-243px;">
-  <img src="/static/assets/skywardsword.jpg" alt="Greeting" width="520" height="250" style ="position:relative; left:492px; top:-243px;">
-
-  <div style="background: dodgerblue;
-            font-size: 20px;
-            text-align: center;
-            position:relative;
-            top:47px;
-overl">
-    New Games
   </div>
 </div>
 
@@ -519,7 +440,7 @@ overl">
         <p>The Nintendo Wii U is the successor of the original Nintendo Wii console</p>
         <p>The Nintendo Wii U has upgraded graphics and processing power, and will give you the ultimate gaming experience</p>
         <p>Price: $279.99</p>
-        <button class="button button1" onclick="showAlert()" style = "position:relative; top:-10px;">Add to Cart</button>
+        <p style = "color:red;">Buy ></p>
       </div>
     </div>
   </div>
@@ -532,7 +453,7 @@ overl">
         <p>You can think of the Nintendo Switch LITE as a gaming phone, as it is around the size of a normal phone but has built in control pad.</p>
         <p>You can take out the Nintendo Switch LITE to play it whenever you want</p>
         <p>Price: $199.99</p>
-        <button class="button button1" style = "position:relative; top:-10px;">Add to Cart</button>
+        <p style = "color:red;">Buy ></p>
       </div>
     </div>
   </div>
@@ -545,7 +466,7 @@ overl">
         <p>Meant to be played at home, you and your friends and family can play the many family-friendly games this console offers</p>
         <p>With the Nintendo Wii, you can play the 2 iconic games that we all know and love: Super Mario Bros Wii and Wii Sports</p>
         <p>Price: $99.99</p>
-        <button class="button button1" style = "position:relative; top:-10px;">Add to Cart</button>
+        <p style = "color:red;">Buy ></p>
       </div>
     </div>
   </div>
@@ -557,14 +478,13 @@ overl">
         <p>The Nintendo Swith OLED has a bigger, brighter screen with increased storage</p>
         <p>If you're seeking a good graphical and visual experience, the Nintendo Switch OLED is for you</p>
         <p>Price: $159.99</p>
-        <button class="button button1" style = "position:relative; top:-10px;">Add to Cart</button>
+        <p style = "color:red;">Buy ></p>
       </div>
     </div>
   </div>
 </div>
 </div>
 <script>
-  <!-- Dropdown bar -->
   var coll = document.getElementsByClassName("collapsible");
   var i;
 
@@ -580,128 +500,10 @@ overl">
     });
   }
 
-  <!-- Popupwindow -->
   function myFunction() {
     var popup = document.getElementById("myPopup");
     popup.classList.toggle("show");
   }
-
-  <!-- Notification(Currently not used) -->
-
-  function showAlert() {
-    var myText = "Added to Cart";
-    alert (myText);
-  }
-
-  <!-- Search suggestions -->
-  function search_Nintendo() {
-    let input = document.getElementById('searchbar').value
-    input=input.toLowerCase();
-    let x = document.getElementsByClassName('animals');
-
-    for (i = 0; i < x.length; i++) {
-      if (!x[i].innerHTML.toLowerCase().includes(input)) {
-        x[i].style.display="none";
-      }
-      else {
-        x[i].style.display="list-item";
-      }
-    }
-  }
-
-  <!-- Search autocomplete -->
-  function autocomplete(inp, arr) {
-
-    var currentFocus;
-
-    inp.addEventListener("input", function(e) {
-      var a, b, i, val = this.value;
-
-      closeAllLists();
-      if (!val) { return false;}
-      currentFocus = -1;
-
-      a = document.createElement("DIV");
-      a.setAttribute("id", this.id + "autocomplete-list");
-      a.setAttribute("class", "autocomplete-items");
-
-      this.parentNode.appendChild(a);
-
-      for (i = 0; i < arr.length; i++) {
-
-        if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
-
-          b = document.createElement("DIV");
-
-          b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
-          b.innerHTML += arr[i].substr(val.length);
-
-          b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
-
-          b.addEventListener("click", function(e) {
-
-            inp.value = this.getElementsByTagName("input")[0].value;
-
-            closeAllLists();
-          });
-          a.appendChild(b);
-        }
-      }
-    });
-
-    inp.addEventListener("keydown", function(e) {
-      var x = document.getElementById(this.id + "autocomplete-list");
-      if (x) x = x.getElementsByTagName("div");
-      if (e.keyCode == 40) {
-
-        currentFocus++;
-
-        addActive(x);
-      } else if (e.keyCode == 38) {
-        currentFocus--;
-
-        addActive(x);
-      } else if (e.keyCode == 13) {
-
-        e.preventDefault();
-        if (currentFocus > -1) {
-
-          if (x) x[currentFocus].click();
-        }
-      }
-    });
-    function addActive(x) {
-      if (!x) return false;
-
-      removeActive(x);
-      if (currentFocus >= x.length) currentFocus = 0;
-      if (currentFocus < 0) currentFocus = (x.length - 1);
-      x[currentFocus].classList.add("autocomplete-active");
-    }
-    function removeActive(x) {
-      for (var i = 0; i < x.length; i++) {
-        x[i].classList.remove("autocomplete-active");
-      }
-    }
-    function closeAllLists(elmnt) {
-
-      var x = document.getElementsByClassName("autocomplete-items");
-      for (var i = 0; i < x.length; i++) {
-        if (elmnt != x[i] && elmnt != inp) {
-          x[i].parentNode.removeChild(x[i]);
-        }
-      }
-    }
-
-    document.addEventListener("click", function (e) {
-      closeAllLists(e.target);
-    });
-  }
-
-  var NintendoSearch = ["Nintendo Switch","Nintendo Games", "Nintendo Wii U", "Nintendo Switch LITE", "Nintendo Wii", "Nintendo Switch OLED Model"];
-
-
-  autocomplete(document.getElementById("myInput"), NintendoSearch);
 </script>
 </body>
 </html>
