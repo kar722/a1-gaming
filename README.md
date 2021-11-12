@@ -21,14 +21,14 @@ We want our website to model an e-commerce website with the purpose of reselling
 3. [Daniel Levy's Geekbox Response](https://docs.google.com/document/d/1js9KODT9EcwzRFxK_9GFheG3oC3pbGsDpefpRMJkxR4/edit)
 4. [Dylan Luo's Geekbox Response](https://docs.google.com/document/d/1N_HCtybqbwHjSyyBqWrLj3pPeVEugxJVbok2YCQyyy0/edit)
 5. [Karthik Valluri's Geekbox Response](https://docs.google.com/document/d/1k9wnWeavc2OqGcRkzRsd1OnkGxJEGqEC-kQLHDrT6zg/edit)
-6. [Youtube Video](https://www.youtube.com/watch?v=lbk7yEhAkac)
+6. [Experience in presenting our Project and engaging others in presentation - Youtube Video](https://www.youtube.com/watch?v=lbk7yEhAkac)
 
 ### Timeboxes (Sprint 9 and 10 10/18-10/29)
 1. [Individual Final Videos Review Ticket](https://github.com/kar722/a1-gaming/issues/62)
 
 
 | |Daniel Levy's Video | William Du's Video | Karthik Valluri's Video | Dylan Luo's Video |
-|-|----------------------|---------------------|----------------------------|--------------------|
+|-|----------------------|---------------------|------ - ----------------------|--------------------|
 | Link to Vid | [Daniel Levy](https://github.com/kar722/a1-gaming/issues/63) | [William Du](https://github.com/kar722/a1-gaming/issues/65) | [Karthik Valluri](https://github.com/kar722/a1-gaming/issues/64) | [Dylan Luo](https://github.com/kar722/a1-gaming/issues/66) |
 | Daniel's Score | No Score | 5.75/6 | 5.5/6 | 5.75/6 | 
 | William's Score | 5.75 | No Score | 5.5 | 5.25/6 |
