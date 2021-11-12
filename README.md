@@ -28,7 +28,7 @@ We want our website to model an e-commerce website with the purpose of reselling
 
 
 | |Daniel Levy's Video | William Du's Video | Karthik Valluri's Video | Dylan Luo's Video |
-|-|----------------------|---------------------|------ - ----------------------|--------------------|
+|-|----------------------|---------------------|----------------------------|--------------------|
 | Link to Vid | [Daniel Levy](https://github.com/kar722/a1-gaming/issues/63) | [William Du](https://github.com/kar722/a1-gaming/issues/65) | [Karthik Valluri](https://github.com/kar722/a1-gaming/issues/64) | [Dylan Luo](https://github.com/kar722/a1-gaming/issues/66) |
 | Daniel's Score | No Score | 5.75/6 | 5.5/6 | 5.75/6 | 
 | William's Score | 5.75 | No Score | 5.5 | 5.25/6 |
