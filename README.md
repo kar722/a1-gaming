@@ -17,10 +17,10 @@ We want our website to model an e-commerce website with the purpose of reselling
 
 ### Timeboxes (Sprint 11 11/1-11/12)
 1. [Team N@tM Presentation and Walk Abouts (Includes Capture the Moment, Geekbox Responses, Video and Reflection with Individual Addendum)](https://docs.google.com/presentation/d/1ibBZ1TrW5ZltRkR-PAqyvk5Phj2EZIjjuvbqXQ7Q3RE/edit#slide=id.g10166317455_0_129)
-2. [William Du's Geekbox Response](https://docs.google.com/document/d/1oftf-72zzIOxxH41_wWDWaE30vTK2LMsHnWSehqVVQE/edit)
-3. [Daniel Levy's Geekbox Response](https://docs.google.com/document/d/1js9KODT9EcwzRFxK_9GFheG3oC3pbGsDpefpRMJkxR4/edit)
-4. [Dylan Luo's Geekbox Response](https://docs.google.com/document/d/1N_HCtybqbwHjSyyBqWrLj3pPeVEugxJVbok2YCQyyy0/edit)
-5. [Karthik Valluri's Geekbox Response](https://docs.google.com/document/d/1k9wnWeavc2OqGcRkzRsd1OnkGxJEGqEC-kQLHDrT6zg/edit)
+2. [William Du's Journal](https://docs.google.com/document/d/1OhomTzA51OutPHPLo4jpT1Ptp2ZS8mAsf_A3SOUOlFQ/edit)
+3. [Daniel Levy's Journal](https://docs.google.com/document/d/1Le8fP7HaGLj91U_Pl5fQkyvFMuTCalJmNHyuG0S6Wek/edit#)
+4. [Dylan Luo's Journal](https://docs.google.com/document/d/1N6wt6GK69TAVtxWaY7saxu-Q4V8Ob1QYiTvG4i2oI58/edit)
+5. [Karthik Valluri's Journal](https://docs.google.com/document/d/1hc7i7dQO46DbZtw3wyF1-D67xVczTvwFXIbZ2oCQI48/edit)
 6. [Experience in presenting our Project and engaging others in presentation - Youtube Video](https://www.youtube.com/watch?v=lbk7yEhAkac)
 
 ### Timeboxes (Sprint 9 and 10 10/18-10/29)
