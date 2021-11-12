@@ -11,7 +11,7 @@
 ### Overall Contributers' Tab: https://github.com/kar722/a1-gaming/graphs/contributors
 
 ## Objective: 
-We want our website to model an e-commerce website with the purpose of reselling gaming equipment, like computers, PC parts, and peripherals. We are planning on changing the code within the pages that we changed from Hawkers, Kangaroos, and Walruses into PCs, Console, and Mice respectively. We are also including about me pages that will be done in a dropdown as well as a greet function. Our final goal is to create something where someone can view different items and possibly buy something.
+Technology is constantly accelerating especially in the gaming industry. Gamers always want to have the highest quality and newest tech. But there are so many different companies to choose from. Companies like Amazon and EBay do a good job compiling the different gaming equipment into one website. But website like these are not solely focused on the gaming industry so they provide the necessary information a gamer needs to know whether they are making the right purchase for themselves. A1 Gaming has vast library of the highest quality gaming products  along with professionally designed interactable pages that our designed for the everyday gamer. We want our website to model an e-commerce website with the purpose of reselling gaming equipment, like computers, PC parts, and peripherals. 
 
 # Team Repository: A1 Gaming (Daniel, William, Karthik, Dylan)
 
