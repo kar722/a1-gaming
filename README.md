@@ -16,13 +16,7 @@ We want our website to model an e-commerce website with the purpose of reselling
 # Team Repository: A1 Gaming (Daniel, William, Karthik, Dylan)
 
 ### Timeboxes (Sprint 11 11/1-11/12)
-1. [Daniel Levy's N@TM and Walkabout, Includes GeekBot Response need to be done]()
-2. [Dylan Luo's N@TM and Walkabouts, Includes GeekBot Response need to be done]()
-3. [William Du's N@TM and Walkabouts, Includes GeekBot Response need to be done]()
-4. [Karthik Valluri's N@TM and Walkabouts, Includes GeekBot Response need to be done]()
-5. [Night at the Museum Presentation]()
-6. [Recorded Session]()
-
+1. [Team N@tM Presentation and Walk Abouts (Includes Capture the Moment and Reflection with Individual Addendum)]()
 
 ### Timeboxes (Sprint 9 and 10 10/18-10/29)
 1. [Individual Final Videos Review Ticket](https://github.com/kar722/a1-gaming/issues/62)
