@@ -8,7 +8,7 @@ Technology is constantly accelerating especially in the gaming industry. Gamers 
 ### PBL Example: Nintendo Page
 ![image](https://user-images.githubusercontent.com/89277619/141527356-811f7e12-c717-45b5-81dc-19131ac141bc.png)
 ### Sample About Us Page
-![image](![image](https://user-images.githubusercontent.com/72475804/141528348-b0959099-de7a-401d-b2a1-dd07b8dd0868.png)
+![image]((https://user-images.githubusercontent.com/72475804/141528348-b0959099-de7a-401d-b2a1-dd07b8dd0868.png)
 ### API Example
 ![image](https://user-images.githubusercontent.com/72475804/141528272-c0da5524-dbdd-49d0-8305-fab41663adc9.png)
 
